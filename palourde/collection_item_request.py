@@ -6,8 +6,15 @@ from palourde.request_url import RequestUrl
 
 
 @dataclass
+class BearerToken:
+    key: str
+    value: str
+
+
+@dataclass
 class RequestAuth:
     type: str
+    bearer: Optional[list[BearerToken]]
 
 
 @dataclass
@@ -15,5 +22,5 @@ class CollectionItemRequest:
     auth: Optional[RequestAuth]
     method: str
     header: list
-    body: RequestBody | None
-    url: RequestUrl | None
+    body: Optional[RequestBody]
+    url: Optional[RequestUrl]

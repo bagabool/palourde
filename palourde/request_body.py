@@ -1,4 +1,12 @@
 from dataclasses import dataclass
+from typing import Optional
+
+
+@dataclass
+class FormData:
+    key: str
+    type: str
+    src: str
 
 
 @dataclass
@@ -14,5 +22,6 @@ class RequestBodyOption:
 @dataclass
 class RequestBody:
     mode: str
-    raw: str
-    options: RequestBodyOption
+    formdata: Optional[list[FormData]]
+    raw: Optional[str]
+    options: Optional[RequestBodyOption]
