@@ -1,7 +1,7 @@
 ### Palourde
 ---
 
-|Python Version| |PyPI version|
+![version](https://img.shields.io/badge/version-1.0.0-blue)
 
 Palourde converts **a v2.1 Postman collection**,  into a **markdown file**, shareable on Github or in Obsidian.
 
@@ -26,7 +26,9 @@ pip install palourde
 ---
 
 ```shell
-palourde demo.postman_collection.json > demo.md
+palourde api_platform.postman_collection.json
 ```
+
+This should a `demo.md` file in the same folder.
 
 See [Demos](https://github.com/bagabool/palourde/tree/main/demo).

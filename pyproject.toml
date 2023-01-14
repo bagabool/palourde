@@ -19,3 +19,6 @@ classifiers = [
 [build-system]
 requires = ["hatchling", "dacite", "slugify"]
 build-backend = "hatchling.build"
+
+[project.scripts]
+palourde = "palourde.cmdline:execute"
