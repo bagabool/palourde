@@ -34,7 +34,6 @@ This Collection includes a pre-configured Environment. You will need to set up t
 
 
 ### Single Tweet
-
 ---
 > Request
 
