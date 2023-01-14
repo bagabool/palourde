@@ -1,7 +1,7 @@
 ### Palourde
 ---
 
-![version](https://img.shields.io/badge/version-1.0.0-blue)
+![version](https://img.shields.io/badge/version-1.0.1-blue)
 
 Palourde converts **a v2.1 Postman collection**,  into a **markdown file**, shareable on Github or in Obsidian.
 
@@ -17,7 +17,7 @@ Note that palourde has only been tested on version **2.1** postman collections a
 ---
 
 ```shell
-pip install palourde==1.0.1
+pip install palourde
 ```
 
 <br>
