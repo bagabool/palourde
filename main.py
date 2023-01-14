@@ -20,7 +20,7 @@ def flatten(root: dict, out: list) -> None:
             out.append(data)
 
 
-doc = pathlib.Path("demo").joinpath("Google Analytics API").joinpath("Google Analytics API.postman_collection.json")
+doc = pathlib.Path("demo").joinpath("Twitter API").joinpath("Twitter API v2.postman_collection.json")
 with open(doc, 'r+') as json_coll:
     decoded = json.load(json_coll)
     items = []

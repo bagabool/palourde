@@ -4,6 +4,11 @@
 
 <br>
 
+Views and manages your Google Analytics data.
+
+Contact Support:
+ Name: Google
+
 ### analytics.data.ga.get
 
 ---

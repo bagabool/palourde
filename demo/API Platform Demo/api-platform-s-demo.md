@@ -1,7 +1,13 @@
 # API Platform's demo
+
 ---
 
 <br>
+
+This is a demo application of the [API Platform](https://api-platform.com) framework.
+[Its source code](https://github.com/api-platform/demo) includes various examples, check it out!
+You may also be interested by [the GraphQL entrypoint](/graphql).
+[A PWA](/) and [an admin](/admin) are consuming this API.
 
 ### Retrieves a Book resource.
 

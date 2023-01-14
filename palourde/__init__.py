@@ -12,7 +12,9 @@ class ResponseHeader:
 
 
 @dataclass
-class CollectionInfo: name: str
+class CollectionInfo:
+    name: str
+    description: Optional[str]
 
 
 @dataclass
@@ -53,7 +55,8 @@ class RequestBody:
 @dataclass
 class RequestQuery:
     key: str
-    value: str
+    value: Optional[str]
+    description: Optional[str]
 
 
 @dataclass
@@ -94,7 +97,7 @@ class Collection:
     item: list[CollectionItem]
 
     def __post_init__(self):
-        self.file = pathlib.Path("demo").joinpath("Microsoft Graph API").joinpath(f"{slugify(self.info.name)}.md")
+        self.file = pathlib.Path("demo").joinpath("Twitter API").joinpath(f"{slugify(self.info.name)}.md")
         self.file.touch(exist_ok=True)
 
     def to_markdown(self):
@@ -102,13 +105,26 @@ class Collection:
 
             # REQUEST NAME
             markdown.write(f"# {self.info.name}\n\n---\n\n<br>\n\n")
+
+            # REQUEST DESCRIPTION
+            if self.info.description:
+                markdown.write(f"{self.info.description}\n\n")
             for item in self.item:
 
                 # REQUEST METHOD AND URL
                 if item.request.__dict__.get("url") is not None:
                     markdown.write(
-                        f"### {item.name}\n\n---\n> Request\n\n```\n{item.request.method} {item.request.url.raw}\n```\n\n"
+                        f"### {item.name}\n\n---\n> Request\n\n```\n"
+                        f"{item.request.method} {item.request.url.raw}\n```\n\n"
                     )
+
+                # REQUEST URL PARAMETERS
+                if item.request.url.query:
+                    markdown.write(f"> Query parameters\n\n")
+                    for param in item.request.url.query:
+                        markdown.write(f"**`{param.key}`**\n\n")
+                        if param.description:
+                            markdown.write(param.description + "\n\n")
 
                 # REQUEST HEADERS AND BODY
                 if item.request.body and item.request.body.raw:
@@ -126,5 +142,6 @@ class Collection:
                 # REQUEST RESPONSE
                 if bool(item.response):
                     markdown.write(
-                        f"\n> Response\n\n```{item.response[0].get('_postman_previewlanguage')}\n{item.response[0].get('body')}\n```\n\n"
+                        f"\n> Response\n\n```{item.response[0].get('_postman_previewlanguage')}\n"
+                        f"{item.response[0].get('body')}\n```\n\n"
                     )
