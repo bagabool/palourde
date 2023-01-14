@@ -26,9 +26,9 @@ pip install palourde
 ---
 
 ```shell
-palourde api_platform.postman_collection.json
+palourde demo.postman_collection.json
 ```
 
-This should a `demo.md` file in the same folder.
+This should generate a `demo.md` file in the same folder.
 
 See [Demos](https://github.com/bagabool/palourde/tree/main/demo).

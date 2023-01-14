@@ -22,7 +22,7 @@ def flatten(root: dict, out: list) -> None:
 
 
 def execute():
-    postman_collection = sys.argv[1]
+    postman_collection = sys.argv[1].strip()
 
     doc = pathlib.Path(postman_collection)
     with open(doc, 'r+') as json_coll:
