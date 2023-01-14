@@ -17,7 +17,7 @@ Note that palourde has only been tested on version **2.1** postman collections a
 ---
 
 ```shell
-pip install palourde
+pip install palourde==1.0.1
 ```
 
 <br>
