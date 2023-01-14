@@ -1,0 +1,3666 @@
+{
+	"info": {
+		"_postman_id": "6d07f39b-a7b4-4cd5-b2d4-c1cd6c6c58d2",
+		"name": "API Platform's demo",
+		"description": "This is a demo application of the [API Platform](https://api-platform.com) framework.\n[Its source code](https://github.com/api-platform/demo) includes various examples, check it out!\nYou may also be interested by [the GraphQL entrypoint](/graphql).\n[A PWA](/) and [an admin](/admin) are consuming this API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieves a Book resource.",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/books/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Book identifier"
+										}
+									]
+								},
+								"description": "Retrieves a Book resource."
+							},
+							"response": [
+								{
+									"name": "Book resource",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"title\": \"ex\",\n  \"description\": \"voluptate nostrud ullamco\",\n  \"author\": \"esse\",\n  \"publicationDate\": \"1951-06-26T01:40:49.639Z\",\n  \"@context\": \"dolor\",\n  \"@id\": \"ut cupidatat dolore\",\n  \"@type\": \"sunt consectetur do magna\",\n  \"id\": \"e22a78a0-bed4-fee9-f9ee-04940de5f1c1\",\n  \"isbn\": \"qui elit cupidatat\",\n  \"reviews\": [\n    {\n      \"body\": \"minim pariatur fugiat esse\",\n      \"@context\": \"conse\",\n      \"@id\": \"deserunt\",\n      \"@type\": \"velit ut\",\n      \"id\": \"urn:uuid:cfb7face-828a-5d3d-f92d-92cfaeb6127b\"\n    },\n    {\n      \"body\": \"magna commodo elit amet\",\n      \"@context\": \"irure deserunt consequat cupidatat aliquip\",\n      \"@id\": \"labore\",\n      \"@type\": \"esse deserunt anim\",\n      \"id\": \"urn:uuid:699b3ac3-b47a-b5b9-ef30-4d479734039e\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Replaces the Book resource.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/books/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Book identifier"
+										}
+									]
+								},
+								"description": "Replaces the Book resource."
+							},
+							"response": [
+								{
+									"name": "Book resource updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"title\": \"ex\",\n  \"description\": \"voluptate nostrud ullamco\",\n  \"author\": \"esse\",\n  \"publicationDate\": \"1951-06-26T01:40:49.639Z\",\n  \"@context\": \"dolor\",\n  \"@id\": \"ut cupidatat dolore\",\n  \"@type\": \"sunt consectetur do magna\",\n  \"id\": \"e22a78a0-bed4-fee9-f9ee-04940de5f1c1\",\n  \"isbn\": \"qui elit cupidatat\",\n  \"reviews\": [\n    {\n      \"body\": \"minim pariatur fugiat esse\",\n      \"@context\": \"conse\",\n      \"@id\": \"deserunt\",\n      \"@type\": \"velit ut\",\n      \"id\": \"urn:uuid:cfb7face-828a-5d3d-f92d-92cfaeb6127b\"\n    },\n    {\n      \"body\": \"magna commodo elit amet\",\n      \"@context\": \"irure deserunt consequat cupidatat aliquip\",\n      \"@id\": \"labore\",\n      \"@type\": \"esse deserunt anim\",\n      \"id\": \"urn:uuid:699b3ac3-b47a-b5b9-ef30-4d479734039e\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable entity",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Removes the Book resource.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/books/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Book identifier"
+										}
+									]
+								},
+								"description": "Removes the Book resource."
+							},
+							"response": [
+								{
+									"name": "Book resource deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates the Book resource.",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/merge-patch+json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[object Object]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/books/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Book identifier"
+										}
+									]
+								},
+								"description": "Updates the Book resource."
+							},
+							"response": [
+								{
+									"name": "Book resource updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"title\": \"ex\",\n  \"description\": \"voluptate nostrud ullamco\",\n  \"author\": \"esse\",\n  \"publicationDate\": \"1951-06-26T01:40:49.639Z\",\n  \"@context\": \"dolor\",\n  \"@id\": \"ut cupidatat dolore\",\n  \"@type\": \"sunt consectetur do magna\",\n  \"id\": \"e22a78a0-bed4-fee9-f9ee-04940de5f1c1\",\n  \"isbn\": \"qui elit cupidatat\",\n  \"reviews\": [\n    {\n      \"body\": \"minim pariatur fugiat esse\",\n      \"@context\": \"conse\",\n      \"@id\": \"deserunt\",\n      \"@type\": \"velit ut\",\n      \"id\": \"urn:uuid:cfb7face-828a-5d3d-f92d-92cfaeb6127b\"\n    },\n    {\n      \"body\": \"magna commodo elit amet\",\n      \"@context\": \"irure deserunt consequat cupidatat aliquip\",\n      \"@id\": \"labore\",\n      \"@type\": \"esse deserunt anim\",\n      \"id\": \"urn:uuid:699b3ac3-b47a-b5b9-ef30-4d479734039e\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable entity",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Replaces the Book resource.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/books/:id/generate-cover",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books",
+										":id",
+										"generate-cover"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Book identifier"
+										}
+									]
+								},
+								"description": "Replaces the Book resource."
+							},
+							"response": [
+								{
+									"name": "Book resource updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id/generate-cover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id",
+												"generate-cover"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id/generate-cover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id",
+												"generate-cover"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id/generate-cover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id",
+												"generate-cover"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable entity",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/books/:id/generate-cover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"books",
+												":id",
+												"generate-cover"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Book identifier"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieves the collection of Book resources.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/books?page=1&itemsPerPage=30&archived=true&order[id]=asc&order[title]=asc&order[author]=asc&order[isbn]=asc&order[publicationDate]=asc&properties[]=est tempor et incididunt&properties[]=do culpa&title=eu&author=eu",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "The collection page number"
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "30",
+									"description": "The number of items per page"
+								},
+								{
+									"key": "archived",
+									"value": "true"
+								},
+								{
+									"key": "order[id]",
+									"value": "asc"
+								},
+								{
+									"key": "order[title]",
+									"value": "asc"
+								},
+								{
+									"key": "order[author]",
+									"value": "asc"
+								},
+								{
+									"key": "order[isbn]",
+									"value": "asc"
+								},
+								{
+									"key": "order[publicationDate]",
+									"value": "asc"
+								},
+								{
+									"key": "properties[]",
+									"value": "est tempor et incididunt"
+								},
+								{
+									"key": "properties[]",
+									"value": "do culpa"
+								},
+								{
+									"key": "title",
+									"value": "eu"
+								},
+								{
+									"key": "author",
+									"value": "eu"
+								}
+							]
+						},
+						"description": "Retrieves the collection of Book resources."
+					},
+					"response": [
+						{
+							"name": "Book collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/books?page=1&itemsPerPage=30&archived=true&order[id]=asc&order[title]=asc&order[author]=asc&order[isbn]=asc&order[publicationDate]=asc&properties[]=laboris Lorem aliqua&properties[]=velit aute qui&title=eu&author=eu",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "30"
+										},
+										{
+											"key": "archived",
+											"value": "true"
+										},
+										{
+											"key": "order[id]",
+											"value": "asc"
+										},
+										{
+											"key": "order[title]",
+											"value": "asc"
+										},
+										{
+											"key": "order[author]",
+											"value": "asc"
+										},
+										{
+											"key": "order[isbn]",
+											"value": "asc"
+										},
+										{
+											"key": "order[publicationDate]",
+											"value": "asc"
+										},
+										{
+											"key": "properties[]",
+											"value": "laboris Lorem aliqua"
+										},
+										{
+											"key": "properties[]",
+											"value": "velit aute qui"
+										},
+										{
+											"key": "title",
+											"value": "eu"
+										},
+										{
+											"key": "author",
+											"value": "eu"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"hydra:member\": [\n    {\n      \"title\": \"in aute\",\n      \"description\": \"et irure reprehenderit occaecat\",\n      \"author\": \"adipisicing incididunt veniam\",\n      \"publicationDate\": \"1958-07-08T20:18:32.329Z\",\n      \"@context\": \"cillum\",\n      \"@id\": \"eiusmod exercitation nostrud anim\",\n      \"@type\": \"incididunt eu enim ex laboris\",\n      \"id\": \"urn:uuid:d49da2a2-649f-423a-a631-2dd1aafb05ef\",\n      \"isbn\": \"officia est ipsum n\",\n      \"reviews\": [\n        {\n          \"body\": \"non do qui ut\",\n          \"@context\": \"ea\",\n          \"@id\": \"laboris cillum\",\n          \"@type\": \"labore \",\n          \"id\": \"28767b1d-1c34-20c2-0d97-3861e21ecf4b\"\n        },\n        {\n          \"body\": \"amet Ut Excepteur\",\n          \"@context\": \"ut sint velit\",\n          \"@id\": \"proide\",\n          \"@type\": \"cillum eiusmod\",\n          \"id\": \"aa3eabda-fcf5-6235-f51e-9b9939637697\"\n        }\n      ]\n    },\n    {\n      \"title\": \"eu dolor\",\n      \"description\": \"sunt m\",\n      \"author\": \"sunt E\",\n      \"publicationDate\": \"1980-11-14T07:01:17.267Z\",\n      \"@context\": \"dolor in reprehenderit in\",\n      \"@id\": \"ex labore\",\n      \"@type\": \"nisi pariatur reprehenderit elit\",\n      \"id\": \"d47c78b6-f2e8-588a-3164-f11e75b6fc56\",\n      \"isbn\": \"culpa elit sun\",\n      \"reviews\": [\n        {\n          \"body\": \"minim non\",\n          \"@context\": \"consectetur ullamco incididunt id\",\n          \"@id\": \"incididunt velit ut elit\",\n          \"@type\": \"pariatur sit deserunt\",\n          \"id\": \"8649e5c2-52dd-f5cc-f0b8-0bda9db74bb4\"\n        },\n        {\n          \"body\": \"eiusmod consectetur irure labore quis\",\n          \"@context\": \"nisi Lorem\",\n          \"@id\": \"esse Ut cupidatat adipisicing\",\n          \"@type\": \"anim magna Lorem\",\n          \"id\": \"99a8f80c-0298-c78a-8fe1-6129c1cd5f6f\"\n        }\n      ]\n    }\n  ],\n  \"hydra:totalItems\": 77275772,\n  \"hydra:view\": {\n    \"@id\": \"string\",\n    \"type\": \"string\",\n    \"hydra:first\": \"string\",\n    \"hydra:last\": \"string\",\n    \"hydra:previous\": \"string\",\n    \"hydra:next\": \"string\"\n  },\n  \"hydra:search\": {\n    \"@type\": \"sed consequat\",\n    \"hydra:template\": \"proident\",\n    \"hydra:variableRepresentation\": \"reprehenderit Duis\",\n    \"hydra:mapping\": [\n      {\n        \"@type\": \"ea\",\n        \"variable\": \"cupidatat anim irure tempor dolore\",\n        \"property\": \"enim consequat\",\n        \"required\": true\n      },\n      {\n        \"@type\": \"est qui ut\",\n        \"variable\": \"aliqua Duis dolor\",\n        \"property\": \"anim amet\",\n        \"required\": true\n      }\n    ]\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Creates a Book resource.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"pariatur et\",\n  \"description\": \"nisi\",\n  \"author\": \"veniam cillum\",\n  \"publicationDate\": \"2022-04-09T21:49:17.479Z\",\n  \"isbn\": \"Duis aliqua ut eu eius\",\n  \"reviews\": [\n    \"ipsum commodo\",\n    \"magna deserunt dolor consequat\"\n  ],\n  \"cover\": \"enim n\",\n  \"archivedAt\": \"1968-03-08T21:18:12.216Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/books",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books"
+							]
+						},
+						"description": "Creates a Book resource."
+					},
+					"response": [
+						{
+							"name": "Book resource created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/books",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"title\": \"ex\",\n  \"description\": \"voluptate nostrud ullamco\",\n  \"author\": \"esse\",\n  \"publicationDate\": \"1951-06-26T01:40:49.639Z\",\n  \"@context\": \"dolor\",\n  \"@id\": \"ut cupidatat dolore\",\n  \"@type\": \"sunt consectetur do magna\",\n  \"id\": \"e22a78a0-bed4-fee9-f9ee-04940de5f1c1\",\n  \"isbn\": \"qui elit cupidatat\",\n  \"reviews\": [\n    {\n      \"body\": \"minim pariatur fugiat esse\",\n      \"@context\": \"conse\",\n      \"@id\": \"deserunt\",\n      \"@type\": \"velit ut\",\n      \"id\": \"urn:uuid:cfb7face-828a-5d3d-f92d-92cfaeb6127b\"\n    },\n    {\n      \"body\": \"magna commodo elit amet\",\n      \"@context\": \"irure deserunt consequat cupidatat aliquip\",\n      \"@id\": \"labore\",\n      \"@type\": \"esse deserunt anim\",\n      \"id\": \"urn:uuid:699b3ac3-b47a-b5b9-ef30-4d479734039e\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Invalid input",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/books",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unprocessable entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"esse quis officia consequat\",\n  \"description\": \"fugiat Duis\",\n  \"author\": \"ex adipisicing tempor\",\n  \"publicationDate\": \"1999-04-17T00:30:55.199Z\",\n  \"isbn\": \"Duis incididunt\",\n  \"reviews\": [\n    \"aliqua Lorem officia aliquip\",\n    \"sint reprehenderit\"\n  ],\n  \"cover\": \"incidi\",\n  \"archivedAt\": \"2016-09-24T23:11:55.744Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/books",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Retrieves the collection of Review resources.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/books/:bookId/reviews?page=1&order[id]=asc&order[publicationDate]=asc&book=eu&book[]=est tempor et incididunt&book[]=do culpa",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								":bookId",
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "The collection page number"
+								},
+								{
+									"key": "order[id]",
+									"value": "asc"
+								},
+								{
+									"key": "order[publicationDate]",
+									"value": "asc"
+								},
+								{
+									"key": "book",
+									"value": "eu"
+								},
+								{
+									"key": "book[]",
+									"value": "est tempor et incididunt"
+								},
+								{
+									"key": "book[]",
+									"value": "do culpa"
+								}
+							],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "eu",
+									"description": "(Required) Book identifier"
+								}
+							]
+						},
+						"description": "Retrieves the collection of Review resources."
+					},
+					"response": [
+						{
+							"name": "Review collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/books/:bookId/reviews?page=1&order[id]=asc&order[publicationDate]=asc&book=eu&book[]=laboris Lorem aliqua&book[]=velit aute qui",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"books",
+										":bookId",
+										"reviews"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "order[id]",
+											"value": "asc"
+										},
+										{
+											"key": "order[publicationDate]",
+											"value": "asc"
+										},
+										{
+											"key": "book",
+											"value": "eu"
+										},
+										{
+											"key": "book[]",
+											"value": "laboris Lorem aliqua"
+										},
+										{
+											"key": "book[]",
+											"value": "velit aute qui"
+										}
+									],
+									"variable": [
+										{
+											"key": "bookId",
+											"value": "eu",
+											"description": "(Required) Book identifier"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"hydra:member\": [\n    {\n      \"body\": \"aliquip dolore Lorem culpa ad\",\n      \"rating\": 0,\n      \"book\": {\n        \"title\": \"esse elit Lorem Duis velit\",\n        \"@context\": \"cupidatat tempor do\",\n        \"@id\": \"in proident\",\n        \"@type\": \"nisi aute eu est\"\n      },\n      \"@id\": \"officia quis cillum\",\n      \"@type\": \"laborum enim aute elit\",\n      \"@context\": \"fugiat velit est\",\n      \"id\": \"13605898-d780-6728-af64-a3d96780caee\",\n      \"letter\": \"b\",\n      \"author\": \"ipsum Lorem mollit\",\n      \"publicationDate\": \"1965-06-15T12:47:12.787Z\"\n    },\n    {\n      \"body\": \"ut sed incididunt proident et\",\n      \"rating\": 0,\n      \"book\": {\n        \"title\": \"labo\",\n        \"@context\": \"cillum dolor ut\",\n        \"@id\": \"aute cupidatat velit do aliquip\",\n        \"@type\": \"ex qui\"\n      },\n      \"@id\": \"elit eiusmod fugiat occaecat dolor\",\n      \"@type\": \"irure enim\",\n      \"@context\": \"tempor incididunt do non\",\n      \"id\": \"2b28f935-bea6-1683-3f16-eeaa67bf234c\",\n      \"letter\": \"a\",\n      \"author\": \"labore id aliquip minim\",\n      \"publicationDate\": \"1947-10-13T02:25:52.503Z\"\n    }\n  ],\n  \"hydra:totalItems\": 9898490,\n  \"hydra:view\": {\n    \"@id\": \"string\",\n    \"type\": \"string\",\n    \"hydra:first\": \"string\",\n    \"hydra:last\": \"string\",\n    \"hydra:previous\": \"string\",\n    \"hydra:next\": \"string\"\n  },\n  \"hydra:search\": {\n    \"@type\": \"Duis nisi\",\n    \"hydra:template\": \"dolore est aute Duis\",\n    \"hydra:variableRepresentation\": \"aute id ad\",\n    \"hydra:mapping\": [\n      {\n        \"@type\": \"in exercitation ad esse\",\n        \"variable\": \"deserunt laboris incididunt ut\",\n        \"property\": \"eiusmod mi\",\n        \"required\": true\n      },\n      {\n        \"@type\": \"reprehenderit sit velit\",\n        \"variable\": \"ea nisi aute aliq\",\n        \"property\": \"quis ex Ut consectetur\",\n        \"required\": false\n      }\n    ]\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "parchments",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieves a Parchment resource.",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/parchments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Parchment identifier"
+										}
+									]
+								},
+								"description": "Retrieves a Parchment resource."
+							},
+							"response": [
+								{
+									"name": "Parchment resource",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"title\": \"occaecat proident aliqua incididunt ut\",\n  \"description\": \"Duis minim eiusmod anim\",\n  \"@context\": \"dolor sed\",\n  \"@id\": \"in Ut \",\n  \"@type\": \"veniam eu\",\n  \"id\": \"330a7855-e8cd-4e4f-29f9-d83ea7fecbc2\"\n}"
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Replaces the Parchment resource.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/parchments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Parchment identifier"
+										}
+									]
+								},
+								"description": "Replaces the Parchment resource."
+							},
+							"response": [
+								{
+									"name": "Parchment resource updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"title\": \"occaecat proident aliqua incididunt ut\",\n  \"description\": \"Duis minim eiusmod anim\",\n  \"@context\": \"dolor sed\",\n  \"@id\": \"in Ut \",\n  \"@type\": \"veniam eu\",\n  \"id\": \"330a7855-e8cd-4e4f-29f9-d83ea7fecbc2\"\n}"
+								},
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable entity",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Removes the Parchment resource.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/parchments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Parchment identifier"
+										}
+									]
+								},
+								"description": "Removes the Parchment resource."
+							},
+							"response": [
+								{
+									"name": "Parchment resource deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates the Parchment resource.",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/merge-patch+json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[object Object]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/parchments/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Parchment identifier"
+										}
+									]
+								},
+								"description": "Updates the Parchment resource."
+							},
+							"response": [
+								{
+									"name": "Parchment resource updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"title\": \"occaecat proident aliqua incididunt ut\",\n  \"description\": \"Duis minim eiusmod anim\",\n  \"@context\": \"dolor sed\",\n  \"@id\": \"in Ut \",\n  \"@type\": \"veniam eu\",\n  \"id\": \"330a7855-e8cd-4e4f-29f9-d83ea7fecbc2\"\n}"
+								},
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable entity",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/parchments/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"parchments",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Parchment identifier"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieves the collection of Parchment resources.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/parchments?page=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"parchments"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "The collection page number"
+								}
+							]
+						},
+						"description": "Retrieves the collection of Parchment resources."
+					},
+					"response": [
+						{
+							"name": "Parchment collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/parchments?page=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"hydra:member\": [\n    {\n      \"title\": \"eu\",\n      \"description\": \"sed irure\",\n      \"@context\": \"\",\n      \"@id\": \"laboris sint nisi enim reprehenderit\",\n      \"@type\": \"sed Duis voluptate\",\n      \"id\": \"urn:uuid:9127d881-7103-9e16-6de6-2f6576b1cde1\"\n    },\n    {\n      \"title\": \"velit\",\n      \"description\": \"reprehenderit commodo\",\n      \"@context\": \"laboris sunt esse consequat\",\n      \"@id\": \"laborum in velit\",\n      \"@type\": \"ex veniam pariatur dolor in\",\n      \"id\": \"urn:uuid:66d14e31-ff67-0c60-e900-3bb44a2f2213\"\n    }\n  ],\n  \"hydra:totalItems\": 87267620,\n  \"hydra:view\": {\n    \"@id\": \"string\",\n    \"type\": \"string\",\n    \"hydra:first\": \"string\",\n    \"hydra:last\": \"string\",\n    \"hydra:previous\": \"string\",\n    \"hydra:next\": \"string\"\n  },\n  \"hydra:search\": {\n    \"@type\": \"sunt ex\",\n    \"hydra:template\": \"anim nostrud dolore occaecat ea\",\n    \"hydra:variableRepresentation\": \"qui nost\",\n    \"hydra:mapping\": [\n      {\n        \"@type\": \"esse sunt\",\n        \"variable\": \"ad minim ex \",\n        \"property\": \"consequat labore dolor\",\n        \"required\": true\n      },\n      {\n        \"@type\": \"culpa elit\",\n        \"variable\": \"veniam Lorem\",\n        \"property\": \"aute nulla elit laborum\",\n        \"required\": false\n      }\n    ]\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Creates a Parchment resource.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/parchments",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"parchments"
+							]
+						},
+						"description": "Creates a Parchment resource."
+					},
+					"response": [
+						{
+							"name": "Parchment resource created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/parchments",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"title\": \"occaecat proident aliqua incididunt ut\",\n  \"description\": \"Duis minim eiusmod anim\",\n  \"@context\": \"dolor sed\",\n  \"@id\": \"in Ut \",\n  \"@type\": \"veniam eu\",\n  \"id\": \"330a7855-e8cd-4e4f-29f9-d83ea7fecbc2\"\n}"
+						},
+						{
+							"name": "Invalid input",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/parchments",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unprocessable entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"ullamco elit\",\n  \"description\": \"pariatur amet est\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/parchments",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"parchments"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Retrieves a Review resource.",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reviews/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Review identifier"
+										}
+									]
+								},
+								"description": "Retrieves a Review resource."
+							},
+							"response": [
+								{
+									"name": "Review resource",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"body\": \"nulla m\",\n  \"rating\": 2,\n  \"book\": {\n    \"title\": \"sit\",\n    \"@context\": \"eu fugiat consequat cupidatat velit\",\n    \"@id\": \"dolore nisi qui incidi\",\n    \"@type\": \"Duis veniam\"\n  },\n  \"@id\": \"laborum\",\n  \"@type\": \"mollit in\",\n  \"@context\": \"enim mollit\",\n  \"id\": \"0539f27a-d49c-e028-ef34-24382dde4429\",\n  \"letter\": \"c\",\n  \"author\": \"laborum\",\n  \"publicationDate\": \"1973-01-02T11:01:32.600Z\"\n}"
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Replaces the Review resource.",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reviews/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Review identifier"
+										}
+									]
+								},
+								"description": "Replaces the Review resource."
+							},
+							"response": [
+								{
+									"name": "Review resource updated",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"body\": \"nulla m\",\n  \"rating\": 2,\n  \"book\": {\n    \"title\": \"sit\",\n    \"@context\": \"eu fugiat consequat cupidatat velit\",\n    \"@id\": \"dolore nisi qui incidi\",\n    \"@type\": \"Duis veniam\"\n  },\n  \"@id\": \"laborum\",\n  \"@type\": \"mollit in\",\n  \"@context\": \"enim mollit\",\n  \"id\": \"0539f27a-d49c-e028-ef34-24382dde4429\",\n  \"letter\": \"c\",\n  \"author\": \"laborum\",\n  \"publicationDate\": \"1973-01-02T11:01:32.600Z\"\n}"
+								},
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable entity",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Removes the Review resource.",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/reviews/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Review identifier"
+										}
+									]
+								},
+								"description": "Removes the Review resource."
+							},
+							"response": [
+								{
+									"name": "Review resource deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Updates the Review resource.",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/merge-patch+json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/ld+json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[object Object]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reviews/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) Review identifier"
+										}
+									]
+								},
+								"description": "Updates the Review resource."
+							},
+							"response": [
+								{
+									"name": "Review resource updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/ld+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"body\": \"nulla m\",\n  \"rating\": 2,\n  \"book\": {\n    \"title\": \"sit\",\n    \"@context\": \"eu fugiat consequat cupidatat velit\",\n    \"@id\": \"dolore nisi qui incidi\",\n    \"@type\": \"Duis veniam\"\n  },\n  \"@id\": \"laborum\",\n  \"@type\": \"mollit in\",\n  \"@context\": \"enim mollit\",\n  \"id\": \"0539f27a-d49c-e028-ef34-24382dde4429\",\n  \"letter\": \"c\",\n  \"author\": \"laborum\",\n  \"publicationDate\": \"1973-01-02T11:01:32.600Z\"\n}"
+								},
+								{
+									"name": "Invalid input",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unprocessable entity",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[object Object]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reviews/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reviews",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eu",
+													"description": "(Required) Review identifier"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Retrieves the collection of Review resources.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/reviews?page=1&itemsPerPage=30&order[id]=asc&order[publicationDate]=asc&book=eu&book[]=est tempor et incididunt&book[]=do culpa",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "The collection page number"
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "30",
+									"description": "The number of items per page"
+								},
+								{
+									"key": "order[id]",
+									"value": "asc"
+								},
+								{
+									"key": "order[publicationDate]",
+									"value": "asc"
+								},
+								{
+									"key": "book",
+									"value": "eu"
+								},
+								{
+									"key": "book[]",
+									"value": "est tempor et incididunt"
+								},
+								{
+									"key": "book[]",
+									"value": "do culpa"
+								}
+							]
+						},
+						"description": "Retrieves the collection of Review resources."
+					},
+					"response": [
+						{
+							"name": "Review collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reviews?page=1&itemsPerPage=30&order[id]=asc&order[publicationDate]=asc&book=eu&book[]=laboris Lorem aliqua&book[]=velit aute qui",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "30"
+										},
+										{
+											"key": "order[id]",
+											"value": "asc"
+										},
+										{
+											"key": "order[publicationDate]",
+											"value": "asc"
+										},
+										{
+											"key": "book",
+											"value": "eu"
+										},
+										{
+											"key": "book[]",
+											"value": "laboris Lorem aliqua"
+										},
+										{
+											"key": "book[]",
+											"value": "velit aute qui"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"hydra:member\": [\n    {\n      \"body\": \"aliquip dolore Lorem culpa ad\",\n      \"rating\": 0,\n      \"book\": {\n        \"title\": \"esse elit Lorem Duis velit\",\n        \"@context\": \"cupidatat tempor do\",\n        \"@id\": \"in proident\",\n        \"@type\": \"nisi aute eu est\"\n      },\n      \"@id\": \"officia quis cillum\",\n      \"@type\": \"laborum enim aute elit\",\n      \"@context\": \"fugiat velit est\",\n      \"id\": \"13605898-d780-6728-af64-a3d96780caee\",\n      \"letter\": \"b\",\n      \"author\": \"ipsum Lorem mollit\",\n      \"publicationDate\": \"1965-06-15T12:47:12.787Z\"\n    },\n    {\n      \"body\": \"ut sed incididunt proident et\",\n      \"rating\": 0,\n      \"book\": {\n        \"title\": \"labo\",\n        \"@context\": \"cillum dolor ut\",\n        \"@id\": \"aute cupidatat velit do aliquip\",\n        \"@type\": \"ex qui\"\n      },\n      \"@id\": \"elit eiusmod fugiat occaecat dolor\",\n      \"@type\": \"irure enim\",\n      \"@context\": \"tempor incididunt do non\",\n      \"id\": \"2b28f935-bea6-1683-3f16-eeaa67bf234c\",\n      \"letter\": \"a\",\n      \"author\": \"labore id aliquip minim\",\n      \"publicationDate\": \"1947-10-13T02:25:52.503Z\"\n    }\n  ],\n  \"hydra:totalItems\": 9898490,\n  \"hydra:view\": {\n    \"@id\": \"string\",\n    \"type\": \"string\",\n    \"hydra:first\": \"string\",\n    \"hydra:last\": \"string\",\n    \"hydra:previous\": \"string\",\n    \"hydra:next\": \"string\"\n  },\n  \"hydra:search\": {\n    \"@type\": \"Duis nisi\",\n    \"hydra:template\": \"dolore est aute Duis\",\n    \"hydra:variableRepresentation\": \"aute id ad\",\n    \"hydra:mapping\": [\n      {\n        \"@type\": \"in exercitation ad esse\",\n        \"variable\": \"deserunt laboris incididunt ut\",\n        \"property\": \"eiusmod mi\",\n        \"required\": true\n      },\n      {\n        \"@type\": \"reprehenderit sit velit\",\n        \"variable\": \"ea nisi aute aliq\",\n        \"property\": \"quis ex Ut consectetur\",\n        \"required\": false\n      }\n    ]\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Creates a Review resource.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reviews"
+							]
+						},
+						"description": "Creates a Review resource."
+					},
+					"response": [
+						{
+							"name": "Review resource created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reviews",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"body\": \"nulla m\",\n  \"rating\": 2,\n  \"book\": {\n    \"title\": \"sit\",\n    \"@context\": \"eu fugiat consequat cupidatat velit\",\n    \"@id\": \"dolore nisi qui incidi\",\n    \"@type\": \"Duis veniam\"\n  },\n  \"@id\": \"laborum\",\n  \"@type\": \"mollit in\",\n  \"@context\": \"enim mollit\",\n  \"id\": \"0539f27a-d49c-e028-ef34-24382dde4429\",\n  \"letter\": \"c\",\n  \"author\": \"laborum\",\n  \"publicationDate\": \"1973-01-02T11:01:32.600Z\"\n}"
+						},
+						{
+							"name": "Invalid input",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reviews",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unprocessable entity",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"body\": \"non sed\",\n  \"rating\": 1,\n  \"book\": \"ut a\",\n  \"letter\": \"d\",\n  \"author\": \"voluptate dolore proident aliqua\",\n  \"publicationDate\": \"2011-10-17T15:25:47.262Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reviews",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "top books",
+			"item": [
+				{
+					"name": "Retrieves the collection of TopBook resources.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/top_books?page=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"top_books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "The collection page number"
+								}
+							]
+						},
+						"description": "Retrieves the collection of TopBook resources."
+					},
+					"response": [
+						{
+							"name": "TopBook collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/top_books?page=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"top_books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"hydra:member\": [\n    {\n      \"@context\": \"minim\",\n      \"@id\": \"incididunt dolor\",\n      \"@type\": \"officia anim tempor incididunt eu\",\n      \"id\": -2505774,\n      \"title\": \"Ut ex Duis conse\",\n      \"author\": \"non Lorem\",\n      \"part\": \"id\",\n      \"place\": \"sed laborum\",\n      \"borrowCount\": -35695914\n    },\n    {\n      \"@context\": \"veniam culpa dolore \",\n      \"@id\": \"consequat nisi in\",\n      \"@type\": \"dolor do sit\",\n      \"id\": -68848204,\n      \"title\": \"exercitation minim incididunt\",\n      \"author\": \"ea ut elit aliquip\",\n      \"part\": \"proident non officia\",\n      \"place\": \"est ad laborum adipisi\",\n      \"borrowCount\": 70707087\n    }\n  ],\n  \"hydra:totalItems\": 93403241,\n  \"hydra:view\": {\n    \"@id\": \"string\",\n    \"type\": \"string\",\n    \"hydra:first\": \"string\",\n    \"hydra:last\": \"string\",\n    \"hydra:previous\": \"string\",\n    \"hydra:next\": \"string\"\n  },\n  \"hydra:search\": {\n    \"@type\": \"exercitation sed eiusmod et\",\n    \"hydra:template\": \"ullamco sunt Duis ut\",\n    \"hydra:variableRepresentation\": \"labore do id\",\n    \"hydra:mapping\": [\n      {\n        \"@type\": \"esse ex labore\",\n        \"variable\": \"proident dolore quis\",\n        \"property\": \"nisi dolore do magna\",\n        \"required\": true\n      },\n      {\n        \"@type\": \"nisi\",\n        \"variable\": \"nostrud proident\",\n        \"property\": \"qui proident aliqua\",\n        \"required\": false\n      }\n    ]\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieves a TopBook resource.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/top_books/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"top_books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "eu",
+									"description": "(Required) TopBook identifier"
+								}
+							]
+						},
+						"description": "Retrieves a TopBook resource."
+					},
+					"response": [
+						{
+							"name": "TopBook resource",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/top_books/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"top_books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) TopBook identifier"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/ld+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"@context\": \"exercitation laborum culpa\",\n  \"@id\": \"ex ipsum pariatur aliqua Lorem\",\n  \"@type\": \"reprehenderit proident velit do anim\",\n  \"id\": -1655768,\n  \"title\": \"pariatur\",\n  \"author\": \"elit velit ullamco deserunt cupidatat\",\n  \"part\": \"veniam pariatur sint\",\n  \"place\": \"exercitation\",\n  \"borrowCount\": -49018559\n}"
+						},
+						{
+							"name": "Resource not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/top_books/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"top_books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eu",
+											"description": "(Required) TopBook identifier"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Retrieves the number of books and top books (legacy endpoint).",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/stats",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "Authorization",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stats",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stats"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"books_count\": 997,\n  \"topbooks_count\": 101\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "<API Key>",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
