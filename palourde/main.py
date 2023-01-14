@@ -1,9 +1,9 @@
-import pathlib
 import json
+import pathlib
 
 import dacite
 
-import palourde
+from palourde.classes import Collection
 
 
 def flatten(root: dict, out: list) -> None:
@@ -20,7 +20,7 @@ def flatten(root: dict, out: list) -> None:
             out.append(data)
 
 
-doc = pathlib.Path("demo").joinpath("Twitter API").joinpath("Twitter API v2.postman_collection.json")
+doc = pathlib.Path("../demo").joinpath("Twitter API").joinpath("Twitter API v2.postman_collection.json")
 with open(doc, 'r+') as json_coll:
     decoded = json.load(json_coll)
     items = []
@@ -28,5 +28,5 @@ with open(doc, 'r+') as json_coll:
     # Flatten the requests, ignoring the folder structure
     decoded["item"] = items
 
-collection = dacite.from_dict(data_class=palourde.Collection, data=decoded)
+collection = dacite.from_dict(data_class=Collection, data=decoded)
 collection.to_markdown()
