@@ -114,8 +114,9 @@ Default values:
 id,name,username
 
 
-> Response
+> Responses
 
+*200 Success - Request Tweet fields*
 ```json
 {
     "data": {
@@ -153,6 +154,156 @@ id,name,username
         "possibly_sensitive": false,
         "source": "Twitter Web App",
         "text": "Learn how to create a sentiment score for your Tweets with Microsoft Azure, Python, and Twitter Developer Labs recent search functionality.\nhttps://t.co/IKM3zo6ngu"
+    }
+}
+```
+
+*429 Rate Limit Exceeded*
+```plain
+Rate limit exceeded
+
+```
+
+*200 Success - Deleted Tweet*
+```json
+{
+    "errors": [
+        {
+            "detail": "Could not find tweet with id: [1276230436478386177].",
+            "title": "Not Found Error",
+            "resource_type": "tweet",
+            "parameter": "id",
+            "value": "1276230436478386177",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        }
+    ]
+}
+```
+
+*200 Success - Request Place Fields*
+```json
+{
+    "data": {
+        "geo": {
+            "place_id": "01a9a39529b27f36"
+        },
+        "id": "1136017751028449283",
+        "text": "We’re getting ready to #TapIntoTwitter with our NYC developer community! See you soon @TwitterNYC https://t.co/5rEn5dhsAq"
+    },
+    "includes": {
+        "places": [
+            {
+                "country": "United States",
+                "country_code": "US",
+                "full_name": "Manhattan, NY",
+                "geo": {
+                    "type": "Feature",
+                    "bbox": [
+                        -74.026675,
+                        40.683935,
+                        -73.910408,
+                        40.877483
+                    ],
+                    "properties": {}
+                },
+                "id": "01a9a39529b27f36",
+                "name": "Manhattan",
+                "place_type": "city"
+            }
+        ]
+    }
+}
+```
+
+*200 Success - Request Poll Fields*
+```json
+{
+    "data": {
+        "attachments": {
+            "poll_ids": [
+                "1199786642468413448"
+            ]
+        },
+        "id": "1199786642791452673",
+        "text": "C#"
+    },
+    "includes": {
+        "polls": [
+            {
+                "duration_minutes": 1440,
+                "end_datetime": "2019-11-28T20:26:41.000Z",
+                "id": "1199786642468413448",
+                "options": [
+                    {
+                        "position": 1,
+                        "label": "“C Sharp”",
+                        "votes": 795
+                    },
+                    {
+                        "position": 2,
+                        "label": "“C Hashtag”",
+                        "votes": 156
+                    }
+                ],
+                "voting_status": "closed"
+            }
+        ]
+    }
+}
+```
+
+*200 Success - Default Payload (No additonal fields requested)*
+```json
+{
+    "data": {
+        "id": "20",
+        "text": "just setting up my twttr"
+    }
+}
+```
+
+*200 Success - Request Media Fields*
+```json
+{
+    "data": {
+        "attachments": {
+            "media_keys": [
+                "13_1263145212760805376"
+            ]
+        },
+        "author_id": "783214",
+        "created_at": "2020-05-20T16:31:15.000Z",
+        "entities": {
+            "urls": [
+                {
+                    "start": 154,
+                    "end": 177,
+                    "url": "https://t.co/pV53mvjAVT",
+                    "expanded_url": "https://twitter.com/Twitter/status/1263145271946551300/video/1",
+                    "display_url": "pic.twitter.com/pV53mvjAVT"
+                }
+            ]
+        },
+        "id": "1263145271946551300",
+        "lang": "en",
+        "possibly_sensitive": false,
+        "source": "Sprinklr",
+        "text": "Testing, testing...\n\nA new way to have a convo with exactly who you want. We’re starting with a small % globally, so keep your 👀 out to see it in action. https://t.co/pV53mvjAVT"
+    },
+    "includes": {
+        "media": [
+            {
+                "duration_ms": 46947,
+                "height": 1080,
+                "media_key": "13_1263145212760805376",
+                "preview_image_url": "https://pbs.twimg.com/media/EYeX7akWsAIP1_1.jpg",
+                "public_metrics": {
+                    "view_count": 6891098
+                },
+                "type": "video",
+                "width": 1920
+            }
+        ]
     }
 }
 ```
@@ -236,13 +387,196 @@ Default values:
 id,name,username
 
 
-> Response
+> Responses
 
+*200 Success - Default Payload (No additonal fields requested)*
 ```json
 {
     "data": {
         "id": "20",
         "text": "just setting up my twttr"
+    }
+}
+```
+
+*429 Rate Limit Exceeded*
+```plain
+Rate limit exceeded
+
+```
+
+*200 Success - Request Place Fields*
+```json
+{
+    "data": {
+        "geo": {
+            "place_id": "01a9a39529b27f36"
+        },
+        "id": "1136017751028449283",
+        "text": "We’re getting ready to #TapIntoTwitter with our NYC developer community! See you soon @TwitterNYC https://t.co/5rEn5dhsAq"
+    },
+    "includes": {
+        "places": [
+            {
+                "country": "United States",
+                "country_code": "US",
+                "full_name": "Manhattan, NY",
+                "geo": {
+                    "type": "Feature",
+                    "bbox": [
+                        -74.026675,
+                        40.683935,
+                        -73.910408,
+                        40.877483
+                    ],
+                    "properties": {}
+                },
+                "id": "01a9a39529b27f36",
+                "name": "Manhattan",
+                "place_type": "city"
+            }
+        ]
+    }
+}
+```
+
+*200 Success - Request Poll Fields*
+```json
+{
+    "data": {
+        "attachments": {
+            "poll_ids": [
+                "1199786642468413448"
+            ]
+        },
+        "id": "1199786642791452673",
+        "text": "C#"
+    },
+    "includes": {
+        "polls": [
+            {
+                "duration_minutes": 1440,
+                "end_datetime": "2019-11-28T20:26:41.000Z",
+                "id": "1199786642468413448",
+                "options": [
+                    {
+                        "position": 1,
+                        "label": "“C Sharp”",
+                        "votes": 795
+                    },
+                    {
+                        "position": 2,
+                        "label": "“C Hashtag”",
+                        "votes": 156
+                    }
+                ],
+                "voting_status": "closed"
+            }
+        ]
+    }
+}
+```
+
+*200 Success - Deleted Tweet*
+```json
+{
+    "errors": [
+        {
+            "detail": "Could not find tweet with id: [1276230436478386177].",
+            "title": "Not Found Error",
+            "resource_type": "tweet",
+            "parameter": "id",
+            "value": "1276230436478386177",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        }
+    ]
+}
+```
+
+*200 Success - Request Media Fields*
+```json
+{
+    "data": {
+        "attachments": {
+            "media_keys": [
+                "13_1263145212760805376"
+            ]
+        },
+        "author_id": "783214",
+        "created_at": "2020-05-20T16:31:15.000Z",
+        "entities": {
+            "urls": [
+                {
+                    "start": 154,
+                    "end": 177,
+                    "url": "https://t.co/pV53mvjAVT",
+                    "expanded_url": "https://twitter.com/Twitter/status/1263145271946551300/video/1",
+                    "display_url": "pic.twitter.com/pV53mvjAVT"
+                }
+            ]
+        },
+        "id": "1263145271946551300",
+        "lang": "en",
+        "possibly_sensitive": false,
+        "source": "Sprinklr",
+        "text": "Testing, testing...\n\nA new way to have a convo with exactly who you want. We’re starting with a small % globally, so keep your 👀 out to see it in action. https://t.co/pV53mvjAVT"
+    },
+    "includes": {
+        "media": [
+            {
+                "duration_ms": 46947,
+                "height": 1080,
+                "media_key": "13_1263145212760805376",
+                "preview_image_url": "https://pbs.twimg.com/media/EYeX7akWsAIP1_1.jpg",
+                "public_metrics": {
+                    "view_count": 6891098
+                },
+                "type": "video",
+                "width": 1920
+            }
+        ]
+    }
+}
+```
+
+*200 Success - Request Tweet fields*
+```json
+{
+    "data": {
+        "author_id": "2244994945",
+        "created_at": "2020-06-24T16:28:14.000Z",
+        "entities": {
+            "urls": [
+                {
+                    "start": 140,
+                    "end": 163,
+                    "url": "https://t.co/IKM3zo6ngu",
+                    "expanded_url": "https://blog.twitter.com/developer/en_us/topics/tips/2020/how-to-analyze-the-sentiment-of-your-own-tweets.html",
+                    "display_url": "blog.twitter.com/developer/en_u…",
+                    "images": [
+                        {
+                            "url": "https://pbs.twimg.com/news_img/1275828115110060033/WIbBrSld?format=jpg&name=orig",
+                            "width": 1600,
+                            "height": 600
+                        },
+                        {
+                            "url": "https://pbs.twimg.com/news_img/1275828115110060033/WIbBrSld?format=jpg&name=150x150",
+                            "width": 150,
+                            "height": 150
+                        }
+                    ],
+                    "status": 200,
+                    "title": "How to analyze the sentiment of your own Tweets",
+                    "description": "This post helps developers try out sentiment analysis by analyzing their own past Tweets.",
+                    "unwound_url": "https://blog.twitter.com/developer/en_us/topics/tips/2020/how-to-analyze-the-sentiment-of-your-own-tweets.html"
+                }
+            ]
+        },
+        "id": "1275828087666679809",
+        "lang": "en",
+        "possibly_sensitive": false,
+        "source": "Twitter Web App",
+        "text": "Learn how to create a sentiment score for your Tweets with Microsoft Azure, Python, and Twitter Developer Labs recent search functionality.\nhttps://t.co/IKM3zo6ngu"
     }
 }
 ```
@@ -330,8 +664,9 @@ Default values:
 id,name,username
 
 
-> Response
+> Responses
 
+*200 Success - Multiple Tweets with Tweet Fields*
 ```json
 {
     "data": [
@@ -1870,6 +2205,303 @@ id,name,username
 }
 ```
 
+*200 Success - Multiple Tweets Default Payload*
+```json
+{
+    "data": [
+        {
+            "id": "20",
+            "text": "just setting up my twttr"
+        },
+        {
+            "id": "1276501058211262464",
+            "text": "Add new voices and conversations to your Timeline using Lists.\n\nYou can now:\n👉 make a List\n👉 discover new Lists\n👉 follow a List\n👉 Tweet a List\nhttps://t.co/BabQnqOX4r https://t.co/ATG2vi3Dxf"
+        },
+        {
+            "id": "1275244210439028736",
+            "text": "Need to follow what’s happening in real time? Change your timeline to show latest Tweets instead of top Tweets. https://t.co/dpI2lRmj9F"
+        },
+        {
+            "id": "1274087695145332736",
+            "text": "📍 Oakland\n🗣️ @YoliZama https://t.co/lcGDLzAJIn"
+        },
+        {
+            "id": "1274087694105075714",
+            "text": "📍 New York City\n🗣️ @Afrikkana95 https://t.co/tEfs27p7xu"
+        },
+        {
+            "id": "1274087692003770368",
+            "text": "📍 Chicago\n🗣️ @JoshuaKissi https://t.co/ZeD3XvJUbX"
+        },
+        {
+            "id": "1274087690758090752",
+            "text": "📍 Philadelphia\n🗣️ @Imani_Barbarin https://t.co/ZRDUipsu38"
+        },
+        {
+            "id": "1274087689487134720",
+            "text": "📍 Louisville\n🗣️ @itsbarrrrett https://t.co/Vk4vDeuAqb"
+        },
+        {
+            "id": "1274087688321200128",
+            "text": "📍 Atlanta\n🗣️ @BerniceKing https://t.co/83upyVnwIS"
+        },
+        {
+            "id": "1274087687469715457",
+            "text": "📍 Minneapolis\n🗣️ @FredTJoseph https://t.co/lNTOkyguG1"
+        },
+        {
+            "id": "1274034244700930049",
+            "text": "RT @Blackbirds: Juneteenth is a celebration. It’s about our freedom. And within that freedom is our joy.\n\n#BlackJoy is a form of resistance…"
+        },
+        {
+            "id": "1274025734990897152",
+            "text": "RT @TwitterTogether: Juneteenth represents freedom, emancipation, and liberation.\n\nTo celebrate #Juneteenth is to know Black history. It's…"
+        },
+        {
+            "id": "1276440670631124993",
+            "text": "RT @TwitterKorea: Come and enjoy #TwitterBlueroom LIVE Q&amp;A with @yubinofficial and @WG_Lim \n#AskYubinHyelim \n\nhttps://t.co/GFh8TWNHK2"
+        },
+        {
+            "id": "1276426779796750338",
+            "text": "RT @TwitterKorea: #StayHome and Enjoy #MusicBank LIVE 6/26 5PM KST @KBSWorldTV #SafeWithTwitter\nhttps://t.co/GNqEFNhTaC"
+        },
+        {
+            "id": "1276420300641406976",
+            "text": "https://t.co/vwWwOBgn3M"
+        },
+        {
+            "id": "1276346768490328064",
+            "text": "https://t.co/dTn7FwgQFg"
+        },
+        {
+            "id": "1276301871515222017",
+            "text": "https://t.co/FWAdDJaWFu"
+        },
+        {
+            "id": "1276175944105865216",
+            "text": "https://t.co/TUvMWuMn9y"
+        },
+        {
+            "id": "1276172826764926976",
+            "text": "https://t.co/YCbDKj3Tej"
+        },
+        {
+            "id": "1276172649299763200",
+            "text": "https://t.co/VsaGUixN0t"
+        },
+        {
+            "id": "1276171938449121280",
+            "text": "https://t.co/rENggwsoIZ"
+        },
+        {
+            "id": "1276171724111765504",
+            "text": "https://t.co/5nmkyBSWuL"
+        },
+        {
+            "id": "1276171627386957824",
+            "text": "https://t.co/CUJAivshzU"
+        },
+        {
+            "id": "1276170528387035136",
+            "text": "RT @TwitterNews: Go behind the byline with @KaraSwisher this #Pride month to hear about her storied journalism career, tri-coastal lifestyl…"
+        },
+        {
+            "id": "1276168667517071361",
+            "text": "https://t.co/ibZN9aauZT"
+        },
+        {
+            "id": "1276048583557394432",
+            "text": "https://t.co/mCv7iZsUA8"
+        },
+        {
+            "id": "1276035881992740864",
+            "text": "https://t.co/T9pwAL4ezo"
+        },
+        {
+            "id": "1276009123876749312",
+            "text": "RT @TwitterMENA: شاهدوا حلقة جديدة من برنامح  #OnStream https://t.co/THBICnDwwY"
+        },
+        {
+            "id": "1276009123620851712",
+            "text": "RT @TwitterMENA: https://t.co/Z12uictjZD"
+        },
+        {
+            "id": "1275981562811527170",
+            "text": "https://t.co/hG0ovCwgMS"
+        },
+        {
+            "id": "1275930077927141376",
+            "text": "https://t.co/5ZxW1tDKVR"
+        },
+        {
+            "id": "1275832645574733824",
+            "text": "https://t.co/Bx8oI3Vawr"
+        },
+        {
+            "id": "1275817073755611136",
+            "text": "https://t.co/vTjlgN24JS"
+        },
+        {
+            "id": "1275816972459012101",
+            "text": "https://t.co/ZwTlhydfWN"
+        },
+        {
+            "id": "1275806248525389824",
+            "text": "https://t.co/b6phJzClfR"
+        },
+        {
+            "id": "1275806002307231744",
+            "text": "https://t.co/But99uyYHV"
+        },
+        {
+            "id": "1275805935659700225",
+            "text": "https://t.co/SV3IZDoipf"
+        },
+        {
+            "id": "1275805533690138630",
+            "text": "https://t.co/3k0J6vJVyL"
+        },
+        {
+            "id": "1275628222818877440",
+            "text": "https://t.co/P0Bg8JTcmZ"
+        },
+        {
+            "id": "1275506262327918599",
+            "text": "https://t.co/eIUT3T5s2U"
+        },
+        {
+            "id": "1275490500108259329",
+            "text": "https://t.co/TCzAnu83Tt"
+        },
+        {
+            "id": "1275451488102256645",
+            "text": "https://t.co/wqPmepT4PU"
+        },
+        {
+            "id": "1275451397459243009",
+            "text": "https://t.co/VaWXJ1jJmd"
+        },
+        {
+            "id": "1275332886015520768",
+            "text": "https://t.co/0jcsarw5OI"
+        },
+        {
+            "id": "1275327412616617984",
+            "text": "RT @TwitterMENA: اليكم حلقة جديدة من  #تأقلم_وتعلم https://t.co/0f4F0C9pAS"
+        },
+        {
+            "id": "1275128589244157958",
+            "text": "https://t.co/NbAiUfUpic"
+        },
+        {
+            "id": "1275089113742336000",
+            "text": "https://t.co/oigT4Ux4GP"
+        },
+        {
+            "id": "1276312753393680384",
+            "text": "Inspiring conversation with @d_lux_brand and @sfciti on combatting racial inequality.\n\n“In order for a company to be successful at inclusion and diversity, the work has to be embedded in all aspects. In pay equity, in procurement, in supplier diversity.”\n\n#ScalingSocialImpact https://t.co/rFWhUIiryq"
+        },
+        {
+            "id": "1275556031876087808",
+            "text": "Hear from our very own @d_lux_brand on fighting racism and promoting equity. Register 👇 https://t.co/OlqqqIZzVJ"
+        },
+        {
+            "id": "1274094606498459651",
+            "text": "RT @codetenderloin: Three graduates of our S.O.A.R.(SURMOUNT OBSTACLES, ACHIEVE RESULTS) Sales Program. #BlackJoy Giving opportunities to f…"
+        },
+        {
+            "id": "1274018381662793729",
+            "text": "RT @Blackbirds: Juneteenth is a celebration. It’s about our freedom. And within that freedom is our joy.\n\n#BlackJoy is a form of resistance…"
+        },
+        {
+            "id": "1274013886178418688",
+            "text": "RT @TwitterTogether: Juneteenth represents freedom, emancipation, and liberation.\n\nTo celebrate #Juneteenth is to know Black history. It's…"
+        },
+        {
+            "id": "1276163304541618180",
+            "text": "This week is #DeafblindAwarenessWeek.\n\nIt’s important to recognize the challenges this community faces, even more so during this time.\n\nConnect with, learn from, and be inspired by the deaf-blind community. https://t.co/DPvOvpFKsh"
+        },
+        {
+            "id": "1275875669600202753",
+            "text": "RT @TwitterOpen: What's one thing you'd like to tell the queer community? #AlwaysProud https://t.co/jmRg5fVgVf"
+        },
+        {
+            "id": "1275856634837897223",
+            "text": "RT @TwitterSupport: Video autoplay can be turned off in three steps:\n\n1️⃣ Select \"Settings and privacy\" from the main menu\n2️⃣ Tap \"Data us…"
+        },
+        {
+            "id": "1275561823471718401",
+            "text": "RT @TwitterForGood: Hear from our very own @d_lux_brand on fighting racism and promoting equity. Register 👇 https://t.co/OlqqqIZzVJ"
+        },
+        {
+            "id": "1275518378271141890",
+            "text": "RT @Policy: During #COVID19, gender-based violence has risen.\n\nWith @unwomenasia &amp; other critical partners, we've expanded our #ThereIsHelp…"
+        },
+        {
+            "id": "1275473478779469825",
+            "text": "RT @Policy: Statement on US high-skilled immigration proclamation: \n\n\"This proclamation undermines America’s greatest economic asset: its d…"
+        }
+    ],
+    "errors": [
+        {
+            "detail": "Could not find tweet with ids: [1276230436478386177].",
+            "title": "Not Found Error",
+            "resource_type": "tweet",
+            "parameter": "ids",
+            "value": "1276230436478386177",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        }
+    ]
+}
+```
+
+*429 Rate Limit Exceeded - Multiple Tweets*
+```plain
+Rate limit exceeded
+
+```
+
+*200 Success - 1 Deleted, 1 Valid Tweet*
+```json
+{
+    "data": [
+        {
+            "id": "20",
+            "text": "just setting up my twttr"
+        }
+    ],
+    "errors": [
+        {
+            "detail": "Could not find tweet with ids: [1276230436478386177].",
+            "title": "Not Found Error",
+            "resource_type": "tweet",
+            "parameter": "ids",
+            "value": "1276230436478386177",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        }
+    ]
+}
+```
+
+*400 Bad Request - Too Many Tweets*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "ids": [
+                    "20,1276230436478386177,1276501058211262464,1275244210439028736,1274087695145332736,1274087694105075714,1274087692003770368,1274087690758090752,1274087689487134720,1274087688321200128,1274087687469715457,1274034244700930049,1274025734990897152,1276440670631124993,1276426779796750338,1276420300641406976,1276346768490328064,1276301871515222017,1276175944105865216,1276172826764926976,1276172649299763200,1276171938449121280,1276171724111765504,1276171627386957824,1276170528387035136,1276168667517071361,1276048583557394432,1276035881992740864,1276009123876749312,1276009123620851712,1275981562811527170,1275930077927141376,1275832645574733824,1275817073755611136,1275816972459012101,1275806248525389824,1275806002307231744,1275805935659700225,1275805533690138630,1275628222818877440,1275506262327918599,1275490500108259329,1275451488102256645,1275451397459243009,1275332886015520768,1275327412616617984,1275128589244157958,1275089113742336000,1276312753393680384,1275556031876087808,1274094606498459651,1274018381662793729,1274013886178418688,1276163304541618180,1275875669600202753,1275856634837897223,1275561823471718401,1275518378271141890,1275473478779469825,20,1276230436478386177,1276501058211262464,1275244210439028736,1274087695145332736,1274087694105075714,1274087692003770368,1274087690758090752,1274087689487134720,1274087688321200128,1274087687469715457,1274034244700930049,1274025734990897152,1276440670631124993,1276426779796750338,1276420300641406976,1276346768490328064,1276301871515222017,1276175944105865216,1276172826764926976,1276172649299763200,1276171938449121280,1276171724111765504,1276171627386957824,1276170528387035136,1276168667517071361,1276048583557394432,1276035881992740864,1276009123876749312,1276009123620851712,1275981562811527170,1275930077927141376,1275832645574733824,1275817073755611136,1275816972459012101,1275806248525389824,1275806002307231744,1275805935659700225,1275805533690138630,1275628222818877440,1275506262327918599,1275490500108259329,1275451488102256645,1275451397459243009,1275332886015520768,1275327412616617984,1275128589244157958,1275089113742336000,1276312753393680384,1275556031876087808,1274094606498459651,1274018381662793729,1274013886178418688,1276163304541618180,1275875669600202753,1275856634837897223,1275561823471718401,1275518378271141890,1275473478779469825"
+                ]
+            },
+            "message": "size [118] is not between 1 and 100"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
 <br>
 
 ### User by ID
@@ -1916,8 +2548,9 @@ OAuth1.0a User Context authorization required if any of the following fields are
 non_public_metrics,organic_metrics,promoted_metrics
 
 
-> Response
+> Responses
 
+*200 Success - User Not Found*
 ```json
 {
     "errors": [
@@ -1930,6 +2563,127 @@ non_public_metrics,organic_metrics,promoted_metrics
             "type": "https://api.twitter.com/2/problems/resource-not-found"
         }
     ]
+}
+```
+
+*429 Rate Limit Exceeded*
+```plain
+Rate limit exceeded
+
+```
+
+*200 Success - Default Payload*
+```json
+{
+    "data": {
+        "id": "2244994945",
+        "name": "Twitter Dev",
+        "username": "TwitterDev"
+    }
+}
+```
+
+*User by ID*
+```json
+{
+    "data": {
+        "created_at": "2020-06-17T19:10:19.000Z",
+        "description": "",
+        "id": "1273332037970202626",
+        "name": "Clou",
+        "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "protected": true,
+        "url": "",
+        "username": "Clou18829992",
+        "verified": false
+    }
+}
+```
+
+*200 Success - Request Fields for User and Expanded Pinned Tweet*
+```json
+{
+    "data": {
+        "created_at": "2013-12-14T04:35:55.000Z",
+        "description": "The voice of Twitter's #DevRel team, and your official source for updates, news, & events about Twitter's API. \n\n#BlackLivesMatter",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "start": 0,
+                        "end": 23,
+                        "url": "https://t.co/3ZX3TNiZCY",
+                        "expanded_url": "https://developer.twitter.com/en/community",
+                        "display_url": "developer.twitter.com/en/community"
+                    }
+                ]
+            },
+            "description": {
+                "hashtags": [
+                    {
+                        "start": 23,
+                        "end": 30,
+                        "tag": "DevRel"
+                    },
+                    {
+                        "start": 113,
+                        "end": 130,
+                        "tag": "BlackLivesMatter"
+                    }
+                ]
+            }
+        },
+        "id": "2244994945",
+        "location": "127.0.0.1",
+        "name": "Twitter Dev",
+        "pinned_tweet_id": "1255542774432063488",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1267175364003901441/tBZNFAgA_normal.jpg",
+        "protected": false,
+        "url": "https://t.co/3ZX3TNiZCY",
+        "username": "TwitterDev",
+        "verified": true
+    },
+    "includes": {
+        "tweets": [
+            {
+                "author_id": "2244994945",
+                "conversation_id": "1255542774432063488",
+                "created_at": "2020-04-29T17:01:38.000Z",
+                "entities": {
+                    "urls": [
+                        {
+                            "start": 264,
+                            "end": 287,
+                            "url": "https://t.co/BPqMcQzhId",
+                            "expanded_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html",
+                            "display_url": "blog.twitter.com/developer/en_u…",
+                            "images": [
+                                {
+                                    "url": "https://pbs.twimg.com/news_img/1274730688919613440/SEsqlE16?format=jpg&name=orig",
+                                    "width": 1600,
+                                    "height": 600
+                                },
+                                {
+                                    "url": "https://pbs.twimg.com/news_img/1274730688919613440/SEsqlE16?format=jpg&name=150x150",
+                                    "width": 150,
+                                    "height": 150
+                                }
+                            ],
+                            "status": 200,
+                            "title": "Enabling study of the public conversation in a time of crisis",
+                            "description": "To further support our company’s ongoing efforts, we want to enable developers and researchers to study the public conversation on COVID-19 in real-time.",
+                            "unwound_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html"
+                        }
+                    ]
+                },
+                "id": "1255542774432063488",
+                "lang": "en",
+                "possibly_sensitive": false,
+                "source": "Twitter Web App",
+                "text": "During these unprecedented times, what’s happening on Twitter can help the world better understand &amp; respond to the pandemic. \n\nWe're launching a free COVID-19 stream endpoint so qualified devs &amp; researchers can study the public conversation in real-time. https://t.co/BPqMcQzhId"
+            }
+        ]
+    }
 }
 ```
 
@@ -1983,8 +2737,9 @@ OAuth1.0a User Context authorization required if any of the following fields are
 non_public_metrics,organic_metrics,promoted_metrics
 
 
-> Response
+> Responses
 
+*200 Success - Request User and Expanded Pinned Tweet Fields*
 ```json
 {
     "data": [
@@ -6866,6 +7621,1856 @@ non_public_metrics,organic_metrics,promoted_metrics
 }
 ```
 
+*200 Success - Default Payload*
+```json
+{
+    "data": [
+        {
+            "id": "783214",
+            "name": "Twitter",
+            "username": "Twitter"
+        },
+        {
+            "id": "2244994945",
+            "name": "Twitter Dev",
+            "username": "TwitterDev"
+        },
+        {
+            "id": "6253282",
+            "name": "Twitter API",
+            "username": "TwitterAPI"
+        },
+        {
+            "id": "495309159",
+            "name": "Twitter New York City",
+            "username": "TwitterNYC"
+        },
+        {
+            "id": "172020392",
+            "name": "Twitter San Francisco",
+            "username": "TwitterSF"
+        },
+        {
+            "id": "95731075",
+            "name": "Twitter Safety",
+            "username": "TwitterSafety"
+        },
+        {
+            "id": "2548985366",
+            "name": "Twitter Blackbirds",
+            "username": "Blackbirds"
+        },
+        {
+            "id": "277761722",
+            "name": "Twitter UK",
+            "username": "TwitterUK"
+        },
+        {
+            "id": "17874544",
+            "name": "Twitter Support",
+            "username": "TwitterSupport"
+        },
+        {
+            "id": "300392950",
+            "name": "Twitter Sports",
+            "username": "TwitterSports"
+        },
+        {
+            "id": "87532773",
+            "name": "Twitter Design",
+            "username": "TwitterDesign"
+        },
+        {
+            "id": "372575989",
+            "name": "Twitter News",
+            "username": "TwitterNews"
+        },
+        {
+            "id": "3260518932",
+            "name": "Twitter Moments",
+            "username": "TwitterMoments"
+        },
+        {
+            "id": "121291606",
+            "name": "Twitter Business",
+            "username": "TwitterBusiness"
+        },
+        {
+            "id": "158079127",
+            "name": "Twitter Nonprofits",
+            "username": "Nonprofits"
+        },
+        {
+            "id": "3282859598",
+            "name": "Twitter Video",
+            "username": "TwitterVideo"
+        },
+        {
+            "id": "103770785",
+            "name": "Twitter India",
+            "username": "TwitterIndia"
+        },
+        {
+            "id": "586198217",
+            "name": "Twitter TV",
+            "username": "TwitterTV"
+        },
+        {
+            "id": "216531294",
+            "name": "Twitter Korea",
+            "username": "TwitterKorea"
+        },
+        {
+            "id": "1526228120",
+            "name": "Twitter Data",
+            "username": "TwitterData"
+        },
+        {
+            "id": "222953824",
+            "name": "TwitterGov",
+            "username": "TwitterGov"
+        },
+        {
+            "id": "1603818258",
+            "name": "Twitter Investor Relations",
+            "username": "TwitterIR"
+        },
+        {
+            "id": "2548979088",
+            "name": "Twitter Alas",
+            "username": "TwitterAlas"
+        },
+        {
+            "id": "2244983430",
+            "name": "Twitter Singapore",
+            "username": "TwitterSG"
+        },
+        {
+            "id": "1347713256",
+            "name": "Twitter Canada",
+            "username": "TwitterCanada"
+        },
+        {
+            "id": "376825877",
+            "name": "Twitter Open Source",
+            "username": "TwitterOSS"
+        },
+        {
+            "id": "6844292",
+            "name": "Twitter Engineering",
+            "username": "TwitterEng"
+        },
+        {
+            "id": "738118115595165697",
+            "name": "Twitter Stripes",
+            "username": "TwitterStripes"
+        },
+        {
+            "id": "738118487122419712",
+            "name": "Twitter Asians",
+            "username": "TwitterAsians"
+        },
+        {
+            "id": "218984871",
+            "name": "Twitter Public Policy",
+            "username": "Policy"
+        },
+        {
+            "id": "2550997820",
+            "name": "Twitter Indonesia",
+            "username": "TwitterID"
+        },
+        {
+            "id": "1159458169",
+            "name": "Twitter 政治",
+            "username": "TwitterGovJP"
+        },
+        {
+            "id": "2296297326",
+            "name": "Twitter Moments UK & Ireland",
+            "username": "UKMoments"
+        },
+        {
+            "id": "234489024",
+            "name": "Twitter Comms",
+            "username": "TwitterComms"
+        },
+        {
+            "id": "3873936134",
+            "name": "Twitter Gaming @ home",
+            "username": "TwitterGaming"
+        },
+        {
+            "id": "2228891959",
+            "name": "Twitter MENA",
+            "username": "TwitterMENA"
+        },
+        {
+            "id": "791978718",
+            "name": "Twitter Official Partner",
+            "username": "OfficialPartner"
+        },
+        {
+            "id": "427475002",
+            "name": "Twitter Books",
+            "username": "TwitterBooks"
+        },
+        {
+            "id": "1194267639100723200",
+            "name": "Twitter Retweets",
+            "username": "TwitterRetweets"
+        },
+        {
+            "id": "1168976680867762177",
+            "name": "Twitter Able",
+            "username": "TwitterAble"
+        },
+        {
+            "id": "905409822",
+            "name": "Twitter SRE",
+            "username": "TwitterSRE"
+        },
+        {
+            "id": "738115375477362688",
+            "name": "Twitter Moments India",
+            "username": "MomentsIndia"
+        },
+        {
+            "id": "88723966",
+            "name": "Twitter Seguro",
+            "username": "TwitterSeguro"
+        },
+        {
+            "id": "1049385226424786944",
+            "name": "Twitter Miami",
+            "username": "TwitterMiami"
+        },
+        {
+            "id": "284201599",
+            "name": "Twitter Terns",
+            "username": "terns"
+        },
+        {
+            "id": "1705676064",
+            "name": "Twitter公式採用アカウント",
+            "username": "JoinTheFlockJP"
+        },
+        {
+            "id": "2861317614",
+            "name": "Twitter ファッション",
+            "username": "TwitterFashnJP"
+        },
+        {
+            "id": "3873965293",
+            "name": "Twitter Moments en Español",
+            "username": "MomentsES"
+        },
+        {
+            "id": "1244731491088809984",
+            "name": "Twitter Thailand",
+            "username": "TwitterThailand"
+        },
+        {
+            "id": "4172587277",
+            "name": "Twitter Moments Brasil",
+            "username": "MomentsBrasil"
+        },
+        {
+            "id": "717465714357972992",
+            "name": "Twitter Video India",
+            "username": "TwitterVideoIN"
+        },
+        {
+            "id": "862314223",
+            "name": "Twitter ミュージック",
+            "username": "TwitterMusicJP"
+        },
+        {
+            "id": "2551000568",
+            "name": "Twitter Mktg Latam",
+            "username": "TwitterMktLatam"
+        },
+        {
+            "id": "2548977510",
+            "name": "Twitter Careers Brasil",
+            "username": "JoinTheFlockBR"
+        },
+        {
+            "id": "1159274324",
+            "name": "Twitter スポーツ",
+            "username": "TwitterSportsJP"
+        }
+    ]
+}
+```
+
+*200 Success - Request User Fields*
+```json
+{
+    "data": [
+        {
+            "created_at": "2007-02-20T14:35:54.000Z",
+            "description": "#BlackTransLivesMatter\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/TAXQpspyHn",
+                            "expanded_url": "https://about.twitter.com/",
+                            "display_url": "about.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 22,
+                            "tag": "BlackTransLivesMatter"
+                        },
+                        {
+                            "start": 23,
+                            "end": 40,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "783214",
+            "location": "Everywhere",
+            "name": "Twitter",
+            "pinned_tweet_id": "1274087687469715457",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270500941498912768/W-80pLvu_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/TAXQpspyHn",
+            "username": "Twitter",
+            "verified": true
+        },
+        {
+            "created_at": "2013-12-14T04:35:55.000Z",
+            "description": "The voice of Twitter's #DevRel team, and your official source for updates, news, & events about Twitter's API. \n\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/3ZX3TNiZCY",
+                            "expanded_url": "https://developer.twitter.com/en/community",
+                            "display_url": "developer.twitter.com/en/community"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 23,
+                            "end": 30,
+                            "tag": "DevRel"
+                        },
+                        {
+                            "start": 113,
+                            "end": 130,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "2244994945",
+            "location": "127.0.0.1",
+            "name": "Twitter Dev",
+            "pinned_tweet_id": "1255542774432063488",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1267175364003901441/tBZNFAgA_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/3ZX3TNiZCY",
+            "username": "TwitterDev",
+            "verified": true
+        },
+        {
+            "created_at": "2007-05-23T06:01:13.000Z",
+            "description": "The Real Twitter API. Tweets about API changes, service issues and our Developer Platform. Don't get an answer? It's on my website.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/8IkCzCDr19",
+                            "expanded_url": "https://developer.twitter.com",
+                            "display_url": "developer.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "6253282",
+            "location": "San Francisco, CA",
+            "name": "Twitter API",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/8IkCzCDr19",
+            "username": "TwitterAPI",
+            "verified": true
+        },
+        {
+            "created_at": "2012-02-17T20:40:28.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/UFN8PpMrxw",
+                            "expanded_url": "https://careers.twitter.com/content/careers-twitter/en/jobs.html#location=careers-twitter%3Alocation",
+                            "display_url": "careers.twitter.com/content/career…"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "495309159",
+            "location": "New York, NY",
+            "name": "Twitter New York City",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1016781101011034115/p0Ie-_Dr_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/UFN8PpMrxw",
+            "username": "TwitterNYC",
+            "verified": true
+        },
+        {
+            "created_at": "2010-07-28T18:40:01.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/MQRffLoRTw",
+                            "expanded_url": "https://careers.twitter.com/",
+                            "display_url": "careers.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "172020392",
+            "location": "San Francisco, CA",
+            "name": "Twitter San Francisco",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875159529008226305/7jXeHhZC_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/MQRffLoRTw",
+            "username": "TwitterSF",
+            "verified": true
+        },
+        {
+            "created_at": "2009-12-09T21:00:57.000Z",
+            "description": "Tweeting the latest safety tools, resources, and updates from @Twitter. For support, visit https://t.co/heEvRrCFXn",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/heEvRrCFXn",
+                            "expanded_url": "https://help.twitter.com",
+                            "display_url": "help.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": [
+                        {
+                            "start": 91,
+                            "end": 114,
+                            "url": "https://t.co/heEvRrCFXn",
+                            "expanded_url": "https://help.twitter.com",
+                            "display_url": "help.twitter.com"
+                        }
+                    ],
+                    "mentions": [
+                        {
+                            "start": 62,
+                            "end": 70,
+                            "username": "Twitter"
+                        }
+                    ]
+                }
+            },
+            "id": "95731075",
+            "location": "Twitter HQ",
+            "name": "Twitter Safety",
+            "pinned_tweet_id": "1271186240323432452",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875170358218735617/qYyASCpq_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/heEvRrCFXn",
+            "username": "TwitterSafety",
+            "verified": true
+        },
+        {
+            "created_at": "2014-06-06T01:19:20.000Z",
+            "description": "#BlackLivesMatter   Header Art by @itsayybee",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/EoaAx7ae6x",
+                            "expanded_url": "https://about.twitter.com/careers",
+                            "display_url": "about.twitter.com/careers"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ],
+                    "mentions": [
+                        {
+                            "start": 34,
+                            "end": 44,
+                            "username": "itsayybee"
+                        }
+                    ]
+                }
+            },
+            "id": "2548985366",
+            "location": "#JoinTheFlock",
+            "name": "Twitter Blackbirds",
+            "pinned_tweet_id": "1274014870707437570",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1013002743278170113/VWJApXAh_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/EoaAx7ae6x",
+            "username": "Blackbirds",
+            "verified": true
+        },
+        {
+            "created_at": "2011-04-06T00:11:41.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/990q7Opv1s",
+                            "expanded_url": "https://www.twitter.com",
+                            "display_url": "twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "277761722",
+            "name": "Twitter UK",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270621519740313600/lZTxsbZt_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/990q7Opv1s",
+            "username": "TwitterUK",
+            "verified": true
+        },
+        {
+            "created_at": "2008-12-04T18:51:57.000Z",
+            "description": "#BlackLivesMatter #AlwaysProud\nHere to help. 🖤",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/heEvRrl4yN",
+                            "expanded_url": "https://help.twitter.com",
+                            "display_url": "help.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 30,
+                            "tag": "AlwaysProud"
+                        }
+                    ]
+                }
+            },
+            "id": "17874544",
+            "location": "Twitter HQ",
+            "name": "Twitter Support",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1266884366279471105/OTps6MBS_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/heEvRrl4yN",
+            "username": "TwitterSupport",
+            "verified": true
+        },
+        {
+            "created_at": "2011-05-17T17:54:29.000Z",
+            "description": "We ride with Bubba.",
+            "id": "300392950",
+            "name": "Twitter Sports",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1275163449937387520/wEcMEvmG_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterSports",
+            "verified": true
+        },
+        {
+            "created_at": "2009-11-04T21:06:16.000Z",
+            "description": "The voice of Twitter’s product design team.",
+            "id": "87532773",
+            "location": "SF, NYC, BDR, LON, SEA, JP, DC",
+            "name": "Twitter Design",
+            "pinned_tweet_id": "1277664599400042496",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/453289910363906048/mybOhh4Z_normal.jpeg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterDesign",
+            "verified": true
+        },
+        {
+            "created_at": "2011-09-13T01:06:02.000Z",
+            "description": "Spotlighting best practices and innovative uses of Twitter by journalists and newsrooms.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/ZJ2tqfNy3t",
+                            "expanded_url": "https://media.twitter.com/news",
+                            "display_url": "media.twitter.com/news"
+                        }
+                    ]
+                }
+            },
+            "id": "372575989",
+            "location": "Newsrooms everywhere",
+            "name": "Twitter News",
+            "pinned_tweet_id": "1276168522134102017",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875126165597372416/NXVpRuG2_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/ZJ2tqfNy3t",
+            "username": "TwitterNews",
+            "verified": true
+        },
+        {
+            "created_at": "2015-06-30T01:06:59.000Z",
+            "description": "The best of what’s happening on Twitter in an instant.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/nYOx6qThjk",
+                            "expanded_url": "https://about.twitter.com/company/moments-guidelines",
+                            "display_url": "about.twitter.com/company/moment…"
+                        }
+                    ]
+                }
+            },
+            "id": "3260518932",
+            "location": "New York, USA",
+            "name": "Twitter Moments",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/651463624330907648/OzaAcuSR_normal.png",
+            "protected": false,
+            "url": "https://t.co/nYOx6qThjk",
+            "username": "TwitterMoments",
+            "verified": true
+        },
+        {
+            "created_at": "2010-03-09T01:53:22.000Z",
+            "description": "Get better at Twitter. We're your resource for how to find your corner of Twitter and grow your business.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/5kMjmqmojX",
+                            "expanded_url": "https://business.twitter.com/",
+                            "display_url": "business.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "121291606",
+            "location": "San Francisco, CA",
+            "name": "Twitter Business",
+            "pinned_tweet_id": "1245486325643403264",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/941415294794317824/gaj36XL5_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/5kMjmqmojX",
+            "username": "TwitterBusiness",
+            "verified": true
+        },
+        {
+            "created_at": "2010-06-21T18:34:36.000Z",
+            "description": "Highlighting great uses of @Twitter in the foundation & non-profit communities. For press inquiries, please contact press@twitter.com.",
+            "entities": {
+                "description": {
+                    "mentions": [
+                        {
+                            "start": 27,
+                            "end": 35,
+                            "username": "Twitter"
+                        }
+                    ]
+                }
+            },
+            "id": "158079127",
+            "location": "Twitter",
+            "name": "Twitter Nonprofits",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875159126459924481/FpgRIUJr_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "Nonprofits",
+            "verified": true
+        },
+        {
+            "created_at": "2015-07-18T00:54:11.000Z",
+            "description": "horizontal over vertical",
+            "id": "3282859598",
+            "name": "Twitter Video",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1104106979788763138/lFxnLjkv_normal.png",
+            "protected": false,
+            "url": "",
+            "username": "TwitterVideo",
+            "verified": true
+        },
+        {
+            "created_at": "2010-01-11T05:44:35.000Z",
+            "description": "ट्विटर - The official Twitter India account.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/7IDoW8iFLm",
+                            "expanded_url": "https://twitter.com",
+                            "display_url": "twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "103770785",
+            "name": "Twitter India",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1012752671344771072/V7P59P0p_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/7IDoW8iFLm",
+            "username": "TwitterIndia",
+            "verified": true
+        },
+        {
+            "created_at": "2012-05-21T03:07:38.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "586198217",
+            "name": "Twitter TV",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1273408970162462720/ZlrL3pgd_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterTV",
+            "verified": true
+        },
+        {
+            "created_at": "2010-11-16T23:59:11.000Z",
+            "description": "트위터 코리아의 공식 계정입니다. 트위터 서비스 관련 문의는 https://t.co/jTMg7YsLw5 을, 광고 관련 문의는 @TwitterMktgKR 계정을 이용해 주세요",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/SvWUEpsmUj",
+                            "expanded_url": "https://blog.twitter.com/korea",
+                            "display_url": "blog.twitter.com/korea"
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": [
+                        {
+                            "start": 34,
+                            "end": 57,
+                            "url": "https://t.co/jTMg7YsLw5",
+                            "expanded_url": "https://support.twitter.com",
+                            "display_url": "support.twitter.com"
+                        }
+                    ],
+                    "mentions": [
+                        {
+                            "start": 71,
+                            "end": 85,
+                            "username": "TwitterMktgKR"
+                        }
+                    ]
+                }
+            },
+            "id": "216531294",
+            "location": "대한민국",
+            "name": "Twitter Korea",
+            "pinned_tweet_id": "1277782541995401216",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1256433106891845632/OwLFJ_N4_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/SvWUEpsmUj",
+            "username": "TwitterKorea",
+            "verified": true
+        },
+        {
+            "created_at": "2013-06-17T23:57:45.000Z",
+            "description": "Data-driven insights about notable moments and conversations from Twitter, Inc., plus tips and tricks to help you get the most out of Twitter data.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/Ca4ib1oKLW",
+                            "expanded_url": "https://blog.twitter.com/data",
+                            "display_url": "blog.twitter.com/data"
+                        }
+                    ]
+                }
+            },
+            "id": "1526228120",
+            "location": "San Francisco",
+            "name": "Twitter Data",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__normal.jpg",
+            "protected": false,
+            "url": "https://t.co/Ca4ib1oKLW",
+            "username": "TwitterData",
+            "verified": true
+        },
+        {
+            "created_at": "2010-12-04T23:27:01.000Z",
+            "description": "What’s happening in government & elections worldwide. Multilingual 🗣️ & well-traveled. 🛄",
+            "id": "222953824",
+            "name": "TwitterGov",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875135141135302656/eiM2Wz66_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterGov",
+            "verified": true
+        },
+        {
+            "created_at": "2013-07-18T16:41:59.000Z",
+            "description": "Official Account of Twitter Investor Relations.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/0pgKNEmUjt",
+                            "expanded_url": "https://investor.twitterinc.com/",
+                            "display_url": "investor.twitterinc.com"
+                        }
+                    ]
+                }
+            },
+            "id": "1603818258",
+            "name": "Twitter Investor Relations",
+            "pinned_tweet_id": "1255826376885596161",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/941403661216899072/n_fXrUW9_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/0pgKNEmUjt",
+            "username": "TwitterIR",
+            "verified": true
+        },
+        {
+            "created_at": "2014-06-06T01:23:52.000Z",
+            "description": "#BlackLivesMatter\nProfile Art by @temi_coker",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/EoaAx7rOY5",
+                            "expanded_url": "https://about.twitter.com/careers",
+                            "display_url": "about.twitter.com/careers"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ],
+                    "mentions": [
+                        {
+                            "start": 33,
+                            "end": 44,
+                            "username": "temi_coker"
+                        }
+                    ]
+                }
+            },
+            "id": "2548979088",
+            "location": "Global",
+            "name": "Twitter Alas",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1013158245853085696/88c5YF8V_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/EoaAx7rOY5",
+            "username": "TwitterAlas",
+            "verified": true
+        },
+        {
+            "created_at": "2013-12-14T04:31:10.000Z",
+            "description": "The official Twitter Singapore account. For anything needing immediate attention, please contact https://t.co/qq1HEzdMA2.",
+            "entities": {
+                "description": {
+                    "urls": [
+                        {
+                            "start": 97,
+                            "end": 120,
+                            "url": "https://t.co/qq1HEzdMA2",
+                            "expanded_url": "https://support.twitter.com",
+                            "display_url": "support.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "2244983430",
+            "name": "Twitter Singapore",
+            "pinned_tweet_id": "1276392707968004096",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875094332365090816/tcm6HqXp_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterSG",
+            "verified": true
+        },
+        {
+            "created_at": "2013-04-12T21:02:58.000Z",
+            "description": "All things Canada on Twitter. #BlackLivesMatter",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 30,
+                            "end": 47,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "1347713256",
+            "name": "Twitter Canada",
+            "pinned_tweet_id": "1273291819527352321",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270799737680207876/bfMP4_DT_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterCanada",
+            "verified": true
+        },
+        {
+            "created_at": "2011-09-20T15:18:34.000Z",
+            "description": "Open Programs at Twitter.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 22,
+                            "url": "http://t.co/Hc7Cv220E7",
+                            "expanded_url": "https://opensource.twitter.com",
+                            "display_url": "opensource.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "376825877",
+            "location": "Twitter HQ",
+            "name": "Twitter Open Source",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875169334573678592/I7zte5WY_normal.jpg",
+            "protected": false,
+            "url": "http://t.co/Hc7Cv220E7",
+            "username": "TwitterOSS",
+            "verified": true
+        },
+        {
+            "created_at": "2007-06-16T00:14:36.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "6844292",
+            "name": "Twitter Engineering",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1267839380405665793/uunuoNK4_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterEng",
+            "verified": true
+        },
+        {
+            "created_at": "2016-06-01T21:20:47.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "738118115595165697",
+            "name": "Twitter Stripes",
+            "pinned_tweet_id": "1193902721755230209",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1012738853247959040/4-g31u_p_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterStripes",
+            "verified": true
+        },
+        {
+            "created_at": "2016-06-01T21:22:15.000Z",
+            "description": "#BlackLivesMatter #AlwaysProud",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        },
+                        {
+                            "start": 18,
+                            "end": 30,
+                            "tag": "AlwaysProud"
+                        }
+                    ]
+                }
+            },
+            "id": "738118487122419712",
+            "name": "Twitter Asians",
+            "pinned_tweet_id": "1265347362853191681",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/942832773999423488/984rqZa-_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterAsians",
+            "verified": true
+        },
+        {
+            "created_at": "2010-11-23T16:45:21.000Z",
+            "description": "The voice of Twitter's Global Public Policy team",
+            "id": "218984871",
+            "name": "Twitter Public Policy",
+            "pinned_tweet_id": "1235212091923013632",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/880132255011586048/rlZKfFFe_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "Policy",
+            "verified": true
+        },
+        {
+            "created_at": "2014-06-06T21:10:35.000Z",
+            "description": "Selamat datang di akun resmi Twitter Indonesia. Untuk informasi lebih lanjut, kunjungi https://t.co/heEvRrl4yN. Blog: https://t.co/fst66a65my.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/7IDoW8iFLm",
+                            "expanded_url": "https://twitter.com",
+                            "display_url": "twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": [
+                        {
+                            "start": 87,
+                            "end": 110,
+                            "url": "https://t.co/heEvRrl4yN",
+                            "expanded_url": "https://help.twitter.com",
+                            "display_url": "help.twitter.com"
+                        },
+                        {
+                            "start": 118,
+                            "end": 141,
+                            "url": "https://t.co/fst66a65my",
+                            "expanded_url": "https://blog.twitter.com/indonesia",
+                            "display_url": "blog.twitter.com/indonesia"
+                        }
+                    ]
+                }
+            },
+            "id": "2550997820",
+            "name": "Twitter Indonesia",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/941531180448415744/ghwtfXVM_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/7IDoW8iFLm",
+            "username": "TwitterID",
+            "verified": true
+        },
+        {
+            "created_at": "2013-02-08T07:33:47.000Z",
+            "description": "政治、行政、自治体の話題をお届けするTwitter Japanによる公式アカウントです。",
+            "id": "1159458169",
+            "location": "Tokyo, JAPAN",
+            "name": "Twitter 政治",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875135373034143744/rJ9cIT6v_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterGovJP",
+            "verified": true
+        },
+        {
+            "created_at": "2014-01-17T15:28:22.000Z",
+            "description": "The best of what’s happening on Twitter in an instant.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/nYOx6qThjk",
+                            "expanded_url": "https://about.twitter.com/company/moments-guidelines",
+                            "display_url": "about.twitter.com/company/moment…"
+                        }
+                    ]
+                }
+            },
+            "id": "2296297326",
+            "location": "London, England",
+            "name": "Twitter Moments UK & Ireland",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/826180910974377984/c5YMMdP5_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/nYOx6qThjk",
+            "username": "UKMoments",
+            "verified": true
+        },
+        {
+            "created_at": "2011-01-05T19:52:33.000Z",
+            "description": "👋 Twitter Communications team here! Check out our Tweets to see what's happening at Twitter. For media Qs @ us. #BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/SPGIfM1UIR",
+                            "expanded_url": "https://about.twitter.com",
+                            "display_url": "about.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 112,
+                            "end": 129,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "234489024",
+            "name": "Twitter Comms",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270788093931446273/bkOFGWwe_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/SPGIfM1UIR",
+            "username": "TwitterComms",
+            "verified": true
+        },
+        {
+            "created_at": "2015-10-12T22:08:01.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "3873936134",
+            "location": "Twitter Island",
+            "name": "Twitter Gaming @ home",
+            "pinned_tweet_id": "1250499154054270976",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270501407573995520/RvaQxXZ6_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterGaming",
+            "verified": true
+        },
+        {
+            "created_at": "2013-12-03T21:39:44.000Z",
+            "description": "Welcome to the official @Twitter account for the #MiddleEast and #NorthAfrica كلّ ما يتعلّق بآخر أخبار ومستجدّات #تويتر في #الشرق_الأوسط و #شمال_أفريقيا",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/f6xSlVOvPK",
+                            "expanded_url": "https://blog.twitter.com/official/ar.html",
+                            "display_url": "blog.twitter.com/official/ar.ht…"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 49,
+                            "end": 60,
+                            "tag": "MiddleEast"
+                        },
+                        {
+                            "start": 65,
+                            "end": 77,
+                            "tag": "NorthAfrica"
+                        },
+                        {
+                            "start": 113,
+                            "end": 119,
+                            "tag": "تويتر"
+                        },
+                        {
+                            "start": 123,
+                            "end": 136,
+                            "tag": "الشرق_الأوسط"
+                        },
+                        {
+                            "start": 139,
+                            "end": 152,
+                            "tag": "شمال_أفريقيا"
+                        }
+                    ],
+                    "mentions": [
+                        {
+                            "start": 24,
+                            "end": 32,
+                            "username": "Twitter"
+                        }
+                    ]
+                }
+            },
+            "id": "2228891959",
+            "location": "MENA",
+            "name": "Twitter MENA",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/942432939748364290/z-jTRDuZ_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/f6xSlVOvPK",
+            "username": "TwitterMENA",
+            "verified": true
+        },
+        {
+            "created_at": "2012-08-30T16:54:44.000Z",
+            "description": "News and updates about the Twitter Official Partner Program.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/fsX4hsZ5Tr",
+                            "expanded_url": "https://partners.twitter.com/",
+                            "display_url": "partners.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "791978718",
+            "name": "Twitter Official Partner",
+            "pinned_tweet_id": "1229818273325371392",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270792615013711872/VR70tT9T_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/fsX4hsZ5Tr",
+            "username": "OfficialPartner",
+            "verified": true
+        },
+        {
+            "created_at": "2011-12-03T15:36:31.000Z",
+            "description": "Reading: everything",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/SPGIfM1UIR",
+                            "expanded_url": "https://about.twitter.com",
+                            "display_url": "about.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "427475002",
+            "name": "Twitter Books",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270501673790775297/pxixrhAT_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/SPGIfM1UIR",
+            "username": "TwitterBooks",
+            "verified": true
+        },
+        {
+            "created_at": "2019-11-12T14:56:22.000Z",
+            "description": "Your best Tweets. Retweeted.",
+            "id": "1194267639100723200",
+            "name": "Twitter Retweets",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1201611308950532096/rBjVNSsR_normal.png",
+            "protected": false,
+            "url": "",
+            "username": "TwitterRetweets",
+            "verified": true
+        },
+        {
+            "created_at": "2019-09-03T19:59:02.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "1168976680867762177",
+            "name": "Twitter Able",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1168989681444425733/XTZAcOSc_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterAble",
+            "verified": true
+        },
+        {
+            "created_at": "2012-10-26T06:22:03.000Z",
+            "description": "The official account for Twitter SRE.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 22,
+                            "url": "http://t.co/gJvsjUZJ3O",
+                            "expanded_url": "https://engineering.twitter.com",
+                            "display_url": "engineering.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "905409822",
+            "location": "San Francisco, CA",
+            "name": "Twitter SRE",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/3755128758/8c6e4cd8246c24c432372385ee534b1c_normal.jpeg",
+            "protected": false,
+            "url": "http://t.co/gJvsjUZJ3O",
+            "username": "TwitterSRE",
+            "verified": true
+        },
+        {
+            "created_at": "2016-06-01T21:09:54.000Z",
+            "description": "The best of what’s happening on Twitter in an instant.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/JvK2Aw7iqc",
+                            "expanded_url": "https://twitter.com/i/moments",
+                            "display_url": "twitter.com/i/moments"
+                        }
+                    ]
+                }
+            },
+            "id": "738115375477362688",
+            "location": "India",
+            "name": "Twitter Moments India",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/939174997540638721/pn1lxe4y_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/JvK2Aw7iqc",
+            "username": "MomentsIndia",
+            "verified": true
+        },
+        {
+            "created_at": "2009-11-09T18:18:15.000Z",
+            "description": "Información y consejos de seguridad y actualizaciones de @Twitter.\n\nInformações e conselhos de segurança e atualizações do @Twitter.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/heEvRrCFXn",
+                            "expanded_url": "https://help.twitter.com",
+                            "display_url": "help.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "mentions": [
+                        {
+                            "start": 57,
+                            "end": 65,
+                            "username": "Twitter"
+                        },
+                        {
+                            "start": 123,
+                            "end": 131,
+                            "username": "Twitter"
+                        }
+                    ]
+                }
+            },
+            "id": "88723966",
+            "name": "Twitter Seguro",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875437956118360064/ZOwIAvAb_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/heEvRrCFXn",
+            "username": "TwitterSeguro",
+            "verified": true
+        },
+        {
+            "created_at": "2018-10-08T19:45:09.000Z",
+            "description": "Que pasa ahora in the most vibrant multicultural city in the world. #SoMiami",
+            "entities": {
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 68,
+                            "end": 76,
+                            "tag": "SoMiami"
+                        }
+                    ]
+                }
+            },
+            "id": "1049385226424786944",
+            "location": "Miami, FL",
+            "name": "Twitter Miami",
+            "pinned_tweet_id": "1275168469542146049",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1275178822107791361/4egjzUcS_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterMiami",
+            "verified": true
+        },
+        {
+            "created_at": "2011-04-18T20:48:55.000Z",
+            "description": "The trials and tribulations of Twitter's past & present interns, also known as the 'Terns'. Find out what they're working on and why you should join the flock.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/Zn0hsX64IK",
+                            "expanded_url": "https://careers.twitter.com/en/university.html",
+                            "display_url": "careers.twitter.com/en/university.…"
+                        }
+                    ]
+                }
+            },
+            "id": "284201599",
+            "location": "San Francisco",
+            "name": "Twitter Terns",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875164144483180544/vaHSsa6n_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/Zn0hsX64IK",
+            "username": "terns",
+            "verified": true
+        },
+        {
+            "created_at": "2013-08-27T22:03:14.000Z",
+            "description": "Twitter Recruiting in Japan | Twitter Japanでの採用、キャリア、イベントなどについてツイートしています。\n#LoveWhereYouWork",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/UFN8Pq42p4",
+                            "expanded_url": "https://careers.twitter.com/content/careers-twitter/en/jobs.html#location=careers-twitter%3Alocation",
+                            "display_url": "careers.twitter.com/content/career…"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 74,
+                            "end": 91,
+                            "tag": "LoveWhereYouWork"
+                        }
+                    ]
+                }
+            },
+            "id": "1705676064",
+            "location": "Tokyo, Japan",
+            "name": "Twitter公式採用アカウント",
+            "pinned_tweet_id": "1139089650008510464",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875166441439232000/uiHVcOJs_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/UFN8Pq42p4",
+            "username": "JoinTheFlockJP",
+            "verified": true
+        },
+        {
+            "created_at": "2014-10-17T22:38:01.000Z",
+            "description": "Twitter Fashion Japan 公式アカウントです",
+            "id": "2861317614",
+            "name": "Twitter ファッション",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875118807391420419/ZsSkVDBs_normal.jpg",
+            "protected": false,
+            "url": "",
+            "username": "TwitterFashnJP",
+            "verified": true
+        },
+        {
+            "created_at": "2015-10-12T22:05:00.000Z",
+            "description": "Lo mejor que está sucediendo en Twitter en español, en un instante.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/ttGn9BmUWD",
+                            "expanded_url": "https://blog.twitter.com/es/2016/tweets-que-cuentan-historias-moments-m-xico-ya-est-disponible",
+                            "display_url": "blog.twitter.com/es/2016/tweets…"
+                        }
+                    ]
+                }
+            },
+            "id": "3873965293",
+            "location": "Worldwide",
+            "name": "Twitter Moments en Español",
+            "pinned_tweet_id": "1254702677424058369",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/752568687761186816/AEtUZtm1_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/ttGn9BmUWD",
+            "username": "MomentsES",
+            "verified": true
+        },
+        {
+            "created_at": "2020-03-30T21:02:29.000Z",
+            "description": "ยินดีต้อนรับสู่แอคเคาท์ทวิตเตอร์อย่างเป็นทางการประจำประเทศไทย! ต้องการข้อมูลเกี่ยวกับการใช้งานทวิตเตอร์​เพิ่มเติม โปรดคลิก https://t.co/heEvRrl4yN.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/f9RtbmyN3p",
+                            "expanded_url": "https://twitter.com/home",
+                            "display_url": "twitter.com/home"
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": [
+                        {
+                            "start": 123,
+                            "end": 146,
+                            "url": "https://t.co/heEvRrl4yN",
+                            "expanded_url": "https://help.twitter.com",
+                            "display_url": "help.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "1244731491088809984",
+            "name": "Twitter Thailand",
+            "pinned_tweet_id": "1262948030271062016",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1248629937025753089/yt0lggXd_normal.png",
+            "protected": false,
+            "url": "https://t.co/f9RtbmyN3p",
+            "username": "TwitterThailand",
+            "verified": true
+        },
+        {
+            "created_at": "2015-11-12T16:46:02.000Z",
+            "description": "O melhor do que está acontecendo no Twitter em um instante.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/XPT5uPLlUa",
+                            "expanded_url": "https://help.twitter.com/pt/rules-and-policies/twitter-moments-guidelines-and-principles",
+                            "display_url": "help.twitter.com/pt/rules-and-p…"
+                        }
+                    ]
+                }
+            },
+            "id": "4172587277",
+            "location": "Sao Paulo, Brazil",
+            "name": "Twitter Moments Brasil",
+            "pinned_tweet_id": "1258114553470160896",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/666324297489739776/nyQKZybh_normal.png",
+            "protected": false,
+            "url": "https://t.co/XPT5uPLlUa",
+            "username": "MomentsBrasil",
+            "verified": true
+        },
+        {
+            "created_at": "2016-04-05T21:35:30.000Z",
+            "description": "The best videos on @TwitterIndia every day. Featuring product updates, videos, and tips!",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/tlbGqc89EN",
+                            "expanded_url": "https://www.blog.twitter.com/india",
+                            "display_url": "blog.twitter.com/india"
+                        }
+                    ]
+                },
+                "description": {
+                    "mentions": [
+                        {
+                            "start": 19,
+                            "end": 32,
+                            "username": "TwitterIndia"
+                        }
+                    ]
+                }
+            },
+            "id": "717465714357972992",
+            "location": "India",
+            "name": "Twitter Video India",
+            "pinned_tweet_id": "895195543802060801",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875794713214726144/_eT7MWCI_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/tlbGqc89EN",
+            "username": "TwitterVideoIN",
+            "verified": true
+        },
+        {
+            "created_at": "2012-10-05T01:15:47.000Z",
+            "description": "Music on Twitter | 日本公式アカウント",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/QjOgMnzmxL",
+                            "expanded_url": "https://blog.twitter.com/ja/media",
+                            "display_url": "blog.twitter.com/ja/media"
+                        }
+                    ]
+                }
+            },
+            "id": "862314223",
+            "location": "Tokyo, Japan",
+            "name": "Twitter ミュージック",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875133214624436224/wPJZeP0H_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/QjOgMnzmxL",
+            "username": "TwitterMusicJP",
+            "verified": true
+        },
+        {
+            "created_at": "2014-06-06T21:13:39.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/6Xy5Trzaep",
+                            "expanded_url": "https://marketing.twitter.com",
+                            "display_url": "marketing.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "2551000568",
+            "location": "Mexico",
+            "name": "Twitter Mktg Latam",
+            "pinned_tweet_id": "1242161083646869509",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1275443824593039361/eGA-rVKf_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/6Xy5Trzaep",
+            "username": "TwitterMktLatam",
+            "verified": true
+        },
+        {
+            "created_at": "2014-06-06T01:22:29.000Z",
+            "description": "Já pensou em trabalhar no Twitter Brasil? Acompanhe por aqui as nossas novidades e oportunidades de carreira. Bem-vindo (a) ao nosso ninho!",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/2Ien1T4L94",
+                            "expanded_url": "https://careers.twitter.com",
+                            "display_url": "careers.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "2548977510",
+            "location": "São Paulo",
+            "name": "Twitter Careers Brasil",
+            "pinned_tweet_id": "1159857897012105219",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875166905111166976/7kYhxexq_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/2Ien1T4L94",
+            "username": "JoinTheFlockBR",
+            "verified": true
+        },
+        {
+            "created_at": "2013-02-08T05:54:29.000Z",
+            "description": "Twitter Sports Japan 公式アカウントです。",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/QjOgMnzmxL",
+                            "expanded_url": "https://blog.twitter.com/ja/media",
+                            "display_url": "blog.twitter.com/ja/media"
+                        }
+                    ]
+                }
+            },
+            "id": "1159274324",
+            "location": "Tokyo, JAPAN",
+            "name": "Twitter スポーツ",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875125949771128832/dCo30emX_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/QjOgMnzmxL",
+            "username": "TwitterSportsJP",
+            "verified": true
+        }
+    ]
+}
+```
+
+*400 Bad Request - Too Many Users*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "ids": [
+                    "783214,2244994945,6253282,495309159,172020392,95731075,2548985366,277761722,17874544,300392950,87532773,372575989,3260518932,121291606,158079127,3282859598,103770785,586198217,216531294,1526228120,222953824,1603818258,2548979088,2244983430,1347713256,376825877,6844292,738118115595165697,738118487122419712,218984871,2550997820,1159458169,2296297326,234489024,3873936134,2228891959,791978718,427475002,1194267639100723200,1168976680867762177,905409822,738115375477362688,88723966,1049385226424786944,284201599,1705676064,2861317614,3873965293,1244731491088809984,4172587277,717465714357972992,862314223,2551000568,2548977510,1159274324,783214,2244994945,6253282,495309159,172020392,95731075,2548985366,277761722,17874544,300392950,87532773,372575989,3260518932,121291606,158079127,3282859598,103770785,586198217,216531294,1526228120,222953824,1603818258,2548979088,2244983430,1347713256,376825877,6844292,738118115595165697,738118487122419712,218984871,2550997820,1159458169,2296297326,234489024,3873936134,2228891959,791978718,427475002,1194267639100723200,1168976680867762177,905409822,738115375477362688,88723966,1049385226424786944,284201599,1705676064,2861317614,3873965293,1244731491088809984,4172587277,717465714357972992,862314223,2551000568,2548977510,1159274324"
+                ]
+            },
+            "message": "size [110] is not between 1 and 100"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
+*200 Success - Multiple Users, 1 Not Found*
+```json
+{
+    "data": [
+        {
+            "id": "12",
+            "name": "jack",
+            "username": "jack"
+        },
+        {
+            "id": "2244994945",
+            "name": "Twitter Dev",
+            "username": "TwitterDev"
+        }
+    ],
+    "errors": [
+        {
+            "detail": "Could not find user with ids: [2244994946].",
+            "title": "Not Found Error",
+            "resource_type": "user",
+            "parameter": "ids",
+            "value": "2244994946",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        }
+    ]
+}
+```
+
 <br>
 
 ### User by Username
@@ -6912,8 +9517,9 @@ OAuth1.0a User Context authorization required if any of the following fields are
 non_public_metrics,organic_metrics,promoted_metrics
 
 
-> Response
+> Responses
 
+*200 Success - User Not Found*
 ```json
 {
     "errors": [
@@ -6926,6 +9532,110 @@ non_public_metrics,organic_metrics,promoted_metrics
             "type": "https://api.twitter.com/2/problems/resource-not-found"
         }
     ]
+}
+```
+
+*200 Success - Request Fields for User and Expanded Pinned Tweet*
+```json
+{
+    "data": {
+        "created_at": "2013-12-14T04:35:55.000Z",
+        "description": "The voice of Twitter's #DevRel team, and your official source for updates, news, & events about Twitter's API. \n\n#BlackLivesMatter",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "start": 0,
+                        "end": 23,
+                        "url": "https://t.co/3ZX3TNiZCY",
+                        "expanded_url": "https://developer.twitter.com/en/community",
+                        "display_url": "developer.twitter.com/en/community"
+                    }
+                ]
+            },
+            "description": {
+                "hashtags": [
+                    {
+                        "start": 23,
+                        "end": 30,
+                        "tag": "DevRel"
+                    },
+                    {
+                        "start": 113,
+                        "end": 130,
+                        "tag": "BlackLivesMatter"
+                    }
+                ]
+            }
+        },
+        "id": "2244994945",
+        "location": "127.0.0.1",
+        "name": "Twitter Dev",
+        "pinned_tweet_id": "1255542774432063488",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1267175364003901441/tBZNFAgA_normal.jpg",
+        "protected": false,
+        "url": "https://t.co/3ZX3TNiZCY",
+        "username": "TwitterDev",
+        "verified": true
+    },
+    "includes": {
+        "tweets": [
+            {
+                "author_id": "2244994945",
+                "conversation_id": "1255542774432063488",
+                "created_at": "2020-04-29T17:01:38.000Z",
+                "entities": {
+                    "urls": [
+                        {
+                            "start": 264,
+                            "end": 287,
+                            "url": "https://t.co/BPqMcQzhId",
+                            "expanded_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html",
+                            "display_url": "blog.twitter.com/developer/en_u…",
+                            "images": [
+                                {
+                                    "url": "https://pbs.twimg.com/news_img/1274730688919613440/SEsqlE16?format=jpg&name=orig",
+                                    "width": 1600,
+                                    "height": 600
+                                },
+                                {
+                                    "url": "https://pbs.twimg.com/news_img/1274730688919613440/SEsqlE16?format=jpg&name=150x150",
+                                    "width": 150,
+                                    "height": 150
+                                }
+                            ],
+                            "status": 200,
+                            "title": "Enabling study of the public conversation in a time of crisis",
+                            "description": "To further support our company’s ongoing efforts, we want to enable developers and researchers to study the public conversation on COVID-19 in real-time.",
+                            "unwound_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html"
+                        }
+                    ]
+                },
+                "id": "1255542774432063488",
+                "lang": "en",
+                "possibly_sensitive": false,
+                "source": "Twitter Web App",
+                "text": "During these unprecedented times, what’s happening on Twitter can help the world better understand &amp; respond to the pandemic. \n\nWe're launching a free COVID-19 stream endpoint so qualified devs &amp; researchers can study the public conversation in real-time. https://t.co/BPqMcQzhId"
+            }
+        ]
+    }
+}
+```
+
+*429 Rate Limit Exceeded*
+```plain
+Rate limit exceeded
+
+```
+
+*200 Success - Default Payload*
+```json
+{
+    "data": {
+        "id": "2244994945",
+        "name": "Twitter Dev",
+        "username": "TwitterDev"
+    }
 }
 ```
 
@@ -6979,8 +9689,9 @@ OAuth1.0a User Context authorization required if any of the following fields are
 non_public_metrics,organic_metrics,promoted_metrics
 
 
-> Response
+> Responses
 
+*200 Success - Request Fields for Users and Expanded Pinned Tweet*
 ```json
 {
     "data": [
@@ -7230,6 +9941,564 @@ non_public_metrics,organic_metrics,promoted_metrics
 }
 ```
 
+*429 Rate Limit Exceeded*
+```plain
+Rate limit exceeded
+
+```
+
+*200 Success - Default Payload*
+```json
+{
+    "data": [
+        {
+            "id": "783214",
+            "name": "Twitter",
+            "username": "Twitter"
+        },
+        {
+            "id": "2244994945",
+            "name": "Twitter Dev",
+            "username": "TwitterDev"
+        },
+        {
+            "id": "6253282",
+            "name": "Twitter API",
+            "username": "TwitterAPI"
+        },
+        {
+            "id": "495309159",
+            "name": "Twitter New York City",
+            "username": "TwitterNYC"
+        },
+        {
+            "id": "172020392",
+            "name": "Twitter San Francisco",
+            "username": "TwitterSF"
+        },
+        {
+            "id": "95731075",
+            "name": "Twitter Safety",
+            "username": "TwitterSafety"
+        },
+        {
+            "id": "2548985366",
+            "name": "Twitter Blackbirds",
+            "username": "Blackbirds"
+        },
+        {
+            "id": "277761722",
+            "name": "Twitter UK",
+            "username": "TwitterUK"
+        },
+        {
+            "id": "17874544",
+            "name": "Twitter Support",
+            "username": "TwitterSupport"
+        },
+        {
+            "id": "300392950",
+            "name": "Twitter Sports",
+            "username": "TwitterSports"
+        },
+        {
+            "id": "87532773",
+            "name": "Twitter Design",
+            "username": "TwitterDesign"
+        },
+        {
+            "id": "372575989",
+            "name": "Twitter News",
+            "username": "TwitterNews"
+        },
+        {
+            "id": "3260518932",
+            "name": "Twitter Moments",
+            "username": "TwitterMoments"
+        },
+        {
+            "id": "121291606",
+            "name": "Twitter Business",
+            "username": "TwitterBusiness"
+        },
+        {
+            "id": "158079127",
+            "name": "Twitter Nonprofits",
+            "username": "Nonprofits"
+        },
+        {
+            "id": "3282859598",
+            "name": "Twitter Video",
+            "username": "TwitterVideo"
+        },
+        {
+            "id": "103770785",
+            "name": "Twitter India",
+            "username": "TwitterIndia"
+        },
+        {
+            "id": "586198217",
+            "name": "Twitter TV",
+            "username": "TwitterTV"
+        },
+        {
+            "id": "216531294",
+            "name": "Twitter Korea",
+            "username": "TwitterKorea"
+        },
+        {
+            "id": "1526228120",
+            "name": "Twitter Data",
+            "username": "TwitterData"
+        },
+        {
+            "id": "222953824",
+            "name": "TwitterGov",
+            "username": "TwitterGov"
+        },
+        {
+            "id": "1603818258",
+            "name": "Twitter Investor Relations",
+            "username": "TwitterIR"
+        },
+        {
+            "id": "2548979088",
+            "name": "Twitter Alas",
+            "username": "TwitterAlas"
+        },
+        {
+            "id": "2244983430",
+            "name": "Twitter Singapore",
+            "username": "TwitterSG"
+        },
+        {
+            "id": "1347713256",
+            "name": "Twitter Canada",
+            "username": "TwitterCanada"
+        },
+        {
+            "id": "376825877",
+            "name": "Twitter Open Source",
+            "username": "TwitterOSS"
+        },
+        {
+            "id": "6844292",
+            "name": "Twitter Engineering",
+            "username": "TwitterEng"
+        },
+        {
+            "id": "738118115595165697",
+            "name": "Twitter Stripes",
+            "username": "TwitterStripes"
+        },
+        {
+            "id": "738118487122419712",
+            "name": "Twitter Asians",
+            "username": "TwitterAsians"
+        },
+        {
+            "id": "218984871",
+            "name": "Twitter Public Policy",
+            "username": "Policy"
+        },
+        {
+            "id": "2550997820",
+            "name": "Twitter Indonesia",
+            "username": "TwitterID"
+        },
+        {
+            "id": "1159458169",
+            "name": "Twitter 政治",
+            "username": "TwitterGovJP"
+        },
+        {
+            "id": "2296297326",
+            "name": "Twitter Moments UK & Ireland",
+            "username": "UKMoments"
+        },
+        {
+            "id": "234489024",
+            "name": "Twitter Comms",
+            "username": "TwitterComms"
+        },
+        {
+            "id": "3873936134",
+            "name": "Twitter Gaming @ home",
+            "username": "TwitterGaming"
+        },
+        {
+            "id": "2228891959",
+            "name": "Twitter MENA",
+            "username": "TwitterMENA"
+        },
+        {
+            "id": "791978718",
+            "name": "Twitter Official Partner",
+            "username": "OfficialPartner"
+        },
+        {
+            "id": "427475002",
+            "name": "Twitter Books",
+            "username": "TwitterBooks"
+        },
+        {
+            "id": "1194267639100723200",
+            "name": "Twitter Retweets",
+            "username": "TwitterRetweets"
+        },
+        {
+            "id": "1168976680867762177",
+            "name": "Twitter Able",
+            "username": "TwitterAble"
+        },
+        {
+            "id": "905409822",
+            "name": "Twitter SRE",
+            "username": "TwitterSRE"
+        },
+        {
+            "id": "738115375477362688",
+            "name": "Twitter Moments India",
+            "username": "MomentsIndia"
+        },
+        {
+            "id": "88723966",
+            "name": "Twitter Seguro",
+            "username": "TwitterSeguro"
+        },
+        {
+            "id": "1049385226424786944",
+            "name": "Twitter Miami",
+            "username": "TwitterMiami"
+        },
+        {
+            "id": "284201599",
+            "name": "Twitter Terns",
+            "username": "terns"
+        },
+        {
+            "id": "1705676064",
+            "name": "Twitter公式採用アカウント",
+            "username": "JoinTheFlockJP"
+        },
+        {
+            "id": "2861317614",
+            "name": "Twitter ファッション",
+            "username": "TwitterFashnJP"
+        },
+        {
+            "id": "3873965293",
+            "name": "Twitter Moments en Español",
+            "username": "MomentsES"
+        },
+        {
+            "id": "1244731491088809984",
+            "name": "Twitter Thailand",
+            "username": "TwitterThailand"
+        },
+        {
+            "id": "4172587277",
+            "name": "Twitter Moments Brasil",
+            "username": "MomentsBrasil"
+        },
+        {
+            "id": "717465714357972992",
+            "name": "Twitter Video India",
+            "username": "TwitterVideoIN"
+        },
+        {
+            "id": "862314223",
+            "name": "Twitter ミュージック",
+            "username": "TwitterMusicJP"
+        },
+        {
+            "id": "2551000568",
+            "name": "Twitter Mktg Latam",
+            "username": "TwitterMktLatam"
+        },
+        {
+            "id": "2548977510",
+            "name": "Twitter Careers Brasil",
+            "username": "JoinTheFlockBR"
+        },
+        {
+            "id": "1159274324",
+            "name": "Twitter スポーツ",
+            "username": "TwitterSportsJP"
+        }
+    ]
+}
+```
+
+*200 Success - Request User Fields*
+```json
+{
+    "data": [
+        {
+            "created_at": "2007-02-20T14:35:54.000Z",
+            "description": "Black queer lives matter.\nBlack trans lives matter.\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/TAXQpspyHn",
+                            "expanded_url": "https://about.twitter.com/",
+                            "display_url": "about.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 52,
+                            "end": 69,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "783214",
+            "location": "Everywhere",
+            "name": "Twitter",
+            "pinned_tweet_id": "1274087687469715457",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270500941498912768/W-80pLvu_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/TAXQpspyHn",
+            "username": "Twitter",
+            "verified": true
+        },
+        {
+            "created_at": "2013-12-14T04:35:55.000Z",
+            "description": "The voice of Twitter's #DevRel team, and your official source for updates, news, & events about Twitter's API. \n\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/3ZX3TNiZCY",
+                            "expanded_url": "https://developer.twitter.com/en/community",
+                            "display_url": "developer.twitter.com/en/community"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 23,
+                            "end": 30,
+                            "tag": "DevRel"
+                        },
+                        {
+                            "start": 113,
+                            "end": 130,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "2244994945",
+            "location": "127.0.0.1",
+            "name": "Twitter Dev",
+            "pinned_tweet_id": "1255542774432063488",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1267175364003901441/tBZNFAgA_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/3ZX3TNiZCY",
+            "username": "TwitterDev",
+            "verified": true
+        },
+        {
+            "created_at": "2007-05-23T06:01:13.000Z",
+            "description": "The Real Twitter API. Tweets about API changes, service issues and our Developer Platform. Don't get an answer? It's on my website.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/8IkCzCDr19",
+                            "expanded_url": "https://developer.twitter.com",
+                            "display_url": "developer.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "6253282",
+            "location": "San Francisco, CA",
+            "name": "Twitter API",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/8IkCzCDr19",
+            "username": "TwitterAPI",
+            "verified": true
+        },
+        {
+            "created_at": "2012-02-17T20:40:28.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/UFN8PpMrxw",
+                            "expanded_url": "https://careers.twitter.com/content/careers-twitter/en/jobs.html#location=careers-twitter%3Alocation",
+                            "display_url": "careers.twitter.com/content/career…"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "495309159",
+            "location": "New York, NY",
+            "name": "Twitter New York City",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1016781101011034115/p0Ie-_Dr_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/UFN8PpMrxw",
+            "username": "TwitterNYC",
+            "verified": true
+        },
+        {
+            "created_at": "2010-07-28T18:40:01.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/MQRffLoRTw",
+                            "expanded_url": "https://careers.twitter.com/",
+                            "display_url": "careers.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "172020392",
+            "location": "San Francisco, CA",
+            "name": "Twitter San Francisco",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875159529008226305/7jXeHhZC_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/MQRffLoRTw",
+            "username": "TwitterSF",
+            "verified": true
+        }
+    ]
+}
+```
+
+*400 Bad Request - Too Many Users*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "usernames": [
+                    "twitter,twitterdev,twitterapi,twitternyc,twittersf,twittersafety,blackbirds,twitteruk,twittersupport,twittersports,twitterdesign,twitternews,twittermoments,twitterbusiness,nonprofits,twittervideo,twitterindia,twittertv,twitterkorea,twitterdata,twittergov,twitterir,twitteralas,twittersg,twittercanada,twitteross,twittereng,twitterstripes,twitterasians,policy,twitterid,twittergovjp,ukmoments,twittercomms,twittergaming,twittermena,officialpartner,twitterbooks,twitterretweets,twitterable,twittersre,momentsindia,twitterseguro,twittermiami,terns,jointheflockjp,twitterfashnjp,momentses,twitterthailand,momentsbrasil,twittervideoin,twittermusicjp,twittermktlatam,jointheflockbr,twittersportsjp,twitter,twitterdev,twitterapi,twitternyc,twittersf,twittersafety,blackbirds,twitteruk,twittersupport,twittersports,twitterdesign,twitternews,twittermoments,twitterbusiness,nonprofits,twittervideo,twitterindia,twittertv,twitterkorea,twitterdata,twittergov,twitterir,twitteralas,twittersg,twittercanada,twitteross,twittereng,twitterstripes,twitterasians,policy,twitterid,twittergovjp,ukmoments,twittercomms,twittergaming,twittermena,officialpartner,twitterbooks,twitterretweets,twitterable,twittersre,momentsindia,twitterseguro,twittermiami,terns,jointheflockjp,twitterfashnjp,momentses,twitterthailand,momentsbrasil,twittervideoin,twittermusicjp,twittermktlatam,jointheflockbr,twittersportsjp"
+                ]
+            },
+            "message": "size [110] is not between 1 and 100"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
+*200 Success - Some Users Not Found*
+```json
+{
+    "data": [
+        {
+            "id": "495309159",
+            "name": "Twitter New York City",
+            "username": "TwitterNYC"
+        },
+        {
+            "id": "172020392",
+            "name": "Twitter San Francisco",
+            "username": "TwitterSF"
+        },
+        {
+            "id": "95731075",
+            "name": "Twitter Safety",
+            "username": "TwitterSafety"
+        },
+        {
+            "id": "2548985366",
+            "name": "Twitter Blackbirds",
+            "username": "Blackbirds"
+        },
+        {
+            "id": "277761722",
+            "name": "Twitter UK",
+            "username": "TwitterUK"
+        },
+        {
+            "id": "17874544",
+            "name": "Twitter Support",
+            "username": "TwitterSupport"
+        },
+        {
+            "id": "300392950",
+            "name": "Twitter Sports",
+            "username": "TwitterSports"
+        },
+        {
+            "id": "87532773",
+            "name": "Twitter Design",
+            "username": "TwitterDesign"
+        }
+    ],
+    "errors": [
+        {
+            "detail": "Could not find user with usernames: [twitterrrrrrr].",
+            "title": "Not Found Error",
+            "resource_type": "user",
+            "parameter": "usernames",
+            "value": "twitterrrrrrr",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        },
+        {
+            "detail": "Could not find user with usernames: [twitterdevvvvvv].",
+            "title": "Not Found Error",
+            "resource_type": "user",
+            "parameter": "usernames",
+            "value": "twitterdevvvvvv",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        },
+        {
+            "detail": "Could not find user with usernames: [twitterapiiiii].",
+            "title": "Not Found Error",
+            "resource_type": "user",
+            "parameter": "usernames",
+            "value": "twitterapiiiii",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        }
+    ]
+}
+```
+
 <br>
 
 ### Authenticated User Lookup
@@ -7276,11 +10545,814 @@ OAuth1.0a User Context authorization required if any of the following fields are
 non_public_metrics,organic_metrics,promoted_metrics
 
 
-> Response
+> Responses
 
+*429 Rate Limit Exceeded*
 ```plain
 Rate limit exceeded
 
+```
+
+*200 Success - Request Fields for Users and Expanded Pinned Tweet*
+```json
+{
+    "data": [
+        {
+            "created_at": "2007-02-20T14:35:54.000Z",
+            "description": "Black queer lives matter.\nBlack trans lives matter.\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/TAXQpspyHn",
+                            "expanded_url": "https://about.twitter.com/",
+                            "display_url": "about.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 52,
+                            "end": 69,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "783214",
+            "location": "Everywhere",
+            "name": "Twitter",
+            "pinned_tweet_id": "1274087687469715457",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270500941498912768/W-80pLvu_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/TAXQpspyHn",
+            "username": "Twitter",
+            "verified": true
+        },
+        {
+            "created_at": "2013-12-14T04:35:55.000Z",
+            "description": "The voice of Twitter's #DevRel team, and your official source for updates, news, & events about Twitter's API. \n\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/3ZX3TNiZCY",
+                            "expanded_url": "https://developer.twitter.com/en/community",
+                            "display_url": "developer.twitter.com/en/community"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 23,
+                            "end": 30,
+                            "tag": "DevRel"
+                        },
+                        {
+                            "start": 113,
+                            "end": 130,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "2244994945",
+            "location": "127.0.0.1",
+            "name": "Twitter Dev",
+            "pinned_tweet_id": "1255542774432063488",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1267175364003901441/tBZNFAgA_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/3ZX3TNiZCY",
+            "username": "TwitterDev",
+            "verified": true
+        },
+        {
+            "created_at": "2007-05-23T06:01:13.000Z",
+            "description": "The Real Twitter API. Tweets about API changes, service issues and our Developer Platform. Don't get an answer? It's on my website.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/8IkCzCDr19",
+                            "expanded_url": "https://developer.twitter.com",
+                            "display_url": "developer.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "6253282",
+            "location": "San Francisco, CA",
+            "name": "Twitter API",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/8IkCzCDr19",
+            "username": "TwitterAPI",
+            "verified": true
+        },
+        {
+            "created_at": "2012-02-17T20:40:28.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/UFN8PpMrxw",
+                            "expanded_url": "https://careers.twitter.com/content/careers-twitter/en/jobs.html#location=careers-twitter%3Alocation",
+                            "display_url": "careers.twitter.com/content/career…"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "495309159",
+            "location": "New York, NY",
+            "name": "Twitter New York City",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1016781101011034115/p0Ie-_Dr_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/UFN8PpMrxw",
+            "username": "TwitterNYC",
+            "verified": true
+        },
+        {
+            "created_at": "2010-07-28T18:40:01.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/MQRffLoRTw",
+                            "expanded_url": "https://careers.twitter.com/",
+                            "display_url": "careers.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "172020392",
+            "location": "San Francisco, CA",
+            "name": "Twitter San Francisco",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875159529008226305/7jXeHhZC_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/MQRffLoRTw",
+            "username": "TwitterSF",
+            "verified": true
+        }
+    ],
+    "includes": {
+        "tweets": [
+            {
+                "attachments": {
+                    "media_keys": [
+                        "3_1274086027544498176"
+                    ]
+                },
+                "author_id": "783214",
+                "conversation_id": "1274087687469715457",
+                "created_at": "2020-06-19T21:12:30.000Z",
+                "entities": {
+                    "mentions": [
+                        {
+                            "start": 17,
+                            "end": 29,
+                            "username": "FredTJoseph"
+                        }
+                    ],
+                    "urls": [
+                        {
+                            "start": 30,
+                            "end": 53,
+                            "url": "https://t.co/lNTOkyguG1",
+                            "expanded_url": "https://twitter.com/Twitter/status/1274087687469715457/photo/1",
+                            "display_url": "pic.twitter.com/lNTOkyguG1"
+                        }
+                    ]
+                },
+                "id": "1274087687469715457",
+                "lang": "et",
+                "possibly_sensitive": false,
+                "source": "Twitter Web App",
+                "text": "📍 Minneapolis\n🗣️ @FredTJoseph https://t.co/lNTOkyguG1"
+            },
+            {
+                "author_id": "2244994945",
+                "conversation_id": "1255542774432063488",
+                "created_at": "2020-04-29T17:01:38.000Z",
+                "entities": {
+                    "urls": [
+                        {
+                            "start": 264,
+                            "end": 287,
+                            "url": "https://t.co/BPqMcQzhId",
+                            "expanded_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html",
+                            "display_url": "blog.twitter.com/developer/en_u…",
+                            "images": [
+                                {
+                                    "url": "https://pbs.twimg.com/news_img/1274730688919613440/SEsqlE16?format=jpg&name=orig",
+                                    "width": 1600,
+                                    "height": 600
+                                },
+                                {
+                                    "url": "https://pbs.twimg.com/news_img/1274730688919613440/SEsqlE16?format=jpg&name=150x150",
+                                    "width": 150,
+                                    "height": 150
+                                }
+                            ],
+                            "status": 200,
+                            "title": "Enabling study of the public conversation in a time of crisis",
+                            "description": "To further support our company’s ongoing efforts, we want to enable developers and researchers to study the public conversation on COVID-19 in real-time.",
+                            "unwound_url": "https://blog.twitter.com/developer/en_us/topics/tools/2020/covid19_public_conversation_data.html"
+                        }
+                    ]
+                },
+                "id": "1255542774432063488",
+                "lang": "en",
+                "possibly_sensitive": false,
+                "source": "Twitter Web App",
+                "text": "During these unprecedented times, what’s happening on Twitter can help the world better understand &amp; respond to the pandemic. \n\nWe're launching a free COVID-19 stream endpoint so qualified devs &amp; researchers can study the public conversation in real-time. https://t.co/BPqMcQzhId"
+            }
+        ]
+    }
+}
+```
+
+*400 Bad Request - Too Many Users*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "usernames": [
+                    "twitter,twitterdev,twitterapi,twitternyc,twittersf,twittersafety,blackbirds,twitteruk,twittersupport,twittersports,twitterdesign,twitternews,twittermoments,twitterbusiness,nonprofits,twittervideo,twitterindia,twittertv,twitterkorea,twitterdata,twittergov,twitterir,twitteralas,twittersg,twittercanada,twitteross,twittereng,twitterstripes,twitterasians,policy,twitterid,twittergovjp,ukmoments,twittercomms,twittergaming,twittermena,officialpartner,twitterbooks,twitterretweets,twitterable,twittersre,momentsindia,twitterseguro,twittermiami,terns,jointheflockjp,twitterfashnjp,momentses,twitterthailand,momentsbrasil,twittervideoin,twittermusicjp,twittermktlatam,jointheflockbr,twittersportsjp,twitter,twitterdev,twitterapi,twitternyc,twittersf,twittersafety,blackbirds,twitteruk,twittersupport,twittersports,twitterdesign,twitternews,twittermoments,twitterbusiness,nonprofits,twittervideo,twitterindia,twittertv,twitterkorea,twitterdata,twittergov,twitterir,twitteralas,twittersg,twittercanada,twitteross,twittereng,twitterstripes,twitterasians,policy,twitterid,twittergovjp,ukmoments,twittercomms,twittergaming,twittermena,officialpartner,twitterbooks,twitterretweets,twitterable,twittersre,momentsindia,twitterseguro,twittermiami,terns,jointheflockjp,twitterfashnjp,momentses,twitterthailand,momentsbrasil,twittervideoin,twittermusicjp,twittermktlatam,jointheflockbr,twittersportsjp"
+                ]
+            },
+            "message": "size [110] is not between 1 and 100"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
+*200 Success - Some Users Not Found*
+```json
+{
+    "data": [
+        {
+            "id": "495309159",
+            "name": "Twitter New York City",
+            "username": "TwitterNYC"
+        },
+        {
+            "id": "172020392",
+            "name": "Twitter San Francisco",
+            "username": "TwitterSF"
+        },
+        {
+            "id": "95731075",
+            "name": "Twitter Safety",
+            "username": "TwitterSafety"
+        },
+        {
+            "id": "2548985366",
+            "name": "Twitter Blackbirds",
+            "username": "Blackbirds"
+        },
+        {
+            "id": "277761722",
+            "name": "Twitter UK",
+            "username": "TwitterUK"
+        },
+        {
+            "id": "17874544",
+            "name": "Twitter Support",
+            "username": "TwitterSupport"
+        },
+        {
+            "id": "300392950",
+            "name": "Twitter Sports",
+            "username": "TwitterSports"
+        },
+        {
+            "id": "87532773",
+            "name": "Twitter Design",
+            "username": "TwitterDesign"
+        }
+    ],
+    "errors": [
+        {
+            "detail": "Could not find user with usernames: [twitterrrrrrr].",
+            "title": "Not Found Error",
+            "resource_type": "user",
+            "parameter": "usernames",
+            "value": "twitterrrrrrr",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        },
+        {
+            "detail": "Could not find user with usernames: [twitterdevvvvvv].",
+            "title": "Not Found Error",
+            "resource_type": "user",
+            "parameter": "usernames",
+            "value": "twitterdevvvvvv",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        },
+        {
+            "detail": "Could not find user with usernames: [twitterapiiiii].",
+            "title": "Not Found Error",
+            "resource_type": "user",
+            "parameter": "usernames",
+            "value": "twitterapiiiii",
+            "type": "https://api.twitter.com/2/problems/resource-not-found"
+        }
+    ]
+}
+```
+
+*200 Success - Request User Fields*
+```json
+{
+    "data": [
+        {
+            "created_at": "2007-02-20T14:35:54.000Z",
+            "description": "Black queer lives matter.\nBlack trans lives matter.\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/TAXQpspyHn",
+                            "expanded_url": "https://about.twitter.com/",
+                            "display_url": "about.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 52,
+                            "end": 69,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "783214",
+            "location": "Everywhere",
+            "name": "Twitter",
+            "pinned_tweet_id": "1274087687469715457",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1270500941498912768/W-80pLvu_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/TAXQpspyHn",
+            "username": "Twitter",
+            "verified": true
+        },
+        {
+            "created_at": "2013-12-14T04:35:55.000Z",
+            "description": "The voice of Twitter's #DevRel team, and your official source for updates, news, & events about Twitter's API. \n\n#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/3ZX3TNiZCY",
+                            "expanded_url": "https://developer.twitter.com/en/community",
+                            "display_url": "developer.twitter.com/en/community"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 23,
+                            "end": 30,
+                            "tag": "DevRel"
+                        },
+                        {
+                            "start": 113,
+                            "end": 130,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "2244994945",
+            "location": "127.0.0.1",
+            "name": "Twitter Dev",
+            "pinned_tweet_id": "1255542774432063488",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1267175364003901441/tBZNFAgA_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/3ZX3TNiZCY",
+            "username": "TwitterDev",
+            "verified": true
+        },
+        {
+            "created_at": "2007-05-23T06:01:13.000Z",
+            "description": "The Real Twitter API. Tweets about API changes, service issues and our Developer Platform. Don't get an answer? It's on my website.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/8IkCzCDr19",
+                            "expanded_url": "https://developer.twitter.com",
+                            "display_url": "developer.twitter.com"
+                        }
+                    ]
+                }
+            },
+            "id": "6253282",
+            "location": "San Francisco, CA",
+            "name": "Twitter API",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/8IkCzCDr19",
+            "username": "TwitterAPI",
+            "verified": true
+        },
+        {
+            "created_at": "2012-02-17T20:40:28.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/UFN8PpMrxw",
+                            "expanded_url": "https://careers.twitter.com/content/careers-twitter/en/jobs.html#location=careers-twitter%3Alocation",
+                            "display_url": "careers.twitter.com/content/career…"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "495309159",
+            "location": "New York, NY",
+            "name": "Twitter New York City",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1016781101011034115/p0Ie-_Dr_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/UFN8PpMrxw",
+            "username": "TwitterNYC",
+            "verified": true
+        },
+        {
+            "created_at": "2010-07-28T18:40:01.000Z",
+            "description": "#BlackLivesMatter",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/MQRffLoRTw",
+                            "expanded_url": "https://careers.twitter.com/",
+                            "display_url": "careers.twitter.com"
+                        }
+                    ]
+                },
+                "description": {
+                    "hashtags": [
+                        {
+                            "start": 0,
+                            "end": 17,
+                            "tag": "BlackLivesMatter"
+                        }
+                    ]
+                }
+            },
+            "id": "172020392",
+            "location": "San Francisco, CA",
+            "name": "Twitter San Francisco",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/875159529008226305/7jXeHhZC_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/MQRffLoRTw",
+            "username": "TwitterSF",
+            "verified": true
+        }
+    ]
+}
+```
+
+*200 Success - Default Payload*
+```json
+{
+    "data": [
+        {
+            "id": "783214",
+            "name": "Twitter",
+            "username": "Twitter"
+        },
+        {
+            "id": "2244994945",
+            "name": "Twitter Dev",
+            "username": "TwitterDev"
+        },
+        {
+            "id": "6253282",
+            "name": "Twitter API",
+            "username": "TwitterAPI"
+        },
+        {
+            "id": "495309159",
+            "name": "Twitter New York City",
+            "username": "TwitterNYC"
+        },
+        {
+            "id": "172020392",
+            "name": "Twitter San Francisco",
+            "username": "TwitterSF"
+        },
+        {
+            "id": "95731075",
+            "name": "Twitter Safety",
+            "username": "TwitterSafety"
+        },
+        {
+            "id": "2548985366",
+            "name": "Twitter Blackbirds",
+            "username": "Blackbirds"
+        },
+        {
+            "id": "277761722",
+            "name": "Twitter UK",
+            "username": "TwitterUK"
+        },
+        {
+            "id": "17874544",
+            "name": "Twitter Support",
+            "username": "TwitterSupport"
+        },
+        {
+            "id": "300392950",
+            "name": "Twitter Sports",
+            "username": "TwitterSports"
+        },
+        {
+            "id": "87532773",
+            "name": "Twitter Design",
+            "username": "TwitterDesign"
+        },
+        {
+            "id": "372575989",
+            "name": "Twitter News",
+            "username": "TwitterNews"
+        },
+        {
+            "id": "3260518932",
+            "name": "Twitter Moments",
+            "username": "TwitterMoments"
+        },
+        {
+            "id": "121291606",
+            "name": "Twitter Business",
+            "username": "TwitterBusiness"
+        },
+        {
+            "id": "158079127",
+            "name": "Twitter Nonprofits",
+            "username": "Nonprofits"
+        },
+        {
+            "id": "3282859598",
+            "name": "Twitter Video",
+            "username": "TwitterVideo"
+        },
+        {
+            "id": "103770785",
+            "name": "Twitter India",
+            "username": "TwitterIndia"
+        },
+        {
+            "id": "586198217",
+            "name": "Twitter TV",
+            "username": "TwitterTV"
+        },
+        {
+            "id": "216531294",
+            "name": "Twitter Korea",
+            "username": "TwitterKorea"
+        },
+        {
+            "id": "1526228120",
+            "name": "Twitter Data",
+            "username": "TwitterData"
+        },
+        {
+            "id": "222953824",
+            "name": "TwitterGov",
+            "username": "TwitterGov"
+        },
+        {
+            "id": "1603818258",
+            "name": "Twitter Investor Relations",
+            "username": "TwitterIR"
+        },
+        {
+            "id": "2548979088",
+            "name": "Twitter Alas",
+            "username": "TwitterAlas"
+        },
+        {
+            "id": "2244983430",
+            "name": "Twitter Singapore",
+            "username": "TwitterSG"
+        },
+        {
+            "id": "1347713256",
+            "name": "Twitter Canada",
+            "username": "TwitterCanada"
+        },
+        {
+            "id": "376825877",
+            "name": "Twitter Open Source",
+            "username": "TwitterOSS"
+        },
+        {
+            "id": "6844292",
+            "name": "Twitter Engineering",
+            "username": "TwitterEng"
+        },
+        {
+            "id": "738118115595165697",
+            "name": "Twitter Stripes",
+            "username": "TwitterStripes"
+        },
+        {
+            "id": "738118487122419712",
+            "name": "Twitter Asians",
+            "username": "TwitterAsians"
+        },
+        {
+            "id": "218984871",
+            "name": "Twitter Public Policy",
+            "username": "Policy"
+        },
+        {
+            "id": "2550997820",
+            "name": "Twitter Indonesia",
+            "username": "TwitterID"
+        },
+        {
+            "id": "1159458169",
+            "name": "Twitter 政治",
+            "username": "TwitterGovJP"
+        },
+        {
+            "id": "2296297326",
+            "name": "Twitter Moments UK & Ireland",
+            "username": "UKMoments"
+        },
+        {
+            "id": "234489024",
+            "name": "Twitter Comms",
+            "username": "TwitterComms"
+        },
+        {
+            "id": "3873936134",
+            "name": "Twitter Gaming @ home",
+            "username": "TwitterGaming"
+        },
+        {
+            "id": "2228891959",
+            "name": "Twitter MENA",
+            "username": "TwitterMENA"
+        },
+        {
+            "id": "791978718",
+            "name": "Twitter Official Partner",
+            "username": "OfficialPartner"
+        },
+        {
+            "id": "427475002",
+            "name": "Twitter Books",
+            "username": "TwitterBooks"
+        },
+        {
+            "id": "1194267639100723200",
+            "name": "Twitter Retweets",
+            "username": "TwitterRetweets"
+        },
+        {
+            "id": "1168976680867762177",
+            "name": "Twitter Able",
+            "username": "TwitterAble"
+        },
+        {
+            "id": "905409822",
+            "name": "Twitter SRE",
+            "username": "TwitterSRE"
+        },
+        {
+            "id": "738115375477362688",
+            "name": "Twitter Moments India",
+            "username": "MomentsIndia"
+        },
+        {
+            "id": "88723966",
+            "name": "Twitter Seguro",
+            "username": "TwitterSeguro"
+        },
+        {
+            "id": "1049385226424786944",
+            "name": "Twitter Miami",
+            "username": "TwitterMiami"
+        },
+        {
+            "id": "284201599",
+            "name": "Twitter Terns",
+            "username": "terns"
+        },
+        {
+            "id": "1705676064",
+            "name": "Twitter公式採用アカウント",
+            "username": "JoinTheFlockJP"
+        },
+        {
+            "id": "2861317614",
+            "name": "Twitter ファッション",
+            "username": "TwitterFashnJP"
+        },
+        {
+            "id": "3873965293",
+            "name": "Twitter Moments en Español",
+            "username": "MomentsES"
+        },
+        {
+            "id": "1244731491088809984",
+            "name": "Twitter Thailand",
+            "username": "TwitterThailand"
+        },
+        {
+            "id": "4172587277",
+            "name": "Twitter Moments Brasil",
+            "username": "MomentsBrasil"
+        },
+        {
+            "id": "717465714357972992",
+            "name": "Twitter Video India",
+            "username": "TwitterVideoIN"
+        },
+        {
+            "id": "862314223",
+            "name": "Twitter ミュージック",
+            "username": "TwitterMusicJP"
+        },
+        {
+            "id": "2551000568",
+            "name": "Twitter Mktg Latam",
+            "username": "TwitterMktLatam"
+        },
+        {
+            "id": "2548977510",
+            "name": "Twitter Careers Brasil",
+            "username": "JoinTheFlockBR"
+        },
+        {
+            "id": "1159274324",
+            "name": "Twitter スポーツ",
+            "username": "TwitterSportsJP"
+        }
+    ]
+}
 ```
 
 <br>
@@ -8358,8 +12430,9 @@ Default values:
 id,name,username
 
 
-> Response
+> Responses
 
+*200 Success - Request Tweet Fields*
 ```json
 {
     "data": [
@@ -8662,6 +12735,620 @@ id,name,username
 }
 ```
 
+*200 Success - Request Expanded Media Fields*
+```json
+{
+    "data": [
+        {
+            "attachments": {
+                "media_keys": [
+                    "3_1277604962361462785"
+                ]
+            },
+            "created_at": "2020-06-30T17:39:06.000Z",
+            "entities": {
+                "hashtags": [
+                    {
+                        "start": 55,
+                        "end": 61,
+                        "tag": "TLOU2"
+                    },
+                    {
+                        "start": 62,
+                        "end": 79,
+                        "tag": "TheLastofUsPart2"
+                    }
+                ],
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 18,
+                        "username": "CritterOfHabit"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 80,
+                        "end": 103,
+                        "url": "https://t.co/IZjikKfxUW",
+                        "expanded_url": "https://twitter.com/CritterOfHabit/status/1277606174284632065/photo/1",
+                        "display_url": "pic.twitter.com/IZjikKfxUW"
+                    }
+                ]
+            },
+            "id": "1278020251041570816",
+            "text": "RT @CritterOfHabit: \"Puppies aren't so scary, I guess\"\n#TLOU2 #TheLastofUsPart2 https://t.co/IZjikKfxUW"
+        },
+        {
+            "created_at": "2020-06-30T17:38:42.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 14,
+                        "username": "turner0027"
+                    }
+                ]
+            },
+            "id": "1278020146485919745",
+            "text": "RT @turner0027: GSP puppies for sale they are only 3 weeks but if you know or hear of anyone wanting them they will be ready to go in 3 wee…"
+        },
+        {
+            "attachments": {
+                "media_keys": [
+                    "3_1278014675309998082",
+                    "3_1278014683598008321"
+                ]
+            },
+            "created_at": "2020-06-30T17:38:24.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 11,
+                        "username": "seongem"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 63,
+                        "end": 86,
+                        "url": "https://t.co/yaHUsQUshX",
+                        "expanded_url": "https://twitter.com/seongem/status/1278014689193140224/photo/1",
+                        "display_url": "pic.twitter.com/yaHUsQUshX"
+                    },
+                    {
+                        "start": 63,
+                        "end": 86,
+                        "url": "https://t.co/yaHUsQUshX",
+                        "expanded_url": "https://twitter.com/seongem/status/1278014689193140224/photo/1",
+                        "display_url": "pic.twitter.com/yaHUsQUshX"
+                    }
+                ]
+            },
+            "id": "1278020073261797378",
+            "text": "RT @seongem: ⩩ taeyong as puppies ¦ a short and funny thread ♡ https://t.co/yaHUsQUshX"
+        },
+        {
+            "attachments": {
+                "media_keys": [
+                    "7_1277795251919429636"
+                ]
+            },
+            "created_at": "2020-06-30T17:38:23.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 16,
+                        "username": "DannyDeraney"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 80,
+                        "end": 103,
+                        "url": "https://t.co/jDV0jebQTH",
+                        "expanded_url": "https://twitter.com/animalIife/status/1277795285801066506/video/1",
+                        "display_url": "pic.twitter.com/jDV0jebQTH"
+                    }
+                ]
+            },
+            "id": "1278020070640410626",
+            "text": "RT @DannyDeraney: Because you want to see three puppies swinging in a hammock.  https://t.co/jDV0jebQTH"
+        },
+        {
+            "attachments": {
+                "media_keys": [
+                    "3_1277604962361462785"
+                ]
+            },
+            "created_at": "2020-06-30T17:38:20.000Z",
+            "entities": {
+                "hashtags": [
+                    {
+                        "start": 55,
+                        "end": 61,
+                        "tag": "TLOU2"
+                    },
+                    {
+                        "start": 62,
+                        "end": 79,
+                        "tag": "TheLastofUsPart2"
+                    }
+                ],
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 18,
+                        "username": "CritterOfHabit"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 80,
+                        "end": 103,
+                        "url": "https://t.co/IZjikKfxUW",
+                        "expanded_url": "https://twitter.com/CritterOfHabit/status/1277606174284632065/photo/1",
+                        "display_url": "pic.twitter.com/IZjikKfxUW"
+                    }
+                ]
+            },
+            "id": "1278020054811017216",
+            "text": "RT @CritterOfHabit: \"Puppies aren't so scary, I guess\"\n#TLOU2 #TheLastofUsPart2 https://t.co/IZjikKfxUW"
+        },
+        {
+            "created_at": "2020-06-30T17:38:07.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 9,
+                        "username": "PSPCA"
+                    }
+                ]
+            },
+            "id": "1278020001467858944",
+            "text": "RT @PSPCA: Ensuring your puppies are up to date on their vaccines is important - even during a pandemic! Molly, a 3-month-old Rottweiler, v…"
+        },
+        {
+            "attachments": {
+                "media_keys": [
+                    "13_1278005508213927938"
+                ]
+            },
+            "created_at": "2020-06-30T17:38:03.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 13,
+                        "username": "OregonZoo"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 27,
+                        "end": 50,
+                        "url": "https://t.co/P6VP5CmD6p",
+                        "expanded_url": "https://twitter.com/OregonZoo/status/1278006421297090560/video/1",
+                        "display_url": "pic.twitter.com/P6VP5CmD6p"
+                    }
+                ]
+            },
+            "id": "1278019985017679872",
+            "text": "RT @OregonZoo: Mud puppies https://t.co/P6VP5CmD6p"
+        },
+        {
+            "created_at": "2020-06-30T17:38:02.000Z",
+            "entities": {
+                "hashtags": [
+                    {
+                        "start": 67,
+                        "end": 73,
+                        "tag": "ISPCA"
+                    }
+                ],
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 10,
+                        "username": "ISPCA1"
+                    }
+                ]
+            },
+            "id": "1278019980659961856",
+            "text": "RT @ISPCA1: 6 abandoned puppies found a box on disused land now in #ISPCA care. The collie/lurcher type pups, thought to be from different…"
+        },
+        {
+            "attachments": {
+                "media_keys": [
+                    "13_1278005508213927938"
+                ]
+            },
+            "created_at": "2020-06-30T17:37:34.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 13,
+                        "username": "OregonZoo"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 27,
+                        "end": 50,
+                        "url": "https://t.co/P6VP5CmD6p",
+                        "expanded_url": "https://twitter.com/OregonZoo/status/1278006421297090560/video/1",
+                        "display_url": "pic.twitter.com/P6VP5CmD6p"
+                    }
+                ]
+            },
+            "id": "1278019863135449088",
+            "text": "RT @OregonZoo: Mud puppies https://t.co/P6VP5CmD6p"
+        },
+        {
+            "created_at": "2020-06-30T17:37:12.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 3,
+                        "end": 16,
+                        "username": "chance_group"
+                    }
+                ]
+            },
+            "id": "1278019772777668609",
+            "text": "RT @chance_group: Today we thank those who give us their support🙏, last night we received bags of food for our puppies🐶🐕, we almost had no…"
+        }
+    ],
+    "includes": {
+        "media": [
+            {
+                "height": 812,
+                "media_key": "3_1277604962361462785",
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/Ebr28bjU0AEasL0.jpg",
+                "width": 1445
+            },
+            {
+                "height": 1080,
+                "media_key": "3_1278014675309998082",
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/Ebxrk3OWsAINP6Y.jpg",
+                "width": 1080
+            },
+            {
+                "height": 736,
+                "media_key": "3_1278014683598008321",
+                "type": "photo",
+                "url": "https://pbs.twimg.com/media/EbxrlWGXsAELIRz.jpg",
+                "width": 736
+            },
+            {
+                "duration_ms": 15034,
+                "height": 720,
+                "media_key": "7_1277795251919429636",
+                "preview_image_url": "https://pbs.twimg.com/ext_tw_video_thumb/1277795251919429636/pu/img/QzdDVtEyX6NNqA_5.jpg",
+                "public_metrics": {
+                    "view_count": 52717
+                },
+                "type": "video",
+                "width": 406
+            },
+            {
+                "duration_ms": 49533,
+                "height": 720,
+                "media_key": "13_1278005508213927938",
+                "preview_image_url": "https://pbs.twimg.com/media/EbxkA_dU0AAvzTt.jpg",
+                "public_metrics": {
+                    "view_count": 4662
+                },
+                "type": "video",
+                "width": 720
+            }
+        ]
+    },
+    "meta": {
+        "newest_id": "1278020251041570816",
+        "oldest_id": "1278019772777668609",
+        "result_count": 10,
+        "next_token": "b26v89c19zqg8o3fo7gg1pu5pv61lxgru17onnv29q4cd"
+    }
+}
+```
+
+*200 Success - Recent Search (Default Payload)*
+```json
+{
+    "data": [
+        {
+            "id": "1275840243636322304",
+            "text": "RT @polarbearrs: Hi  #VisibleWomen ✨ I’m Anna, I’m a Black + Latina Caribbean illustrator based in NYC. I love making dreamy surrealist por…"
+        },
+        {
+            "id": "1275840238498308097",
+            "text": "RT @DavidYankovich: A man who admitted his own guilt twice is getting freed from prison while black folks who jump a turnstile in NYC subwa…"
+        },
+        {
+            "id": "1275840234521899008",
+            "text": "@freetesla11 @square1_NYC @FakeMikeMiseph @ajn465 @krystalball His evils have actually become bipartisan for the most part. Much like Reagan, in a sense.\nTrump is disorganized and incompetent. He was handed an unprecedented level of power when he got inaugurated(both chambers, courts, governorships) and yet still accomplished very little."
+        },
+        {
+            "id": "1275840231883898880",
+            "text": "RT @NotifyNYC: AMBER Alert: Ahsan Ali, 15-year-old  male from 46th Avenue in Queens, in a white Toyota Sienna with license plate number JJX…"
+        },
+        {
+            "id": "1275840228402569216",
+            "text": "@BeltwayGreg @zachdcarter you realize Amazon increased its presence in NYC anyway, without any tax incentives, right?"
+        },
+        {
+            "id": "1275840227924414464",
+            "text": "RT @mcgoawayylmao: @DeeH_NYC i can't wait for your best picture speech at the oscars"
+        },
+        {
+            "id": "1275840226922057728",
+            "text": "@SnottieDrippen It’s like another account tweeted a video saying JR Smith IS a bucket then used footage almost exclusively from his time in Denver and NYC as if it was last season..."
+        },
+        {
+            "id": "1275840226657816579",
+            "text": "@tracifrost1976 In NYC we wear masks.   If you're still not sure if they are good for anything, take a look at this graph.  We're keeping it low. https://t.co/pdmt5RG53h"
+        },
+        {
+            "id": "1275840225844113409",
+            "text": "@NYCMayor Where is the money you promised NYC public schools families. We were suppose to get it the first week of June"
+        },
+        {
+            "id": "1275840222559899649",
+            "text": "Just wondering how the government plans on monitoring out of state visitors. Plenty of people live in Jersey that work in NYC"
+        }
+    ],
+    "meta": {
+        "newest_id": "1275840243636322304",
+        "oldest_id": "1275840222559899649",
+        "result_count": 10,
+        "next_token": "b26v89c19zqg8o3fo7gesq314yb2ynhwgmfg7az3v76v1"
+    }
+}
+```
+
+*200 Success - Request Tweet Fields with Expanded User Fields*
+```json
+{
+    "data": [
+        {
+            "attachments": {
+                "media_keys": [
+                    "16_1276035971193044992"
+                ]
+            },
+            "author_id": "63046977",
+            "created_at": "2020-06-25T06:14:19.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 0,
+                        "end": 8,
+                        "username": "snowman"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 90,
+                        "end": 113,
+                        "url": "https://t.co/14TzLYBBXi",
+                        "expanded_url": "https://twitter.com/happycamper/status/1276035977375477760/photo/1",
+                        "display_url": "pic.twitter.com/14TzLYBBXi"
+                    }
+                ]
+            },
+            "geo": {
+                "place_id": "f7eb2fa2fea288b1"
+            },
+            "id": "1276035977375477760",
+            "in_reply_to_user_id": "17200003",
+            "lang": "en",
+            "possibly_sensitive": false,
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1275653067283759104"
+                }
+            ],
+            "source": "Twitter for iPhone",
+            "text": "@snowman Ooo, thanks error message, public_metircs are not the metrics you’re looking for https://t.co/14TzLYBBXi"
+        },
+        {
+            "author_id": "17200003",
+            "created_at": "2020-06-24T20:04:54.000Z",
+            "id": "1275882613572583424",
+            "in_reply_to_user_id": "17200003",
+            "lang": "en",
+            "possibly_sensitive": false,
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1273733248749690880"
+                }
+            ],
+            "source": "Twitter for Android",
+            "text": "Using Labs Recent search for polling use cases has been 🔥👍. A simple alternative to streaming in many cases..."
+        },
+        {
+            "attachments": {
+                "media_keys": [
+                    "16_1275763720522625029"
+                ]
+            },
+            "author_id": "196883832",
+            "created_at": "2020-06-24T12:12:29.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 0,
+                        "end": 8,
+                        "username": "snowman"
+                    },
+                    {
+                        "start": 9,
+                        "end": 21,
+                        "username": "happycamper"
+                    }
+                ],
+                "urls": [
+                    {
+                        "start": 22,
+                        "end": 45,
+                        "url": "https://t.co/qvk5BCBtqh",
+                        "expanded_url": "https://twitter.com/jellybeanjones/status/1275763727908798470/photo/1",
+                        "display_url": "pic.twitter.com/qvk5BCBtqh"
+                    }
+                ]
+            },
+            "geo": {
+                "place_id": "f7eb2fa2fea288b1"
+            },
+            "id": "1275763727908798470",
+            "in_reply_to_user_id": "17200003",
+            "lang": "und",
+            "possibly_sensitive": false,
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1275653067283759104"
+                }
+            ],
+            "source": "Twitter for  iPhone",
+            "text": "@snowman @happycamper https://t.co/qvk5BCBtqh"
+        },
+        {
+            "author_id": "17200003",
+            "created_at": "2020-06-24T04:52:46.000Z",
+            "entities": {
+                "mentions": [
+                    {
+                        "start": 0,
+                        "end": 12,
+                        "username": "happycamper"
+                    }
+                ]
+            },
+            "id": "1275653067283759104",
+            "in_reply_to_user_id": "63046977",
+            "lang": "en",
+            "possibly_sensitive": false,
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1274086728471461889"
+                }
+            ],
+            "source": "Twitter Web App",
+            "text": "@happycamper Wait, when I try that, I get an error: {\n    \"errors\": [\n        { \"message\": \"[public_metircs] is not one of [attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,organic_metrics,promoted_metrics,public_metrics]\""
+        }
+    ],
+    "includes": {
+        "users": [
+            {
+                "created_at": "2009-08-05T05:46:48.000Z",
+                "description": "Part-time fiddler, wanderer, yogi, scubadiver #savegamehenge Full time explorer, festvarian, music lover, nerd, @TwitterBoulder - Opinions are my own. she/her",
+                "id": "63046977",
+                "name": "Emily Waligoske 🏕",
+                "username": "happycamper"
+            },
+            {
+                "created_at": "2008-11-05T23:06:37.000Z",
+                "description": "family, travel, music, farming, photography, coding, weather, rain, snow, snowmelt, hydrology, flood early-warning systems. From MN, live in CO. @TwitterDev",
+                "id": "17200003",
+                "name": "Jim Moffitt",
+                "username": "snowman"
+            },
+            {
+                "created_at": "2010-09-30T03:36:40.000Z",
+                "description": "IT wizard @ Twitter Boulder 🧙\u200d♂️🗻💻 🎧🌞✌🏽Turn my headphones up! #BlackLivesMatter",
+                "id": "196883832",
+                "name": "zachariah jones",
+                "username": "jellybeanjones"
+            }
+        ],
+        "tweets": [
+            {
+                "author_id": "17200003",
+                "created_at": "2020-06-24T04:52:46.000Z",
+                "entities": {
+                    "mentions": [
+                        {
+                            "start": 0,
+                            "end": 12,
+                            "username": "happycamper"
+                        }
+                    ]
+                },
+                "id": "1275653067283759104",
+                "in_reply_to_user_id": "63046977",
+                "lang": "en",
+                "possibly_sensitive": false,
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1274086728471461889"
+                    }
+                ],
+                "source": "Twitter Web App",
+                "text": "@happycamper Wait, when I try that, I get an error: {\n    \"errors\": [\n        { \"message\": \"[public_metircs] is not one of [attachments,author_id,context_annotations,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,organic_metrics,promoted_metrics,public_metrics]\""
+            },
+            {
+                "author_id": "17200003",
+                "created_at": "2020-06-18T21:44:05.000Z",
+                "id": "1273733248749690880",
+                "lang": "en",
+                "possibly_sensitive": false,
+                "source": "Twitter Web App",
+                "text": "So, what's your favorite thing about Twitter Developer Labs? \n\nI find it hard to pick one and am loving the ability to select the Tweet object fields of interest. \n\ntweet.fields=created_at,author_id,context_annotations"
+            },
+            {
+                "author_id": "63046977",
+                "created_at": "2020-06-19T21:08:42.000Z",
+                "entities": {
+                    "hashtags": [
+                        {
+                            "start": 209,
+                            "end": 215,
+                            "tag": "fresh"
+                        }
+                    ],
+                    "mentions": [
+                        {
+                            "start": 0,
+                            "end": 8,
+                            "username": "snowman"
+                        }
+                    ]
+                },
+                "id": "1274086728471461889",
+                "in_reply_to_user_id": "17200003",
+                "lang": "en",
+                "possibly_sensitive": false,
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1273733248749690880"
+                    }
+                ],
+                "source": "Twitter Web App",
+                "text": "@snowman My fave is the new the metrics, especially for building apps to help Twitter users track the metrics for their Tweets.\ntweet.fields=public_metircs,non_public_metrics,organic_metrics,promoted_metrics  #fresh"
+            }
+        ]
+    },
+    "meta": {
+        "newest_id": "1276035977375477760",
+        "oldest_id": "1275653067283759104",
+        "result_count": 4
+    }
+}
+```
+
 <br>
 
 ### Full-archive search
@@ -8867,8 +13554,9 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
 ```
 
 
-> Response
+> Responses
 
+*400 - Bad Request (Delete)*
 ```json
 {
     "errors": [
@@ -8877,6 +13565,159 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
                 "delete": []
             },
             "message": "JSON doesn't match expected schema"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
+*403 Forbidden - Client Not Enrolled*
+```json
+{
+    "client_id": "16340226",
+    "required_enrollment": "Standard Basic",
+    "registration_url": "https://developer.twitter.com/en/account",
+    "title": "Client Forbidden",
+    "detail": "This request must be made using an approved developer account that is enrolled in the requested endpoint. Learn more by visiting our documentation.",
+    "reason": "client-not-enrolled",
+    "type": "https://api.twitter.com/2/problems/client-forbidden"
+}
+```
+
+*Success 200 - Errors for Invalid Rule*
+```json
+{
+    "meta": {
+        "sent": "2020-06-18T15:56:35.056Z",
+        "summary": {
+            "created": 0,
+            "not_created": 1,
+            "valid": 0,
+            "invalid": 1
+        }
+    },
+    "errors": [
+        {
+            "value": "plantains or tostones or guacamole or arepas or tacos or mushrooms or porcini or hen of the woods or cremini or enoki or shiitake or carbonara or cacio e pepe or amatriciana or parmigiano reggiano or california burrito or chipotle or carne asada fries or laksa or hokkien mee or chili crab or nasi lemak or hainan chicken rice or kaya toast or bak kut teh or popiah or pisang goreng or curry puff or nasi uduk or martabak or fried chicken or bbq or kimchi or yukgaejang or galbitang or xiao long bao or pizza or ice cream sandwich",
+            "details": [
+                "Too many positive clauses in rule - 100.  The maximum allowed is 30 (at position 1)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 36)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 484)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 131)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 160)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 447)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 253)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 220)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 55)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 119)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 342)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 501)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 305)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 144)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 175)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 367)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 398)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 328)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 423)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 198)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 262)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 357)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 68)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 99)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 291)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 384)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 510)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 411)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 440)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 23)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 471)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 277)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 79)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 46)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 110)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 11)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 457)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 232)",
+                "Rule 'plantains or tostones or guacamole or arepas or tacos or mushrooms or porcini or hen of the woods or cremini or enoki or shiitake or carbonara or cacio e pepe or amatriciana or parmigiano reggiano or california burrito or chipotle or carne asada fries or laksa or hokkien mee or chili crab or nasi lemak or hainan chicken rice or kaya toast or bak kut teh or popiah or pisang goreng or curry puff or nasi uduk or martabak or fried chicken or bbq or kimchi or yukgaejang or galbitang or xiao long bao or pizza or ice cream sandwich' exceeds the maximum length of a rule. It is 530 characters while the maximum allowed is 512 (at position 1)"
+            ],
+            "title": "UnprocessableEntity",
+            "type": "https://api.twitter.com/2/problems/invalid-rules"
+        }
+    ]
+}
+```
+
+*Success 200 - Delete Rule*
+```json
+{
+    "meta": {
+        "sent": "2020-07-09T21:13:18.284Z",
+        "summary": {
+            "deleted": 1,
+            "not_deleted": 0
+        }
+    }
+}
+```
+
+*Success 201 - Created List of Rules*
+```json
+{
+    "data": [
+        {
+            "value": "meme has:images",
+            "id": "1273636687768285186"
+        },
+        {
+            "value": "puppy has:media",
+            "tag": "puppies with media",
+            "id": "1273636687768285187"
+        }
+    ],
+    "meta": {
+        "sent": "2020-06-18T15:20:24.063Z",
+        "summary": {
+            "created": 2,
+            "not_created": 0,
+            "valid": 2,
+            "invalid": 0
+        }
+    }
+}
+```
+
+*Success 201 - Create Rules with Dry Run*
+```json
+{
+    "data": [
+        {
+            "value": "tostones recipe",
+            "id": "1273646795642421249"
+        }
+    ],
+    "meta": {
+        "sent": "2020-06-18T16:00:33.972Z",
+        "summary": {
+            "created": 1,
+            "not_created": 0,
+            "valid": 1,
+            "invalid": 0
+        }
+    }
+}
+```
+
+*400 - Bad Request (Create)*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "add.value": []
+            },
+            "message": "field is required"
         }
     ],
     "title": "Invalid Request",
@@ -8897,8 +13738,9 @@ GET https://api.twitter.com/2/tweets/search/stream/rules
 ```
 
 
-> Response
+> Responses
 
+*Success 200 - Retrieve Rules*
 ```json
 {
     "data": [
@@ -8915,6 +13757,29 @@ GET https://api.twitter.com/2/tweets/search/stream/rules
     "meta": {
         "sent": "2020-06-18T15:21:58.638Z"
     }
+}
+```
+
+*403 Forbidden - Client Not Enrolled*
+```json
+{
+    "client_id": "16340226",
+    "required_enrollment": "Standard Basic",
+    "registration_url": "https://developer.twitter.com/en/account",
+    "title": "Client Forbidden",
+    "detail": "This request must be made using an approved developer account that is enrolled in the requested endpoint. Learn more by visiting our documentation.",
+    "reason": "client-not-enrolled",
+    "type": "https://api.twitter.com/2/problems/client-forbidden"
+}
+```
+
+*401 Unauthorized*
+```json
+{
+    "title": "Unauthorized",
+    "type": "about:blank",
+    "status": 401,
+    "detail": "Unauthorized"
 }
 ```
 
@@ -8943,8 +13808,9 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
 ```
 
 
-> Response
+> Responses
 
+*400 - Bad Request (Create)*
 ```json
 {
     "errors": [
@@ -8958,6 +13824,159 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
     "title": "Invalid Request",
     "detail": "One or more parameters to your request was invalid.",
     "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
+*Success 201 - Create Rules with Dry Run*
+```json
+{
+    "data": [
+        {
+            "value": "tostones recipe",
+            "id": "1273646795642421249"
+        }
+    ],
+    "meta": {
+        "sent": "2020-06-18T16:00:33.972Z",
+        "summary": {
+            "created": 1,
+            "not_created": 0,
+            "valid": 1,
+            "invalid": 0
+        }
+    }
+}
+```
+
+*Success 200 - Delete Rule*
+```json
+{
+    "meta": {
+        "sent": "2020-07-09T21:13:18.284Z",
+        "summary": {
+            "deleted": 1,
+            "not_deleted": 0
+        }
+    }
+}
+```
+
+*403 Forbidden - Client Not Enrolled*
+```json
+{
+    "client_id": "16340226",
+    "required_enrollment": "Standard Basic",
+    "registration_url": "https://developer.twitter.com/en/account",
+    "title": "Client Forbidden",
+    "detail": "This request must be made using an approved developer account that is enrolled in the requested endpoint. Learn more by visiting our documentation.",
+    "reason": "client-not-enrolled",
+    "type": "https://api.twitter.com/2/problems/client-forbidden"
+}
+```
+
+*Success 200 - Errors for Invalid Rule*
+```json
+{
+    "meta": {
+        "sent": "2020-06-18T15:56:35.056Z",
+        "summary": {
+            "created": 0,
+            "not_created": 1,
+            "valid": 0,
+            "invalid": 1
+        }
+    },
+    "errors": [
+        {
+            "value": "plantains or tostones or guacamole or arepas or tacos or mushrooms or porcini or hen of the woods or cremini or enoki or shiitake or carbonara or cacio e pepe or amatriciana or parmigiano reggiano or california burrito or chipotle or carne asada fries or laksa or hokkien mee or chili crab or nasi lemak or hainan chicken rice or kaya toast or bak kut teh or popiah or pisang goreng or curry puff or nasi uduk or martabak or fried chicken or bbq or kimchi or yukgaejang or galbitang or xiao long bao or pizza or ice cream sandwich",
+            "details": [
+                "Too many positive clauses in rule - 100.  The maximum allowed is 30 (at position 1)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 36)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 484)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 131)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 160)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 447)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 253)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 220)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 55)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 119)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 342)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 501)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 305)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 144)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 175)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 367)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 398)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 328)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 423)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 198)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 262)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 357)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 68)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 99)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 291)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 384)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 510)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 411)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 440)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 23)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 471)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 277)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 79)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 46)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 110)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 11)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 457)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 232)",
+                "Rule 'plantains or tostones or guacamole or arepas or tacos or mushrooms or porcini or hen of the woods or cremini or enoki or shiitake or carbonara or cacio e pepe or amatriciana or parmigiano reggiano or california burrito or chipotle or carne asada fries or laksa or hokkien mee or chili crab or nasi lemak or hainan chicken rice or kaya toast or bak kut teh or popiah or pisang goreng or curry puff or nasi uduk or martabak or fried chicken or bbq or kimchi or yukgaejang or galbitang or xiao long bao or pizza or ice cream sandwich' exceeds the maximum length of a rule. It is 530 characters while the maximum allowed is 512 (at position 1)"
+            ],
+            "title": "UnprocessableEntity",
+            "type": "https://api.twitter.com/2/problems/invalid-rules"
+        }
+    ]
+}
+```
+
+*400 - Bad Request (Delete)*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "delete": []
+            },
+            "message": "JSON doesn't match expected schema"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
+*Success 201 - Created List of Rules*
+```json
+{
+    "data": [
+        {
+            "value": "meme has:images",
+            "id": "1273636687768285186"
+        },
+        {
+            "value": "puppy has:media",
+            "tag": "puppies with media",
+            "id": "1273636687768285187"
+        }
+    ],
+    "meta": {
+        "sent": "2020-06-18T15:20:24.063Z",
+        "summary": {
+            "created": 2,
+            "not_created": 0,
+            "valid": 2,
+            "invalid": 0
+        }
+    }
 }
 ```
 
@@ -8986,8 +14005,9 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
 ```
 
 
-> Response
+> Responses
 
+*Success 201 - Create Rules with Dry Run*
 ```json
 {
     "data": [
@@ -9005,6 +14025,155 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
             "invalid": 0
         }
     }
+}
+```
+
+*Success 200 - Delete Rule*
+```json
+{
+    "meta": {
+        "sent": "2020-07-09T21:13:18.284Z",
+        "summary": {
+            "deleted": 1,
+            "not_deleted": 0
+        }
+    }
+}
+```
+
+*403 Forbidden - Client Not Enrolled*
+```json
+{
+    "client_id": "16340226",
+    "required_enrollment": "Standard Basic",
+    "registration_url": "https://developer.twitter.com/en/account",
+    "title": "Client Forbidden",
+    "detail": "This request must be made using an approved developer account that is enrolled in the requested endpoint. Learn more by visiting our documentation.",
+    "reason": "client-not-enrolled",
+    "type": "https://api.twitter.com/2/problems/client-forbidden"
+}
+```
+
+*Success 200 - Errors for Invalid Rule*
+```json
+{
+    "meta": {
+        "sent": "2020-06-18T15:56:35.056Z",
+        "summary": {
+            "created": 0,
+            "not_created": 1,
+            "valid": 0,
+            "invalid": 1
+        }
+    },
+    "errors": [
+        {
+            "value": "plantains or tostones or guacamole or arepas or tacos or mushrooms or porcini or hen of the woods or cremini or enoki or shiitake or carbonara or cacio e pepe or amatriciana or parmigiano reggiano or california burrito or chipotle or carne asada fries or laksa or hokkien mee or chili crab or nasi lemak or hainan chicken rice or kaya toast or bak kut teh or popiah or pisang goreng or curry puff or nasi uduk or martabak or fried chicken or bbq or kimchi or yukgaejang or galbitang or xiao long bao or pizza or ice cream sandwich",
+            "details": [
+                "Too many positive clauses in rule - 100.  The maximum allowed is 30 (at position 1)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 36)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 484)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 131)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 160)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 447)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 253)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 220)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 55)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 119)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 342)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 501)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 305)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 144)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 175)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 367)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 398)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 328)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 423)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 198)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 262)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 357)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 68)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 99)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 291)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 384)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 510)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 411)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 440)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 23)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 471)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 277)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 79)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 46)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 110)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 11)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 457)",
+                "Ambiguous use of or as a keyword. Use OR to logically join two clauses, or \"or\" to find occurrences of or in text (at position 232)",
+                "Rule 'plantains or tostones or guacamole or arepas or tacos or mushrooms or porcini or hen of the woods or cremini or enoki or shiitake or carbonara or cacio e pepe or amatriciana or parmigiano reggiano or california burrito or chipotle or carne asada fries or laksa or hokkien mee or chili crab or nasi lemak or hainan chicken rice or kaya toast or bak kut teh or popiah or pisang goreng or curry puff or nasi uduk or martabak or fried chicken or bbq or kimchi or yukgaejang or galbitang or xiao long bao or pizza or ice cream sandwich' exceeds the maximum length of a rule. It is 530 characters while the maximum allowed is 512 (at position 1)"
+            ],
+            "title": "UnprocessableEntity",
+            "type": "https://api.twitter.com/2/problems/invalid-rules"
+        }
+    ]
+}
+```
+
+*Success 201 - Created List of Rules*
+```json
+{
+    "data": [
+        {
+            "value": "meme has:images",
+            "id": "1273636687768285186"
+        },
+        {
+            "value": "puppy has:media",
+            "tag": "puppies with media",
+            "id": "1273636687768285187"
+        }
+    ],
+    "meta": {
+        "sent": "2020-06-18T15:20:24.063Z",
+        "summary": {
+            "created": 2,
+            "not_created": 0,
+            "valid": 2,
+            "invalid": 0
+        }
+    }
+}
+```
+
+*400 - Bad Request (Create)*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "add.value": []
+            },
+            "message": "field is required"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
+}
+```
+
+*400 - Bad Request (Delete)*
+```json
+{
+    "errors": [
+        {
+            "parameters": {
+                "delete": []
+            },
+            "message": "JSON doesn't match expected schema"
+        }
+    ],
+    "title": "Invalid Request",
+    "detail": "One or more parameters to your request was invalid.",
+    "type": "https://api.twitter.com/2/problems/invalid-request"
 }
 ```
 
@@ -9094,6 +14263,7 @@ data.
 
 > Response
 
+*429 - Too Many Requests*
 ```json
 {
     "title": "ConnectionException",
