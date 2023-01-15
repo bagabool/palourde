@@ -13,7 +13,7 @@ Contact Support:
 
 ## Requests
 
-### analytics.data.ga.get
+### analytics.data.ga.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -212,7 +212,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.data.mcf.get
+### analytics.data.mcf.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -410,7 +410,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.data.realtime.get
+### analytics.data.realtime.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -533,7 +533,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.account User Links.delete
+### analytics.management.account User Links.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -579,7 +579,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.account User Links.update
+### analytics.management.account User Links.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -719,7 +719,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.account User Links.list
+### analytics.management.account User Links.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -875,7 +875,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.account User Links.insert
+### analytics.management.account User Links.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -1015,7 +1015,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.filters.delete
+### analytics.management.filters.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -1123,7 +1123,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.filters.get
+### analytics.management.filters.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -1231,7 +1231,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.filters.patch
+### analytics.management.filters.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -1401,7 +1401,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.filters.update
+### analytics.management.filters.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -1571,7 +1571,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.filters.list
+### analytics.management.filters.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -1758,7 +1758,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.filters.insert
+### analytics.management.filters.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -1928,7 +1928,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.uploads.list
+### analytics.management.uploads.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2018,7 +2018,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.uploads.upload Data
+### analytics.management.uploads.upload Data ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2078,7 +2078,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.uploads.get
+### analytics.management.uploads.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2138,7 +2138,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.uploads.delete Upload Data
+### analytics.management.uploads.delete Upload Data ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2196,7 +2196,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Data Sources.list
+### analytics.management.custom Data Sources.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2323,7 +2323,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Dimensions.get
+### analytics.management.custom Dimensions.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2388,7 +2388,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Dimensions.patch
+### analytics.management.custom Dimensions.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2475,7 +2475,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Dimensions.update
+### analytics.management.custom Dimensions.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2562,7 +2562,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Dimensions.list
+### analytics.management.custom Dimensions.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2663,7 +2663,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Dimensions.insert
+### analytics.management.custom Dimensions.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2746,7 +2746,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Metrics.get
+### analytics.management.custom Metrics.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2814,7 +2814,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Metrics.patch
+### analytics.management.custom Metrics.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -2907,7 +2907,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Metrics.update
+### analytics.management.custom Metrics.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3000,7 +3000,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Metrics.list
+### analytics.management.custom Metrics.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3107,7 +3107,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.custom Metrics.insert
+### analytics.management.custom Metrics.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3196,7 +3196,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.web Property Ad Words Links.delete
+### analytics.management.web Property Ad Words Links.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3242,7 +3242,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.web Property Ad Words Links.get
+### analytics.management.web Property Ad Words Links.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3322,7 +3322,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.web Property Ad Words Links.patch
+### analytics.management.web Property Ad Words Links.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3440,7 +3440,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.web Property Ad Words Links.update
+### analytics.management.web Property Ad Words Links.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3558,7 +3558,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.web Property Ad Words Links.list
+### analytics.management.web Property Ad Words Links.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3688,7 +3688,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.web Property Ad Words Links.insert
+### analytics.management.web Property Ad Words Links.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3806,7 +3806,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperty User Links.delete
+### analytics.management.webproperty User Links.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3852,7 +3852,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperty User Links.update
+### analytics.management.webproperty User Links.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -3992,7 +3992,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperty User Links.list
+### analytics.management.webproperty User Links.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4148,7 +4148,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperty User Links.insert
+### analytics.management.webproperty User Links.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4288,7 +4288,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile User Links.delete
+### analytics.management.profile User Links.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4334,7 +4334,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile User Links.update
+### analytics.management.profile User Links.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4474,7 +4474,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile User Links.list
+### analytics.management.profile User Links.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4630,7 +4630,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile User Links.insert
+### analytics.management.profile User Links.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4770,7 +4770,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.experiments.delete
+### analytics.management.experiments.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4816,7 +4816,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.experiments.get
+### analytics.management.experiments.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -4912,7 +4912,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.experiments.patch
+### analytics.management.experiments.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -5062,7 +5062,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.experiments.update
+### analytics.management.experiments.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -5212,7 +5212,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.experiments.list
+### analytics.management.experiments.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -5375,7 +5375,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.experiments.insert
+### analytics.management.experiments.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -5525,7 +5525,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.goals.get
+### analytics.management.goals.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -5637,7 +5637,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.goals.patch
+### analytics.management.goals.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -5819,7 +5819,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.goals.update
+### analytics.management.goals.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6001,7 +6001,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.goals.list
+### analytics.management.goals.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6196,7 +6196,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.goals.insert
+### analytics.management.goals.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6378,7 +6378,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile Filter Links.delete
+### analytics.management.profile Filter Links.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6424,7 +6424,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile Filter Links.get
+### analytics.management.profile Filter Links.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6494,7 +6494,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile Filter Links.patch
+### analytics.management.profile Filter Links.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6590,7 +6590,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile Filter Links.update
+### analytics.management.profile Filter Links.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6686,7 +6686,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile Filter Links.list
+### analytics.management.profile Filter Links.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6797,7 +6797,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profile Filter Links.insert
+### analytics.management.profile Filter Links.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6893,7 +6893,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.unsampled Reports.delete
+### analytics.management.unsampled Reports.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -6939,7 +6939,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.unsampled Reports.get
+### analytics.management.unsampled Reports.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7013,7 +7013,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.unsampled Reports.list
+### analytics.management.unsampled Reports.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7132,7 +7132,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.unsampled Reports.insert
+### analytics.management.unsampled Reports.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7225,7 +7225,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profiles.delete
+### analytics.management.profiles.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7271,7 +7271,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profiles.get
+### analytics.management.profiles.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7358,7 +7358,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profiles.patch
+### analytics.management.profiles.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7479,7 +7479,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profiles.update
+### analytics.management.profiles.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7600,7 +7600,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profiles.list
+### analytics.management.profiles.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7745,7 +7745,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.profiles.insert
+### analytics.management.profiles.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7866,7 +7866,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.remarketing Audience.delete
+### analytics.management.remarketing Audience.delete ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -7912,7 +7912,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.remarketing Audience.get
+### analytics.management.remarketing Audience.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -8024,7 +8024,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.remarketing Audience.patch
+### analytics.management.remarketing Audience.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -8202,7 +8202,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.remarketing Audience.update
+### analytics.management.remarketing Audience.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -8380,7 +8380,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.remarketing Audience.list
+### analytics.management.remarketing Audience.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -8577,7 +8577,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.remarketing Audience.insert
+### analytics.management.remarketing Audience.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -8755,7 +8755,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperties.get
+### analytics.management.webproperties.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -8835,7 +8835,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperties.patch
+### analytics.management.webproperties.patch ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -8941,7 +8941,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperties.update
+### analytics.management.webproperties.update ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -9047,7 +9047,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperties.list
+### analytics.management.webproperties.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -9178,7 +9178,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.webproperties.insert
+### analytics.management.webproperties.insert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -9284,7 +9284,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.accounts.list
+### analytics.management.accounts.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -9389,7 +9389,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.account Summaries.list
+### analytics.management.account Summaries.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -9652,7 +9652,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.client Id.hash Client Id
+### analytics.management.client Id.hash Client Id ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -9717,7 +9717,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.management.segments.list
+### analytics.management.segments.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -9806,7 +9806,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.provisioning.create Account Ticket
+### analytics.provisioning.create Account Ticket ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -10050,7 +10050,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.provisioning.create Account Tree
+### analytics.provisioning.create Account Tree ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -10205,7 +10205,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.metadata.columns.list
+### analytics.metadata.columns.list ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -10274,7 +10274,7 @@ Deprecated. Please use quotaUser instead.
 
 <br>
 
-### analytics.user Deletion.user Deletion Request.upsert
+### analytics.user Deletion.user Deletion Request.upsert ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request

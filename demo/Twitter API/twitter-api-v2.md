@@ -37,7 +37,7 @@ This Collection includes a pre-configured Environment. You will need to set up t
 
 ## Requests
 
-### Single Tweet
+### Single Tweet 
 
 ---
 > Request
@@ -310,7 +310,7 @@ Rate limit exceeded
 
 <br>
 
-### Single Tweet Usercontext
+### Single Tweet Usercontext 
 
 ---
 > Request
@@ -583,7 +583,7 @@ Rate limit exceeded
 
 <br>
 
-### Multiple Tweets
+### Multiple Tweets 
 
 ---
 > Request
@@ -2504,7 +2504,7 @@ Rate limit exceeded
 
 <br>
 
-### User by ID
+### User by ID 
 
 ---
 > Request
@@ -2689,7 +2689,7 @@ Rate limit exceeded
 
 <br>
 
-### Users by ID
+### Users by ID 
 
 ---
 > Request
@@ -9473,7 +9473,7 @@ non_public_metrics,organic_metrics,promoted_metrics
 
 <br>
 
-### User by Username
+### User by Username 
 
 ---
 > Request
@@ -9641,7 +9641,7 @@ Rate limit exceeded
 
 <br>
 
-### Users by Username
+### Users by Username 
 
 ---
 > Request
@@ -10501,7 +10501,7 @@ Rate limit exceeded
 
 <br>
 
-### Authenticated User Lookup
+### Authenticated User Lookup 
 
 ---
 > Request
@@ -11357,7 +11357,7 @@ Rate limit exceeded
 
 <br>
 
-### Followers of user ID
+### Followers of user ID 
 
 ---
 > Request
@@ -11405,7 +11405,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Users a user ID is following
+### Users a user ID is following 
 
 ---
 > Request
@@ -11453,7 +11453,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Follow a user ID
+### Follow a user ID 
 
 ---
 > Request
@@ -11473,7 +11473,7 @@ POST https://api.twitter.com/2/users/:id/following
 
 <br>
 
-### Unfollow a user ID
+### Unfollow a user ID 
 
 ---
 > Request
@@ -11484,7 +11484,7 @@ DELETE https://api.twitter.com/2/users/:source_user_id/following/:target_user_id
 
 <br>
 
-### Block a user ID
+### Block a user ID 
 
 ---
 > Request
@@ -11505,7 +11505,7 @@ POST https://api.twitter.com/2/users/:id/blocking
 
 <br>
 
-### Blocks lookup
+### Blocks lookup 
 
 ---
 > Request
@@ -11553,7 +11553,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Unblock a user ID
+### Unblock a user ID 
 
 ---
 > Request
@@ -11564,7 +11564,7 @@ DELETE https://api.twitter.com/2/users/:source_user_id/blocking/:target_user_id
 
 <br>
 
-### List by ID
+### List by ID 
 
 ---
 > Request
@@ -11600,7 +11600,7 @@ id,name,username
 
 <br>
 
-### User owned Lists
+### User owned Lists 
 
 ---
 > Request
@@ -11646,7 +11646,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Create a list
+### Create a list 
 
 ---
 > Request
@@ -11668,7 +11668,7 @@ POST https://api.twitter.com/2/lists
 
 <br>
 
-### Delete a list
+### Delete a list 
 
 ---
 > Request
@@ -11679,7 +11679,7 @@ DELETE https://api.twitter.com/2/lists/:id
 
 <br>
 
-### Update a list
+### Update a list 
 
 ---
 > Request
@@ -11701,7 +11701,7 @@ PUT https://api.twitter.com/2/lists/:id
 
 <br>
 
-### List Tweets lookup
+### List Tweets lookup 
 
 ---
 > Request
@@ -11752,7 +11752,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Add a member
+### Add a member 
 
 ---
 > Request
@@ -11772,7 +11772,7 @@ POST https://api.twitter.com/2/lists/:id/members
 
 <br>
 
-### Remove a member
+### Remove a member 
 
 ---
 > Request
@@ -11783,7 +11783,7 @@ DELETE https://api.twitter.com/2/lists/:id/members/:user_id
 
 <br>
 
-### Members lookup
+### Members lookup 
 
 ---
 > Request
@@ -11833,7 +11833,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### User memberships
+### User memberships 
 
 ---
 > Request
@@ -11880,7 +11880,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Follow a list
+### Follow a list 
 
 ---
 > Request
@@ -11900,7 +11900,7 @@ POST https://api.twitter.com/2/users/:id/followed_lists
 
 <br>
 
-### Unfollow a list
+### Unfollow a list 
 
 ---
 > Request
@@ -11911,7 +11911,7 @@ DELETE https://api.twitter.com/2/users/:id/followed_lists/:list_id
 
 <br>
 
-### Follower lookup
+### Follower lookup 
 
 ---
 > Request
@@ -11961,7 +11961,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### User's followed Lists
+### User's followed Lists 
 
 ---
 > Request
@@ -12008,7 +12008,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Pin a list
+### Pin a list 
 
 ---
 > Request
@@ -12028,7 +12028,7 @@ POST https://api.twitter.com/2/users/:id/pinned_lists
 
 <br>
 
-### Unpin a list
+### Unpin a list 
 
 ---
 > Request
@@ -12039,7 +12039,7 @@ DELETE https://api.twitter.com/2/lists/:id/pinned_lists/:list_id
 
 <br>
 
-### User's pinned Lists
+### User's pinned Lists 
 
 ---
 > Request
@@ -12075,7 +12075,7 @@ id,name,username
 
 <br>
 
-### Create a Tweet
+### Create a Tweet 
 
 ---
 > Request
@@ -12095,7 +12095,7 @@ POST https://api.twitter.com/2/tweets
 
 <br>
 
-### Delete a Tweet
+### Delete a Tweet 
 
 ---
 > Request
@@ -12106,7 +12106,7 @@ DELETE https://api.twitter.com/2/tweets/:id
 
 <br>
 
-### Mute a user ID
+### Mute a user ID 
 
 ---
 > Request
@@ -12127,7 +12127,7 @@ POST https://api.twitter.com/2/users/:id/muting
 
 <br>
 
-### Unmute a user ID
+### Unmute a user ID 
 
 ---
 > Request
@@ -12138,7 +12138,7 @@ DELETE https://api.twitter.com/2/users/:source_user_id/muting/:target_user_id
 
 <br>
 
-### Mutes lookup
+### Mutes lookup 
 
 ---
 > Request
@@ -12186,7 +12186,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Quote Tweets by Tweet ID
+### Quote Tweets by Tweet ID 
 
 ---
 > Request
@@ -12286,7 +12286,7 @@ id, options
 
 <br>
 
-### Hide a reply
+### Hide a reply 
 
 ---
 > Request
@@ -12306,7 +12306,7 @@ PUT https://api.twitter.com/2/tweets/:id/hidden
 
 <br>
 
-### Unhide a reply
+### Unhide a reply 
 
 ---
 > Request
@@ -12326,7 +12326,7 @@ PUT https://api.twitter.com/2/tweets/:id/hidden
 
 <br>
 
-### Recent search
+### Recent search 
 
 ---
 > Request
@@ -13351,7 +13351,7 @@ id,name,username
 
 <br>
 
-### Full-archive search
+### Full-archive search ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -13452,7 +13452,7 @@ id,name,username
 
 <br>
 
-### Recent Tweet counts
+### Recent Tweet counts 
 
 ---
 > Request
@@ -13489,7 +13489,7 @@ This is the granularity that you want the timeseries count data to be grouped by
 
 <br>
 
-### Full-archive Tweet counts
+### Full-archive Tweet counts ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -13530,7 +13530,7 @@ This is the granularity that you want the timeseries count data to be grouped by
 
 <br>
 
-### Add Rules
+### Add Rules 
 
 ---
 > Request
@@ -13728,7 +13728,7 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
 
 <br>
 
-### Retrieve Rules
+### Retrieve Rules 
 
 ---
 > Request
@@ -13785,7 +13785,7 @@ GET https://api.twitter.com/2/tweets/search/stream/rules
 
 <br>
 
-### Delete Rules (by rule ID)
+### Delete Rules (by rule ID) 
 
 ---
 > Request
@@ -13982,7 +13982,7 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
 
 <br>
 
-### Delete Rules (by rule value)
+### Delete Rules (by rule value) 
 
 ---
 > Request
@@ -14179,7 +14179,7 @@ POST https://api.twitter.com/2/tweets/search/stream/rules
 
 <br>
 
-### Stream (see description)
+### Stream (see description) 
 
 ---
 > Request
@@ -14275,7 +14275,7 @@ data.
 
 <br>
 
-### Stream (see description)
+### Stream (see description) ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14358,7 +14358,7 @@ data.
 
 <br>
 
-### Spaces lookup by single ID
+### Spaces lookup by single ID ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14405,7 +14405,7 @@ id,name,description
 
 <br>
 
-### Spaces lookup by list of IDs
+### Spaces lookup by list of IDs ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14456,7 +14456,7 @@ id,name,description
 
 <br>
 
-### Lookup Spaces created by one or more users
+### Lookup Spaces created by one or more users ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14507,7 +14507,7 @@ id,name,description
 
 <br>
 
-### Users who bought a ticket to a Space
+### Users who bought a ticket to a Space ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14549,7 +14549,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Search Spaces by title
+### Search Spaces by title ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14607,7 +14607,7 @@ id,name,description
 
 <br>
 
-### Create a batch compliance job
+### Create a batch compliance job 
 
 ---
 > Request
@@ -14627,7 +14627,7 @@ POST https://api.twitter.com/2/compliance/jobs
 
 <br>
 
-### Get all batch compliance jobs
+### Get all batch compliance jobs 
 
 ---
 > Request
@@ -14642,7 +14642,7 @@ GET https://api.twitter.com/2/compliance/jobs?type=tweets
 
 <br>
 
-### Get a compliance job by ID
+### Get a compliance job by ID 
 
 ---
 > Request
@@ -14653,7 +14653,7 @@ GET https://api.twitter.com/2/compliance/jobs/:id
 
 <br>
 
-### Like a Tweet
+### Like a Tweet 
 
 ---
 > Request
@@ -14674,7 +14674,7 @@ POST https://api.twitter.com/2/users/:id/likes
 
 <br>
 
-### Liked Tweets
+### Liked Tweets ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14724,7 +14724,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Liking users
+### Liking users ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14772,7 +14772,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Unlike a Tweet
+### Unlike a Tweet 
 
 ---
 > Request
@@ -14783,7 +14783,7 @@ DELETE https://api.twitter.com/2/users/:id/likes/:tweet_id
 
 <br>
 
-### Retweet a Tweet
+### Retweet a Tweet 
 
 ---
 > Request
@@ -14803,7 +14803,7 @@ POST https://api.twitter.com/2/users/:id/retweets
 
 <br>
 
-### Retweeted by
+### Retweeted by ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -14853,7 +14853,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Undo a Retweet
+### Undo a Retweet 
 
 ---
 > Request
@@ -14864,7 +14864,7 @@ DELETE https://api.twitter.com/2/users/:id/retweets/:source_tweet_id
 
 <br>
 
-### Bookmark a Tweet
+### Bookmark a Tweet ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -14884,7 +14884,7 @@ POST https://api.twitter.com/2/users/:id/bookmarks
 
 <br>
 
-### Remove a Bookmark
+### Remove a Bookmark ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -14895,7 +14895,7 @@ DELETE https://api.twitter.com/2/users/:id/bookmarks/:tweet_id
 
 <br>
 
-### Bookmarked Tweets
+### Bookmarked Tweets ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 
 ---
 > Request
@@ -14945,7 +14945,7 @@ This parameter is used to get the next 'page' of results. The value used with th
 
 <br>
 
-### Reverse chronological home timeline by ID
+### Reverse chronological home timeline by ID 
 
 ---
 > Request
@@ -15045,7 +15045,7 @@ id, options
 
 <br>
 
-### User Tweet timeline by ID
+### User Tweet timeline by ID 
 
 ---
 > Request
@@ -15145,7 +15145,7 @@ id, options
 
 <br>
 
-### User mention timeline by ID
+### User mention timeline by ID 
 
 ---
 > Request
@@ -15245,7 +15245,7 @@ id, options
 
 <br>
 
-### DM events by 1-1 conversation
+### DM events by 1-1 conversation 
 
 ---
 > Request
@@ -15316,7 +15316,7 @@ Comma-separated list of fields (with no spaces).
 
 <br>
 
-### Get DMs by conversation
+### Get DMs by conversation 
 
 ---
 > Request
@@ -15375,7 +15375,7 @@ Comma-separated list of fields (with no spaces).
 
 <br>
 
-### DM events by User
+### DM events by User 
 
 ---
 > Request
@@ -15447,7 +15447,7 @@ Comma-separated list of fields (with no spaces).
 
 <br>
 
-### New 1-1 DM message
+### New 1-1 DM message 
 
 ---
 > Request
@@ -15468,7 +15468,7 @@ POST https://api.twitter.com/2/dm_conversations/with/:participant_id/messages
 
 <br>
 
-### New group DM and conversation
+### New group DM and conversation 
 
 ---
 > Request
@@ -15492,7 +15492,7 @@ POST https://api.twitter.com/2/dm_conversations/
 
 <br>
 
-### Add DM to conversation
+### Add DM to conversation 
 
 ---
 > Request

@@ -578,7 +578,7 @@ GET https://graph.microsoft.com/beta/security/triggers/retentionEvents
 
 <br>
 
-### Get an open extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
+### Get an open extension ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -595,7 +595,7 @@ GET https://graph.microsoft.com/v1.0/me?$select=id,displayName,mail,mobilePhone&
 
 <br>
 
-### Create an open extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
+### Create an open extension ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -619,7 +619,7 @@ POST https://graph.microsoft.com/v1.0/me/extensions
 
 <br>
 
-### Update an open extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
+### Update an open extension ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -641,7 +641,7 @@ PATCH https://graph.microsoft.com/v1.0/me/extensions/{{ExtensionId}}
 
 <br>
 
-### Get avaiable schema extensions ![postman](https://img.shields.io/badge/auth-token-brightgreen)
+### Get avaiable schema extensions ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -652,7 +652,7 @@ GET https://graph.microsoft.com/v1.0/schemaExtensions
 
 <br>
 
-### Create a group with extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
+### Create a group with extension ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -684,7 +684,7 @@ POST https://graph.microsoft.com/v1.0/groups
 
 <br>
 
-### Filter groups by extensions ![postman](https://img.shields.io/badge/auth-token-brightgreen)
+### Filter groups by extensions ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -701,7 +701,7 @@ GET https://graph.microsoft.com/v1.0/groups?$filter=adatumisv_courses/id eq '123
 
 <br>
 
-### Update a group with extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
+### Update a group with extension ![auth](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request

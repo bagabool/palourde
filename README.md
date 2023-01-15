@@ -1,5 +1,4 @@
 ## Palourde
----
 
 ![version](https://img.shields.io/badge/version-1.0.3-blue) ![python](https://img.shields.io/badge/python-%3E=3.10-brightgreen) ![postman](https://img.shields.io/badge/postman%20collection-2.1-yellowgreen) 
 

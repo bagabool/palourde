@@ -13,7 +13,7 @@ You may also be interested by [the GraphQL entrypoint](/graphql).
 
 ## Requests
 
-### Retrieves a Book resource.
+### Retrieves a Book resource. 
 
 ---
 > Request
@@ -60,7 +60,7 @@ GET {{baseUrl}}/books/:id
 
 <br>
 
-### Replaces the Book resource.
+### Replaces the Book resource. 
 
 ---
 > Request
@@ -130,7 +130,7 @@ PUT {{baseUrl}}/books/:id
 
 <br>
 
-### Removes the Book resource.
+### Removes the Book resource. 
 
 ---
 > Request
@@ -148,7 +148,7 @@ DELETE {{baseUrl}}/books/:id
 
 <br>
 
-### Updates the Book resource.
+### Updates the Book resource. 
 
 ---
 > Request
@@ -206,7 +206,7 @@ PATCH {{baseUrl}}/books/:id
 
 <br>
 
-### Replaces the Book resource.
+### Replaces the Book resource. 
 
 ---
 > Request
@@ -250,7 +250,7 @@ PUT {{baseUrl}}/books/:id/generate-cover
 
 <br>
 
-### Retrieves the collection of Book resources.
+### Retrieves the collection of Book resources. 
 
 ---
 > Request
@@ -384,7 +384,7 @@ The number of items per page
 
 <br>
 
-### Creates a Book resource.
+### Creates a Book resource. 
 
 ---
 > Request
@@ -452,7 +452,7 @@ POST {{baseUrl}}/books
 
 <br>
 
-### Retrieves the collection of Review resources.
+### Retrieves the collection of Review resources. 
 
 ---
 > Request
@@ -552,7 +552,7 @@ The collection page number
 
 <br>
 
-### Retrieves a Parchment resource.
+### Retrieves a Parchment resource. 
 
 ---
 > Request
@@ -580,7 +580,7 @@ GET {{baseUrl}}/parchments/:id
 
 <br>
 
-### Replaces the Parchment resource.
+### Replaces the Parchment resource. 
 
 ---
 > Request
@@ -622,7 +622,7 @@ PUT {{baseUrl}}/parchments/:id
 
 <br>
 
-### Removes the Parchment resource.
+### Removes the Parchment resource. 
 
 ---
 > Request
@@ -640,7 +640,7 @@ DELETE {{baseUrl}}/parchments/:id
 
 <br>
 
-### Updates the Parchment resource.
+### Updates the Parchment resource. 
 
 ---
 > Request
@@ -679,7 +679,7 @@ PATCH {{baseUrl}}/parchments/:id
 
 <br>
 
-### Retrieves the collection of Parchment resources.
+### Retrieves the collection of Parchment resources. 
 
 ---
 > Request
@@ -751,7 +751,7 @@ The collection page number
 
 <br>
 
-### Creates a Parchment resource.
+### Creates a Parchment resource. 
 
 ---
 > Request
@@ -791,7 +791,7 @@ POST {{baseUrl}}/parchments
 
 <br>
 
-### Retrieves a Review resource.
+### Retrieves a Review resource. 
 
 ---
 > Request
@@ -828,7 +828,7 @@ GET {{baseUrl}}/reviews/:id
 
 <br>
 
-### Replaces the Review resource.
+### Replaces the Review resource. 
 
 ---
 > Request
@@ -883,7 +883,7 @@ PUT {{baseUrl}}/reviews/:id
 
 <br>
 
-### Removes the Review resource.
+### Removes the Review resource. 
 
 ---
 > Request
@@ -901,7 +901,7 @@ DELETE {{baseUrl}}/reviews/:id
 
 <br>
 
-### Updates the Review resource.
+### Updates the Review resource. 
 
 ---
 > Request
@@ -949,7 +949,7 @@ PATCH {{baseUrl}}/reviews/:id
 
 <br>
 
-### Retrieves the collection of Review resources.
+### Retrieves the collection of Review resources. 
 
 ---
 > Request
@@ -1053,7 +1053,7 @@ The number of items per page
 
 <br>
 
-### Creates a Review resource.
+### Creates a Review resource. 
 
 ---
 > Request
@@ -1106,7 +1106,7 @@ POST {{baseUrl}}/reviews
 
 <br>
 
-### Retrieves the collection of TopBook resources.
+### Retrieves the collection of TopBook resources. 
 
 ---
 > Request
@@ -1184,7 +1184,7 @@ The collection page number
 
 <br>
 
-### Retrieves a TopBook resource.
+### Retrieves a TopBook resource. 
 
 ---
 > Request
@@ -1215,7 +1215,7 @@ GET {{baseUrl}}/top_books/:id
 
 <br>
 
-### Retrieves the number of books and top books (legacy endpoint).
+### Retrieves the number of books and top books (legacy endpoint). 
 
 ---
 > Request
