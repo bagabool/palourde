@@ -1,6 +1,4 @@
-# Google Analytics API
-
----
+# Google Analytics API 
 
 <br>
 
@@ -12,6 +10,8 @@ Contact Support:
 <br>
 
 ## Requests
+
+<br>
 
 ### analytics.data.ga.get ![auth](https://img.shields.io/badge/auth-oauth2-yellow)
 

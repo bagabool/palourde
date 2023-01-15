@@ -1,6 +1,4 @@
-# Microsoft Graph
-
----
+# Microsoft Graph 
 
 <br>
 
@@ -9,6 +7,8 @@
 <br>
 
 ## Requests
+
+<br>
 
 ### Get my notebooks 
 
