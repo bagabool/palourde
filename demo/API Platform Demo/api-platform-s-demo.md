@@ -23,8 +23,9 @@ GET {{baseUrl}}/books/:id
 ```
 
 
-> Response
+> Responses
 
+*Book resource*
 ```json
 {
   "title": "ex",
@@ -54,6 +55,8 @@ GET {{baseUrl}}/books/:id
   ]
 }
 ```
+
+*Resource not found*: No response specified
 
 <br>
 
@@ -86,8 +89,9 @@ PUT {{baseUrl}}/books/:id
 ```
 
 
-> Response
+> Responses
 
+*Book resource updated*
 ```json
 {
   "title": "ex",
@@ -118,6 +122,12 @@ PUT {{baseUrl}}/books/:id
 }
 ```
 
+*Invalid input*: No response specified
+
+*Resource not found*: No response specified
+
+*Unprocessable entity*: No response specified
+
 <br>
 
 ### Removes the Book resource.
@@ -130,11 +140,11 @@ DELETE {{baseUrl}}/books/:id
 ```
 
 
-> Response
+> Responses
 
-```text
+*Book resource deleted*: No response specified
 
-```
+*Resource not found*: No response specified
 
 <br>
 
@@ -155,8 +165,9 @@ PATCH {{baseUrl}}/books/:id
 ```
 
 
-> Response
+> Responses
 
+*Book resource updated*
 ```json
 {
   "title": "ex",
@@ -186,6 +197,12 @@ PATCH {{baseUrl}}/books/:id
   ]
 }
 ```
+
+*Invalid input*: No response specified
+
+*Resource not found*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -218,11 +235,18 @@ PUT {{baseUrl}}/books/:id/generate-cover
 ```
 
 
-> Response
+> Responses
 
+*Book resource updated*
 ```json
 {}
 ```
+
+*Invalid input*: No response specified
+
+*Resource not found*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -268,6 +292,7 @@ The number of items per page
 
 > Response
 
+*Book collection*
 ```json
 {
   "hydra:member": [
@@ -388,8 +413,9 @@ POST {{baseUrl}}/books
 ```
 
 
-> Response
+> Responses
 
+*Book resource created*
 ```json
 {
   "title": "ex",
@@ -419,6 +445,10 @@ POST {{baseUrl}}/books
   ]
 }
 ```
+
+*Invalid input*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -450,6 +480,7 @@ The collection page number
 
 > Response
 
+*Review collection*
 ```json
 {
   "hydra:member": [
@@ -531,8 +562,9 @@ GET {{baseUrl}}/parchments/:id
 ```
 
 
-> Response
+> Responses
 
+*Parchment resource*
 ```json
 {
   "title": "occaecat proident aliqua incididunt ut",
@@ -543,6 +575,8 @@ GET {{baseUrl}}/parchments/:id
   "id": "330a7855-e8cd-4e4f-29f9-d83ea7fecbc2"
 }
 ```
+
+*Resource not found*: No response specified
 
 <br>
 
@@ -566,8 +600,9 @@ PUT {{baseUrl}}/parchments/:id
 ```
 
 
-> Response
+> Responses
 
+*Parchment resource updated*
 ```json
 {
   "title": "occaecat proident aliqua incididunt ut",
@@ -578,6 +613,12 @@ PUT {{baseUrl}}/parchments/:id
   "id": "330a7855-e8cd-4e4f-29f9-d83ea7fecbc2"
 }
 ```
+
+*Invalid input*: No response specified
+
+*Resource not found*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -591,11 +632,11 @@ DELETE {{baseUrl}}/parchments/:id
 ```
 
 
-> Response
+> Responses
 
-```text
+*Parchment resource deleted*: No response specified
 
-```
+*Resource not found*: No response specified
 
 <br>
 
@@ -616,8 +657,9 @@ PATCH {{baseUrl}}/parchments/:id
 ```
 
 
-> Response
+> Responses
 
+*Parchment resource updated*
 ```json
 {
   "title": "occaecat proident aliqua incididunt ut",
@@ -628,6 +670,12 @@ PATCH {{baseUrl}}/parchments/:id
   "id": "330a7855-e8cd-4e4f-29f9-d83ea7fecbc2"
 }
 ```
+
+*Invalid input*: No response specified
+
+*Resource not found*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -649,6 +697,7 @@ The collection page number
 
 > Response
 
+*Parchment collection*
 ```json
 {
   "hydra:member": [
@@ -722,8 +771,9 @@ POST {{baseUrl}}/parchments
 ```
 
 
-> Response
+> Responses
 
+*Parchment resource created*
 ```json
 {
   "title": "occaecat proident aliqua incididunt ut",
@@ -734,6 +784,10 @@ POST {{baseUrl}}/parchments
   "id": "330a7855-e8cd-4e4f-29f9-d83ea7fecbc2"
 }
 ```
+
+*Invalid input*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -747,8 +801,9 @@ GET {{baseUrl}}/reviews/:id
 ```
 
 
-> Response
+> Responses
 
+*Review resource*
 ```json
 {
   "body": "nulla m",
@@ -768,6 +823,8 @@ GET {{baseUrl}}/reviews/:id
   "publicationDate": "1973-01-02T11:01:32.600Z"
 }
 ```
+
+*Resource not found*: No response specified
 
 <br>
 
@@ -795,8 +852,9 @@ PUT {{baseUrl}}/reviews/:id
 ```
 
 
-> Response
+> Responses
 
+*Review resource updated*
 ```json
 {
   "body": "nulla m",
@@ -817,6 +875,12 @@ PUT {{baseUrl}}/reviews/:id
 }
 ```
 
+*Invalid input*: No response specified
+
+*Resource not found*: No response specified
+
+*Unprocessable entity*: No response specified
+
 <br>
 
 ### Removes the Review resource.
@@ -829,11 +893,11 @@ DELETE {{baseUrl}}/reviews/:id
 ```
 
 
-> Response
+> Responses
 
-```text
+*Review resource deleted*: No response specified
 
-```
+*Resource not found*: No response specified
 
 <br>
 
@@ -854,8 +918,9 @@ PATCH {{baseUrl}}/reviews/:id
 ```
 
 
-> Response
+> Responses
 
+*Review resource updated*
 ```json
 {
   "body": "nulla m",
@@ -875,6 +940,12 @@ PATCH {{baseUrl}}/reviews/:id
   "publicationDate": "1973-01-02T11:01:32.600Z"
 }
 ```
+
+*Invalid input*: No response specified
+
+*Resource not found*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -910,6 +981,7 @@ The number of items per page
 
 > Response
 
+*Review collection*
 ```json
 {
   "hydra:member": [
@@ -1005,8 +1077,9 @@ POST {{baseUrl}}/reviews
 ```
 
 
-> Response
+> Responses
 
+*Review resource created*
 ```json
 {
   "body": "nulla m",
@@ -1026,6 +1099,10 @@ POST {{baseUrl}}/reviews
   "publicationDate": "1973-01-02T11:01:32.600Z"
 }
 ```
+
+*Invalid input*: No response specified
+
+*Unprocessable entity*: No response specified
 
 <br>
 
@@ -1047,6 +1124,7 @@ The collection page number
 
 > Response
 
+*TopBook collection*
 ```json
 {
   "hydra:member": [
@@ -1116,8 +1194,9 @@ GET {{baseUrl}}/top_books/:id
 ```
 
 
-> Response
+> Responses
 
+*TopBook resource*
 ```json
 {
   "@context": "exercitation laborum culpa",
@@ -1131,6 +1210,8 @@ GET {{baseUrl}}/top_books/:id
   "borrowCount": -49018559
 }
 ```
+
+*Resource not found*: No response specified
 
 <br>
 
@@ -1146,6 +1227,7 @@ GET {{baseUrl}}/stats
 
 > Response
 
+*Untitled Response*
 ```json
 {
   "books_count": 997,

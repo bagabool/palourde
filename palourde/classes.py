@@ -79,7 +79,6 @@ class CollectionItemRequest:
 @dataclass
 class CollectionItemResponse:
     name: str
-    originalRequest: CollectionItemRequest
     status: str
     code: int
     _postman_previewlanguage: str
@@ -90,7 +89,7 @@ class CollectionItemResponse:
 class CollectionItem:
     name: str
     request: CollectionItemRequest
-    response: CollectionItemResponse | list
+    response: list[CollectionItemResponse]
 
 
 @dataclass
@@ -146,12 +145,15 @@ class Collection:
                         f"\n> Body\n\n```{language}\n{item.request.body.raw}\n```\n\n"
                     )
 
-                # REQUEST RESPONSE
+                # REQUEST RESPONSES
                 if bool(item.response):
-                    markdown.write(
-                        f"\n> Response\n\n```{item.response[0].get('_postman_previewlanguage')}\n"
-                        f"{item.response[0].get('body')}\n```\n\n"
-                    )
+                    markdown.write(f"\n> Response{'s' if len(item.response) > 1 else ''}\n\n")
+                    for response in item.response:
+                        markdown.write(f"*{response.name}*")
+                        if bool(response.body):
+                            markdown.write(f"\n```{response._postman_previewlanguage}\n{response.body}\n```\n\n")
+                        else:
+                            markdown.write(": No response specified\n\n")
 
                 markdown.write("<br>\n\n")
 
