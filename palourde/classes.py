@@ -93,40 +93,59 @@ class CollectionItem:
 
 
 @dataclass
+class CollectionAuth:
+    type: str
+
+
+@dataclass
 class Collection:
     info: CollectionInfo
     item: list[CollectionItem]
+    auth: Optional[CollectionAuth]
 
     def __post_init__(self):
         self.file = pathlib.Path(f"{slugify(self.info.name)}.md")
         self.file.touch(exist_ok=True)
 
+    def write_auth_badge(self, auth: CollectionAuth | RequestAuth) -> str:
+        badge = ""
+        match auth.type:
+            case "bearer":
+                badge = "![auth](https://img.shields.io/badge/auth-token-brightgreen)"
+            case "oauth2":
+                badge = "![auth](https://img.shields.io/badge/auth-oauth2-yellow)"
+            case "apikey":
+                badge = "![auth](https://img.shields.io/badge/auth-apikey-orange)"
+
+        return badge
+
     def to_markdown(self):
         with open(self.file, 'w') as markdown:
 
-            # REQUEST NAME
-            markdown.write(f"# {self.info.name}\n\n---\n\n<br>\n\n")
+            # COLLECTION AUTH
+            badge = ""
+            if self.auth:
+                badge = self.write_auth_badge(self.auth)
 
-            # REQUEST DESCRIPTION
+            # COLLECTION NAME
+            markdown.write(f"# {self.info.name} {badge}\n\n<br>\n\n")
+
+            # COLLECTION DESCRIPTION
             if self.info.description:
                 markdown.write(f"{self.info.description}\n\n")
 
-            markdown.write(f"<br>\n\n## Requests\n\n")
+            markdown.write(f"<br>\n\n## Requests\n\n<br>\n\n")
+
+            # Loop through all flatten requests
             for item in self.item:
 
-                # AUTH
-                auth = ""
+                # REQUEST AUTH
+                badge = ""
                 if item.request.auth:
-                    match item.request.auth.type:
-                        case "bearer":
-                            auth = "![auth](https://img.shields.io/badge/auth-token-brightgreen)"
-                        case "oauth2":
-                            auth = "![auth](https://img.shields.io/badge/auth-oauth2-yellow)"
-                        case "apikey":
-                            auth = "![auth](https://img.shields.io/badge/auth-apikey-orange)"
+                    badge = self.write_auth_badge(item.request.auth)
 
                 # REQUEST METHOD AND URL
-                markdown.write(f"### {item.name} {auth}\n\n---\n> Request\n\n```\n")
+                markdown.write(f"### {item.name} {badge}\n\n---\n> Request\n\n```\n")
                 if item.request.url:
                     markdown.write(f"{item.request.method} {item.request.url.raw}\n```\n\n")
                 else:

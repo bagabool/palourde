@@ -1,6 +1,4 @@
-# API Platform's demo
-
----
+# API Platform's demo ![auth](https://img.shields.io/badge/auth-apikey-orange)
 
 <br>
 
@@ -12,6 +10,8 @@ You may also be interested by [the GraphQL entrypoint](/graphql).
 <br>
 
 ## Requests
+
+<br>
 
 ### Retrieves a Book resource. 
 
