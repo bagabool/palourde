@@ -114,12 +114,23 @@ class Collection:
             markdown.write(f"<br>\n\n## Requests\n\n")
             for item in self.item:
 
+                # AUTH
+                auth = ""
+                if item.request.auth:
+                    match item.request.auth.type:
+                        case "bearer":
+                            auth = "![auth](https://img.shields.io/badge/auth-token-brightgreen)"
+                        case "oauth2":
+                            auth = "![auth](https://img.shields.io/badge/auth-oauth2-yellow)"
+                        case "apikey":
+                            auth = "![auth](https://img.shields.io/badge/auth-apikey-orange)"
+
                 # REQUEST METHOD AND URL
-                if item.request.__dict__.get("url") is not None:
-                    markdown.write(
-                        f"### {item.name}\n\n---\n> Request\n\n```\n"
-                        f"{item.request.method} {item.request.url.raw}\n```\n\n"
-                    )
+                markdown.write(f"### {item.name} {auth}\n\n---\n> Request\n\n```\n")
+                if item.request.url:
+                    markdown.write(f"{item.request.method} {item.request.url.raw}\n```\n\n")
+                else:
+                    markdown.write("No URL specified !\n```\n\n")
 
                 # REQUEST URL PARAMETERS
                 if item.request.url.query:

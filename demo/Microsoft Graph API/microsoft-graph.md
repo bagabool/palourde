@@ -10,7 +10,7 @@
 
 ## Requests
 
-### Get my notebooks
+### Get my notebooks 
 
 ---
 > Request
@@ -21,7 +21,7 @@ GET https://graph.microsoft.com/v1.0/me/onenote/notebooks
 
 <br>
 
-### Get my notebook sections
+### Get my notebook sections 
 
 ---
 > Request
@@ -32,7 +32,7 @@ GET https://graph.microsoft.com/v1.0/me/onenote/sections
 
 <br>
 
-### Get my notebook pages
+### Get my notebook pages 
 
 ---
 > Request
@@ -43,7 +43,7 @@ GET https://graph.microsoft.com/v1.0/me/onenote/pages
 
 <br>
 
-### Create notebook
+### Create notebook 
 
 ---
 > Request
@@ -63,7 +63,7 @@ POST https://graph.microsoft.com/v1.0/me/onenote/notebooks
 
 <br>
 
-### Create section
+### Create section 
 
 ---
 > Request
@@ -83,7 +83,7 @@ POST https://graph.microsoft.com/v1.0/me/onenote/notebooks/{{NotebookId}}/sectio
 
 <br>
 
-### Get my organization's default site collection
+### Get my organization's default site collection 
 
 ---
 > Request
@@ -94,7 +94,7 @@ GET https://graph.microsoft.com/v1.0/sites/root
 
 <br>
 
-### Get the doc libs in root site
+### Get the doc libs in root site 
 
 ---
 > Request
@@ -105,7 +105,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/drives
 
 <br>
 
-### Search for site by name
+### Search for site by name 
 
 ---
 > Request
@@ -120,7 +120,7 @@ GET https://graph.microsoft.com/v1.0/sites?search=contoso
 
 <br>
 
-### Get subsites of site
+### Get subsites of site 
 
 ---
 > Request
@@ -131,7 +131,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/sites
 
 <br>
 
-### Get site columns
+### Get site columns 
 
 ---
 > Request
@@ -142,7 +142,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/columns
 
 <br>
 
-### Get site content types
+### Get site content types 
 
 ---
 > Request
@@ -153,7 +153,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/contentTypes
 
 <br>
 
-### Get site lists
+### Get site lists 
 
 ---
 > Request
@@ -164,7 +164,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/lists
 
 <br>
 
-### Get list columns
+### Get list columns 
 
 ---
 > Request
@@ -175,7 +175,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/lists/{{ListId}}/columns
 
 <br>
 
-### Get list content types
+### Get list content types 
 
 ---
 > Request
@@ -186,7 +186,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/lists/{{ListId}}/contentTypes
 
 <br>
 
-### Get list items
+### Get list items 
 
 ---
 > Request
@@ -197,7 +197,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/lists/{{ListId}}/items
 
 <br>
 
-### Get list items titled "Contoso Home"
+### Get list items titled "Contoso Home" 
 
 ---
 > Request
@@ -212,7 +212,7 @@ GET https://graph.microsoft.com/v1.0/sites/root/lists/{{ListId}}/items?$filter=f
 
 <br>
 
-### Get applications
+### Get applications 
 
 ---
 > Request
@@ -223,7 +223,7 @@ GET https://graph.microsoft.com/v1.0/applications
 
 <br>
 
-### Create an application
+### Create an application 
 
 ---
 > Request
@@ -243,7 +243,7 @@ POST https://graph.microsoft.com/v1.0/applications
 
 <br>
 
-### Get application
+### Get application 
 
 ---
 > Request
@@ -254,7 +254,7 @@ GET https://graph.microsoft.com/v1.0/applications/{{ApplicationId}}
 
 <br>
 
-### Get application owners
+### Get application owners 
 
 ---
 > Request
@@ -265,7 +265,7 @@ GET https://graph.microsoft.com/v1.0/applications/{{ApplicationId}}/owners
 
 <br>
 
-### Update application
+### Update application 
 
 ---
 > Request
@@ -285,7 +285,7 @@ PATCH https://graph.microsoft.com/v1.0/applications/{{ApplicationId}}
 
 <br>
 
-### Delete application
+### Delete application 
 
 ---
 > Request
@@ -296,7 +296,7 @@ DELETE https://graph.microsoft.com/beta/applications/{{ApplicationId}}
 
 <br>
 
-### Get subscriptions
+### Get subscriptions 
 
 ---
 > Request
@@ -307,7 +307,7 @@ GET https://graph.microsoft.com/v1.0/subscriptions
 
 <br>
 
-### Create subjectRightsRequest
+### Create subjectRightsRequest 
 
 ---
 > Request
@@ -340,7 +340,7 @@ POST https://graph.microsoft.com/v1.0/privacy/subjectRightsRequests
 
 <br>
 
-### List subjectRightsRequests
+### List subjectRightsRequests 
 
 ---
 > Request
@@ -351,7 +351,7 @@ GET https://graph.microsoft.com/v1.0/privacy/subjectRightsRequests
 
 <br>
 
-### Get subjectRightsRequest
+### Get subjectRightsRequest 
 
 ---
 > Request
@@ -362,7 +362,7 @@ GET https://graph.microsoft.com/v1.0/privacy/subjectRightsRequests/{{subjectRigh
 
 <br>
 
-### subjectRightsRequest: getFinalReport
+### subjectRightsRequest: getFinalReport 
 
 ---
 > Request
@@ -373,7 +373,7 @@ GET https://graph.microsoft.com/v1.0/privacy/subjectRightsRequests/{{subjectRigh
 
 <br>
 
-### subjectRightsRequest: getFinalAttachment
+### subjectRightsRequest: getFinalAttachment 
 
 ---
 > Request
@@ -384,7 +384,7 @@ GET https://graph.microsoft.com/v1.0/privacy/subjectRightsRequests/{{subjectRigh
 
 <br>
 
-### Create authoredNote
+### Create authoredNote 
 
 ---
 > Request
@@ -408,7 +408,7 @@ POST https://graph.microsoft.com/v1.0/privacy/subjectRightsRequests/{{subjectRig
 
 <br>
 
-### List notes
+### List notes 
 
 ---
 > Request
@@ -419,7 +419,7 @@ GET https://graph.microsoft.com/v1.0/privacy/subjectRightsRequests/{{subjectRigh
 
 <br>
 
-### List retentionLabels
+### List retentionLabels 
 
 ---
 > Request
@@ -430,7 +430,7 @@ GET https://graph.microsoft.com/beta/security/labels/retentionLabels
 
 <br>
 
-### Create retentionLabel
+### Create retentionLabel 
 
 ---
 > Request
@@ -459,7 +459,7 @@ POST https://graph.microsoft.com/beta/security/labels/retentionLabels
 
 <br>
 
-### Get retentionLabel
+### Get retentionLabel 
 
 ---
 > Request
@@ -470,7 +470,7 @@ GET https://graph.microsoft.com/beta/security/labels/retentionLabels/{{retention
 
 <br>
 
-### Update retentionLabel
+### Update retentionLabel 
 
 ---
 > Request
@@ -490,7 +490,7 @@ PATCH https://graph.microsoft.com/beta/security/labels/retentionLabels/{{retenti
 
 <br>
 
-### Delete rentionionLabel
+### Delete rentionionLabel 
 
 ---
 > Request
@@ -501,7 +501,7 @@ DELETE https://graph.microsoft.com/beta/security/labels/retentionLabels/{{retent
 
 <br>
 
-### List retentionEventTypes
+### List retentionEventTypes 
 
 ---
 > Request
@@ -512,7 +512,7 @@ GET https://graph.microsoft.com/beta/security/triggerTypes/retentionEventTypes
 
 <br>
 
-### Get retentionEventType
+### Get retentionEventType 
 
 ---
 > Request
@@ -523,7 +523,7 @@ GET https://graph.microsoft.com/beta/security/triggerTypes/retentionEventTypes/{
 
 <br>
 
-### Create retentionEvent
+### Create retentionEvent 
 
 ---
 > Request
@@ -556,7 +556,7 @@ POST https://graph.microsoft.com/beta/security/triggers/retentionEvents
 
 <br>
 
-### Get retentionEvent
+### Get retentionEvent 
 
 ---
 > Request
@@ -567,7 +567,7 @@ GET https://graph.microsoft.com/beta/security/triggers/retentionEvents/{{retenti
 
 <br>
 
-### List retentionEvents
+### List retentionEvents 
 
 ---
 > Request
@@ -578,7 +578,7 @@ GET https://graph.microsoft.com/beta/security/triggers/retentionEvents
 
 <br>
 
-### Get an open extension
+### Get an open extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -595,7 +595,7 @@ GET https://graph.microsoft.com/v1.0/me?$select=id,displayName,mail,mobilePhone&
 
 <br>
 
-### Create an open extension
+### Create an open extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -619,7 +619,7 @@ POST https://graph.microsoft.com/v1.0/me/extensions
 
 <br>
 
-### Update an open extension
+### Update an open extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -641,7 +641,7 @@ PATCH https://graph.microsoft.com/v1.0/me/extensions/{{ExtensionId}}
 
 <br>
 
-### Get avaiable schema extensions
+### Get avaiable schema extensions ![postman](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -652,7 +652,7 @@ GET https://graph.microsoft.com/v1.0/schemaExtensions
 
 <br>
 
-### Create a group with extension
+### Create a group with extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -684,7 +684,7 @@ POST https://graph.microsoft.com/v1.0/groups
 
 <br>
 
-### Filter groups by extensions
+### Filter groups by extensions ![postman](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -701,7 +701,7 @@ GET https://graph.microsoft.com/v1.0/groups?$filter=adatumisv_courses/id eq '123
 
 <br>
 
-### Update a group with extension
+### Update a group with extension ![postman](https://img.shields.io/badge/auth-token-brightgreen)
 
 ---
 > Request
@@ -725,7 +725,7 @@ PATCH https://graph.microsoft.com/v1.0/groups/{{GroupId}}
 
 <br>
 
-### Perform parallel GETS
+### Perform parallel GETS 
 
 ---
 > Request
@@ -761,7 +761,7 @@ POST https://graph.microsoft.com/v1.0/$batch
 
 <br>
 
-### Combine a POST and a GET
+### Combine a POST and a GET 
 
 ---
 > Request
@@ -802,7 +802,7 @@ POST https://graph.microsoft.com/v1.0/$batch
 
 <br>
 
-### List ediscoveryCases
+### List ediscoveryCases 
 
 ---
 > Request
@@ -813,7 +813,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases
 
 <br>
 
-### Create ediscoveryCase
+### Create ediscoveryCase 
 
 ---
 > Request
@@ -835,7 +835,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases
 
 <br>
 
-### Get ediscoveryCase
+### Get ediscoveryCase 
 
 ---
 > Request
@@ -846,7 +846,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### Update ediscoveryCase
+### Update ediscoveryCase 
 
 ---
 > Request
@@ -866,7 +866,7 @@ PATCH https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscove
 
 <br>
 
-### Create Custodians
+### Create Custodians 
 
 ---
 > Request
@@ -886,7 +886,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### List ediscoveryCustodian
+### List ediscoveryCustodian 
 
 ---
 > Request
@@ -897,7 +897,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### Create custodian userSource
+### Create custodian userSource 
 
 ---
 > Request
@@ -918,7 +918,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### ediscoveryCustodian: applyHold
+### ediscoveryCustodian: applyHold 
 
 ---
 > Request
@@ -940,7 +940,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### List userSources
+### List userSources 
 
 ---
 > Request
@@ -951,7 +951,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### Create ediscoveryNoncustodialDataSources
+### Create ediscoveryNoncustodialDataSources 
 
 ---
 > Request
@@ -974,7 +974,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### ediscoveryNoncustodialDataSource: applyHold
+### ediscoveryNoncustodialDataSource: applyHold 
 
 ---
 > Request
@@ -996,7 +996,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### List ediscoveryNoncustodialDataSources
+### List ediscoveryNoncustodialDataSources 
 
 ---
 > Request
@@ -1007,7 +1007,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### Create searches
+### Create searches 
 
 ---
 > Request
@@ -1035,7 +1035,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### List searches
+### List searches 
 
 ---
 > Request
@@ -1046,7 +1046,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### ediscoverySearch: estimate Statistics
+### ediscoverySearch: estimate Statistics 
 
 ---
 > Request
@@ -1057,7 +1057,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### List lastEstimateStatisticsOperation
+### List lastEstimateStatisticsOperation 
 
 ---
 > Request
@@ -1068,7 +1068,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### Create reviewSets
+### Create reviewSets 
 
 ---
 > Request
@@ -1088,7 +1088,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### List reviewSets
+### List reviewSets 
 
 ---
 > Request
@@ -1099,7 +1099,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### ediscoveryReviewSet: addToReviewSet
+### ediscoveryReviewSet: addToReviewSet 
 
 ---
 > Request
@@ -1122,7 +1122,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### Create ediscoveryReviewSetQuery
+### Create ediscoveryReviewSetQuery 
 
 ---
 > Request
@@ -1143,7 +1143,7 @@ POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscover
 
 <br>
 
-### Update ediscoveryReviewSetQuery
+### Update ediscoveryReviewSetQuery 
 
 ---
 > Request
@@ -1164,7 +1164,7 @@ PATCH https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscove
 
 <br>
 
-### List queries
+### List queries 
 
 ---
 > Request
@@ -1175,7 +1175,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### Delete ediscoveryReviewSetQuery
+### Delete ediscoveryReviewSetQuery 
 
 ---
 > Request
@@ -1186,7 +1186,7 @@ DELETE https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscov
 
 <br>
 
-### List caseOperations
+### List caseOperations 
 
 ---
 > Request
@@ -1197,7 +1197,7 @@ GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{{ediscovery
 
 <br>
 
-### Get alerts
+### Get alerts 
 
 ---
 > Request
@@ -1208,7 +1208,7 @@ GET https://graph.microsoft.com/v1.0/security/alerts
 
 <br>
 
-### Get alerts with high severity
+### Get alerts with high severity 
 
 ---
 > Request
@@ -1225,7 +1225,7 @@ GET https://graph.microsoft.com/v1.0/security/alerts?$filter=Severity eq 'High'&
 
 <br>
 
-### Get alerts from Azure Security Center
+### Get alerts from Azure Security Center 
 
 ---
 > Request
@@ -1242,7 +1242,7 @@ GET https://graph.microsoft.com/v1.0/security/alerts?$filter=vendorInformation/p
 
 <br>
 
-### Get alerts filtered by category
+### Get alerts filtered by category 
 
 ---
 > Request
@@ -1259,7 +1259,7 @@ GET https://graph.microsoft.com/v1.0/security/alerts?$filter=Category eq 'ransom
 
 <br>
 
-### Get alerts filtered by destination
+### Get alerts filtered by destination 
 
 ---
 > Request
@@ -1274,7 +1274,7 @@ GET https://graph.microsoft.com/v1.0/security/alerts?$filter=networkConnections/
 
 <br>
 
-### Get alerts filtered by status
+### Get alerts filtered by status 
 
 ---
 > Request
@@ -1291,7 +1291,7 @@ GET https://graph.microsoft.com/v1.0/security/alerts?$filter=Status eq 'NewAlert
 
 <br>
 
-### Get secure scores
+### Get secure scores 
 
 ---
 > Request
@@ -1306,7 +1306,7 @@ GET https://graph.microsoft.com/v1.0/security/secureScores?$top=5
 
 <br>
 
-### Get secure scores control profiles
+### Get secure scores control profiles 
 
 ---
 > Request
@@ -1321,7 +1321,7 @@ GET https://graph.microsoft.com/beta/security/secureScoreControlProfiles?$top=5
 
 <br>
 
-### Get TI indicators
+### Get TI indicators 
 
 ---
 > Request
@@ -1332,7 +1332,7 @@ GET https://graph.microsoft.com/beta/security/tiIndicators
 
 <br>
 
-### Get TI indicator by id
+### Get TI indicator by id 
 
 ---
 > Request
@@ -1343,7 +1343,7 @@ GET https://graph.microsoft.com/beta/security/tiIndicators/{{TIIndicatorId}}
 
 <br>
 
-### Get security actions
+### Get security actions 
 
 ---
 > Request
@@ -1354,7 +1354,7 @@ GET https://graph.microsoft.com/beta/security/securityActions
 
 <br>
 
-### Get security action by id
+### Get security action by id 
 
 ---
 > Request
@@ -1365,7 +1365,7 @@ GET https://graph.microsoft.com/beta/security/securityActions/{{SecurityActionsI
 
 <br>
 
-### List retention labels
+### List retention labels 
 
 ---
 > Request
@@ -1376,7 +1376,7 @@ GET https://graph.microsoft.com/beta/security/labels/retentionLabels
 
 <br>
 
-### List catalog entries
+### List catalog entries 
 
 ---
 > Request
@@ -1387,7 +1387,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/catalog/entries
 
 <br>
 
-### List members
+### List members 
 
 ---
 > Request
@@ -1398,7 +1398,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deploym
 
 <br>
 
-### List exclusions
+### List exclusions 
 
 ---
 > Request
@@ -1409,7 +1409,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deploym
 
 <br>
 
-### Update audience (add members)
+### Update audience (add members) 
 
 ---
 > Request
@@ -1434,7 +1434,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deploy
 
 <br>
 
-### Update audience (add exclusions)
+### Update audience (add exclusions) 
 
 ---
 > Request
@@ -1459,7 +1459,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deploy
 
 <br>
 
-### Update audience (remove members)
+### Update audience (remove members) 
 
 ---
 > Request
@@ -1484,7 +1484,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deploy
 
 <br>
 
-### Update audience (remove exclusions)
+### Update audience (remove exclusions) 
 
 ---
 > Request
@@ -1509,7 +1509,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deploy
 
 <br>
 
-### Create deployment (feature update)
+### Create deployment (feature update) 
 
 ---
 > Request
@@ -1532,7 +1532,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments
 
 <br>
 
-### Create deployment (expedited security update)
+### Create deployment (expedited security update) 
 
 ---
 > Request
@@ -1555,7 +1555,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments
 
 <br>
 
-### Create deployment (rate-based gradual rollout)
+### Create deployment (rate-based gradual rollout) 
 
 ---
 > Request
@@ -1595,7 +1595,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments
 
 <br>
 
-### Create deployment (date-based gradual rollout)
+### Create deployment (date-based gradual rollout) 
 
 ---
 > Request
@@ -1636,7 +1636,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/deployments
 
 <br>
 
-### List deployments
+### List deployments 
 
 ---
 > Request
@@ -1647,7 +1647,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/deployments
 
 <br>
 
-### Get deployment
+### Get deployment 
 
 ---
 > Request
@@ -1658,7 +1658,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deploym
 
 <br>
 
-### Update deployment (replace monitoring rules)
+### Update deployment (replace monitoring rules) 
 
 ---
 > Request
@@ -1689,7 +1689,7 @@ PATCH https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deplo
 
 <br>
 
-### Update deployment (request paused state)
+### Update deployment (request paused state) 
 
 ---
 > Request
@@ -1712,7 +1712,7 @@ PATCH https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deplo
 
 <br>
 
-### Update deployment (clear requested state)
+### Update deployment (clear requested state) 
 
 ---
 > Request
@@ -1735,7 +1735,7 @@ PATCH https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Deplo
 
 <br>
 
-### Delete deployment
+### Delete deployment 
 
 ---
 > Request
@@ -1746,7 +1746,7 @@ DELETE https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Depl
 
 <br>
 
-### List Azure AD devices
+### List Azure AD devices 
 
 ---
 > Request
@@ -1761,7 +1761,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/?$fil
 
 <br>
 
-### Get Azure AD device
+### Get Azure AD device 
 
 ---
 > Request
@@ -1772,7 +1772,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/{{Upd
 
 <br>
 
-### Delete Azure AD device
+### Delete Azure AD device 
 
 ---
 > Request
@@ -1783,7 +1783,7 @@ DELETE https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Upda
 
 <br>
 
-### Enroll in feature update management
+### Enroll in feature update management 
 
 ---
 > Request
@@ -1809,7 +1809,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/enro
 
 <br>
 
-### Unenroll from feature update management
+### Unenroll from feature update management 
 
 ---
 > Request
@@ -1835,7 +1835,7 @@ POST https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/unen
 
 <br>
 
-### List updatable assets
+### List updatable assets 
 
 ---
 > Request
@@ -1846,7 +1846,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets
 
 <br>
 
-### Get updatable asset
+### Get updatable asset 
 
 ---
 > Request
@@ -1857,7 +1857,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/{{Upd
 
 <br>
 
-### Delete updatable asset
+### Delete updatable asset 
 
 ---
 > Request
@@ -1868,7 +1868,7 @@ DELETE https://graph.microsoft.com/beta/admin/windows/updates/deployments/{{Upda
 
 <br>
 
-### Get groups
+### Get groups 
 
 ---
 > Request
@@ -1879,7 +1879,7 @@ GET https://graph.microsoft.com/v1.0/groups
 
 <br>
 
-### Get items trending around me
+### Get items trending around me 
 
 ---
 > Request
@@ -1890,7 +1890,7 @@ GET https://graph.microsoft.com/beta/me/insights/trending
 
 <br>
 
-### Get people I'm working with
+### Get people I'm working with 
 
 ---
 > Request
@@ -1901,7 +1901,7 @@ GET https://graph.microsoft.com/beta/me/workingWith
 
 <br>
 
-### Get rooms
+### Get rooms 
 
 ---
 > Request
@@ -1912,7 +1912,7 @@ GET https://graph.microsoft.com/beta/me/findRooms
 
 <br>
 
-### Get my events for next week
+### Get my events for next week 
 
 ---
 > Request
@@ -1929,7 +1929,7 @@ GET https://graph.microsoft.com/v1.0/me/calendarview?startdatetime={{Today}}&end
 
 <br>
 
-### Get my calendars
+### Get my calendars 
 
 ---
 > Request
@@ -1940,7 +1940,7 @@ GET https://graph.microsoft.com/v1.0/me/calendars
 
 <br>
 
-### Add Microsoft Graph community call event
+### Add Microsoft Graph community call event 
 
 ---
 > Request
@@ -1989,7 +1989,7 @@ POST https://graph.microsoft.com/v1.0/me/events
 
 <br>
 
-### Get my Microsoft Graph community call events
+### Get my Microsoft Graph community call events 
 
 ---
 > Request
@@ -2004,7 +2004,7 @@ GET https://graph.microsoft.com/v1.0/me/events?$filter=subject eq 'Microsoft Gra
 
 <br>
 
-### Get my messages
+### Get my messages 
 
 ---
 > Request
@@ -2015,7 +2015,7 @@ GET https://graph.microsoft.com/v1.0/me/messages
 
 <br>
 
-### Get my important messages
+### Get my important messages 
 
 ---
 > Request
@@ -2030,7 +2030,7 @@ GET https://graph.microsoft.com/v1.0/me/messages?$filter=importance eq 'high'
 
 <br>
 
-### Get my messages from an address
+### Get my messages from an address 
 
 ---
 > Request
@@ -2045,7 +2045,7 @@ GET https://graph.microsoft.com/v1.0/me/messages?$filter=(from/emailAddress/addr
 
 <br>
 
-### Search my messages for "Weekly Digest"
+### Search my messages for "Weekly Digest" 
 
 ---
 > Request
@@ -2060,7 +2060,7 @@ GET https://graph.microsoft.com/v1.0/me/messages?$search="Weekly Digest"
 
 <br>
 
-### Get my messages I'm at mentioned in
+### Get my messages I'm at mentioned in 
 
 ---
 > Request
@@ -2077,7 +2077,7 @@ GET https://graph.microsoft.com/beta/me/messages?$filter=mentionsPreview/isMenti
 
 <br>
 
-### Get a message
+### Get a message 
 
 ---
 > Request
@@ -2088,7 +2088,7 @@ GET https://graph.microsoft.com/v1.0/me/messages/{{MessageId}}
 
 <br>
 
-### Get my mailbox rules
+### Get my mailbox rules 
 
 ---
 > Request
@@ -2099,7 +2099,7 @@ GET https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messagerules
 
 <br>
 
-### Get my categories
+### Get my categories 
 
 ---
 > Request
@@ -2110,7 +2110,7 @@ GET https://graph.microsoft.com/v1.0/me/outlook/masterCategories
 
 <br>
 
-### Get email headers
+### Get email headers 
 
 ---
 > Request
@@ -2127,7 +2127,7 @@ GET https://graph.microsoft.com/v1.0/me/messages?$select=internetMessageHeaders&
 
 <br>
 
-### Send mail
+### Send mail 
 
 ---
 > Request
@@ -2168,7 +2168,7 @@ POST https://graph.microsoft.com/v1.0/me/sendMail
 
 <br>
 
-### Get mailbox settings
+### Get mailbox settings 
 
 ---
 > Request
@@ -2179,7 +2179,7 @@ GET https://graph.microsoft.com/v1.0/me/mailboxSettings
 
 <br>
 
-### Set automatic replies
+### Set automatic replies 
 
 ---
 > Request
@@ -2213,7 +2213,7 @@ PATCH https://graph.microsoft.com/v1.0/me/mailboxSettings
 
 <br>
 
-### Search messages
+### Search messages 
 
 ---
 > Request
@@ -2242,7 +2242,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search file and connector interleaving Results
+### Search file and connector interleaving Results 
 
 ---
 > Request
@@ -2277,7 +2277,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search teams messages
+### Search teams messages 
 
 ---
 > Request
@@ -2306,7 +2306,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search messages top results
+### Search messages top results 
 
 ---
 > Request
@@ -2336,7 +2336,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search events
+### Search events 
 
 ---
 > Request
@@ -2365,7 +2365,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search files and folders
+### Search files and folders 
 
 ---
 > Request
@@ -2396,7 +2396,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search lists
+### Search lists 
 
 ---
 > Request
@@ -2425,7 +2425,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search list items
+### Search list items 
 
 ---
 > Request
@@ -2454,7 +2454,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search with XRANK
+### Search with XRANK 
 
 ---
 > Request
@@ -2483,7 +2483,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search list items with property selection
+### Search list items with property selection 
 
 ---
 > Request
@@ -2519,7 +2519,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search sites
+### Search sites 
 
 ---
 > Request
@@ -2548,7 +2548,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search drives
+### Search drives 
 
 ---
 > Request
@@ -2578,7 +2578,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search acronym
+### Search acronym 
 
 ---
 > Request
@@ -2607,7 +2607,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search bookmark
+### Search bookmark 
 
 ---
 > Request
@@ -2636,7 +2636,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search qna
+### Search qna 
 
 ---
 > Request
@@ -2665,7 +2665,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search result template
+### Search result template 
 
 ---
 > Request
@@ -2700,7 +2700,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search external items
+### Search external items 
 
 ---
 > Request
@@ -2737,7 +2737,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Page search results
+### Page search results 
 
 ---
 > Request
@@ -2768,7 +2768,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Sort search results
+### Sort search results 
 
 ---
 > Request
@@ -2803,7 +2803,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Request spelling correction
+### Request spelling correction 
 
 ---
 > Request
@@ -2838,7 +2838,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Refine results with string aggregations
+### Refine results with string aggregations 
 
 ---
 > Request
@@ -2887,7 +2887,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Refine results with numeric aggregations
+### Refine results with numeric aggregations 
 
 ---
 > Request
@@ -2939,7 +2939,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Apply refined query passing the aggregationToken
+### Apply refined query passing the aggregationToken 
 
 ---
 > Request
@@ -2992,7 +2992,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Trim duplicated SharePoint search results
+### Trim duplicated SharePoint search results 
 
 ---
 > Request
@@ -3022,7 +3022,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search with queryTemplate
+### Search with queryTemplate 
 
 ---
 > Request
@@ -3052,7 +3052,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search with basic collapse
+### Search with basic collapse 
 
 ---
 > Request
@@ -3092,7 +3092,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search with compound collapse
+### Search with compound collapse 
 
 ---
 > Request
@@ -3134,7 +3134,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Search with multi-level collapse
+### Search with multi-level collapse 
 
 ---
 > Request
@@ -3181,7 +3181,7 @@ POST https://graph.microsoft.com/beta/search/query
 
 <br>
 
-### Get Planner tasks
+### Get Planner tasks 
 
 ---
 > Request
@@ -3192,7 +3192,7 @@ GET https://graph.microsoft.com/v1.0/me/planner/tasks
 
 <br>
 
-### Get Planner tasks for a user
+### Get Planner tasks for a user 
 
 ---
 > Request
@@ -3203,7 +3203,7 @@ GET https://graph.microsoft.com/v1.0/users/{{UserName}}/planner/tasks
 
 <br>
 
-### Get Planner plans associated with group
+### Get Planner plans associated with group 
 
 ---
 > Request
@@ -3214,7 +3214,7 @@ GET https://graph.microsoft.com/v1.0/groups/{{GroupId}}/planner/plans
 
 <br>
 
-### Get plan
+### Get plan 
 
 ---
 > Request
@@ -3225,7 +3225,7 @@ GET https://graph.microsoft.com/v1.0/planner/plans/{{PlanId}}
 
 <br>
 
-### Update plan
+### Update plan 
 
 ---
 > Request
@@ -3245,7 +3245,7 @@ PATCH https://graph.microsoft.com/v1.0/planner/plans/{{PlanId}}
 
 <br>
 
-### Get plan buckets
+### Get plan buckets 
 
 ---
 > Request
@@ -3256,7 +3256,7 @@ GET https://graph.microsoft.com/v1.0/planner/plans/{{PlanId}}/buckets
 
 <br>
 
-### Create a bucket in a plan
+### Create a bucket in a plan 
 
 ---
 > Request
@@ -3278,7 +3278,7 @@ POST https://graph.microsoft.com/v1.0/planner/buckets
 
 <br>
 
-### Update a bucket
+### Update a bucket 
 
 ---
 > Request
@@ -3298,7 +3298,7 @@ PATCH https://graph.microsoft.com/v1.0/planner/buckets/{{BucketId}}
 
 <br>
 
-### Get Planner tasks for a plan
+### Get Planner tasks for a plan 
 
 ---
 > Request
@@ -3309,7 +3309,7 @@ GET https://graph.microsoft.com/v1.0/planner/plans/{{PlanId}}/tasks
 
 <br>
 
-### Get Planner task by id
+### Get Planner task by id 
 
 ---
 > Request
@@ -3320,7 +3320,7 @@ GET https://graph.microsoft.com/v1.0/planner/tasks/{{TaskId}}
 
 <br>
 
-### Create a Planner task
+### Create a Planner task 
 
 ---
 > Request
@@ -3342,7 +3342,7 @@ POST https://graph.microsoft.com/v1.0/planner/tasks
 
 <br>
 
-### Update a Planner task
+### Update a Planner task 
 
 ---
 > Request
@@ -3362,7 +3362,7 @@ PATCH https://graph.microsoft.com/v1.0/planner/tasks/{{TaskId}}
 
 <br>
 
-### Get Planner task details
+### Get Planner task details 
 
 ---
 > Request
@@ -3373,7 +3373,7 @@ GET https://graph.microsoft.com/v1.0/planner/tasks/{{TaskId}}/details
 
 <br>
 
-### Get my profile
+### Get my profile 
 
 ---
 > Request
@@ -3384,7 +3384,7 @@ GET https://graph.microsoft.com/v1.0/me
 
 <br>
 
-### Get my about me
+### Get my about me 
 
 ---
 > Request
@@ -3395,7 +3395,7 @@ GET https://graph.microsoft.com/v1.0/me/aboutMe
 
 <br>
 
-### Get my skills
+### Get my skills 
 
 ---
 > Request
@@ -3410,7 +3410,7 @@ GET https://graph.microsoft.com/v1.0/me/?$select=displayName,skills
 
 <br>
 
-### Get my manager
+### Get my manager 
 
 ---
 > Request
@@ -3421,7 +3421,7 @@ GET https://graph.microsoft.com/v1.0/me/manager
 
 <br>
 
-### Get my direct reports
+### Get my direct reports 
 
 ---
 > Request
@@ -3432,7 +3432,7 @@ GET https://graph.microsoft.com/v1.0/me/directReports
 
 <br>
 
-### Get my groups
+### Get my groups 
 
 ---
 > Request
@@ -3443,7 +3443,7 @@ GET https://graph.microsoft.com/v1.0/me/memberOf
 
 <br>
 
-### Get my photo
+### Get my photo 
 
 ---
 > Request
@@ -3454,7 +3454,7 @@ GET https://graph.microsoft.com/v1.0/me/photo/$value
 
 <br>
 
-### Get users
+### Get users 
 
 ---
 > Request
@@ -3465,7 +3465,7 @@ GET https://graph.microsoft.com/v1.0/users
 
 <br>
 
-### Get users $filter
+### Get users $filter 
 
 ---
 > Request
@@ -3480,7 +3480,7 @@ GET https://graph.microsoft.com/v1.0/users?$filter=Department eq 'Finance'
 
 <br>
 
-### Get user's profile by email
+### Get user's profile by email 
 
 ---
 > Request
@@ -3491,7 +3491,7 @@ GET https://graph.microsoft.com/v1.0/users/{{UserName}}
 
 <br>
 
-### Get a user's profile by id
+### Get a user's profile by id 
 
 ---
 > Request
@@ -3502,7 +3502,7 @@ GET https://graph.microsoft.com/v1.0/users/{{UserId}}
 
 <br>
 
-### Get a user's photo
+### Get a user's photo 
 
 ---
 > Request
@@ -3513,7 +3513,7 @@ GET https://graph.microsoft.com/v1.0/users/{{UserId}}/photo/$value
 
 <br>
 
-### Invite a guest user
+### Invite a guest user 
 
 ---
 > Request
@@ -3548,7 +3548,7 @@ POST https://graph.microsoft.com/v1.0/invitations
 
 <br>
 
-### Get my files
+### Get my files 
 
 ---
 > Request
@@ -3559,7 +3559,7 @@ GET https://graph.microsoft.com/v1.0/me/drive/root/children
 
 <br>
 
-### Get my recent files
+### Get my recent files 
 
 ---
 > Request
@@ -3570,7 +3570,7 @@ GET https://graph.microsoft.com/v1.0/me/drive/recent
 
 <br>
 
-### Get files shared with me
+### Get files shared with me 
 
 ---
 > Request
@@ -3581,7 +3581,7 @@ GET https://graph.microsoft.com/v1.0/me/drive/sharedWithMe
 
 <br>
 
-### Search my OneDrive
+### Search my OneDrive 
 
 ---
 > Request
@@ -3596,7 +3596,7 @@ GET https://graph.microsoft.com/v1.0/me/drive/root/search(q='finance')?select=na
 
 <br>
 
-### Create a folder
+### Create a folder 
 
 ---
 > Request
@@ -3617,7 +3617,7 @@ POST https://graph.microsoft.com/v1.0/me/drive/root/children
 
 <br>
 
-### Get my To Do lists
+### Get my To Do lists 
 
 ---
 > Request
@@ -3628,7 +3628,7 @@ GET https://graph.microsoft.com/v1.0/me/todo/lists
 
 <br>
 
-### Get my To Do list
+### Get my To Do list 
 
 ---
 > Request
@@ -3639,7 +3639,7 @@ GET https://graph.microsoft.com/v1.0/me/todo/lists/{{TaskListId}}
 
 <br>
 
-### Create a To Do list
+### Create a To Do list 
 
 ---
 > Request
@@ -3659,7 +3659,7 @@ POST https://graph.microsoft.com/v1.0/me/todo/lists/
 
 <br>
 
-### Update a To Do list
+### Update a To Do list 
 
 ---
 > Request
@@ -3679,7 +3679,7 @@ PATCH https://graph.microsoft.com/v1.0/me/todo/lists/{{TaskListId}}
 
 <br>
 
-### Delete a To Do list
+### Delete a To Do list 
 
 ---
 > Request
@@ -3690,7 +3690,7 @@ DELETE https://graph.microsoft.com/v1.0/me/todo/lists/{{TaskListId}}
 
 <br>
 
-### Get my To Do list tasks
+### Get my To Do list tasks 
 
 ---
 > Request
@@ -3701,7 +3701,7 @@ GET https://graph.microsoft.com/v1.0/me/todo/lists/{{TaskListId}}/tasks
 
 <br>
 
-### Create a To Do task in a list
+### Create a To Do task in a list 
 
 ---
 > Request
@@ -3728,7 +3728,7 @@ POST https://graph.microsoft.com/v1.0/me/todo/lists/{{TaskListId}}/tasks
 
 <br>
 
-### Update a To Do task in a list
+### Update a To Do task in a list 
 
 ---
 > Request
@@ -3751,7 +3751,7 @@ PATCH https://graph.microsoft.com/v1.0/me/todo/lists/{{TaskListId}}/tasks/{{Task
 
 <br>
 
-### Delete a To Do task in a list
+### Delete a To Do task in a list 
 
 ---
 > Request
@@ -3762,7 +3762,7 @@ DELETE https://graph.microsoft.com/v1.0/me/todo/lists/{{TaskListId}}/tasks/{{Tas
 
 <br>
 
-### Get my joined teams
+### Get my joined teams 
 
 ---
 > Request
@@ -3773,7 +3773,7 @@ GET https://graph.microsoft.com/v1.0/me/joinedTeams
 
 <br>
 
-### Get members of a team
+### Get members of a team 
 
 ---
 > Request
@@ -3784,7 +3784,7 @@ GET https://graph.microsoft.com/v1.0/groups/{{TeamId}}/members
 
 <br>
 
-### Get channels of a team
+### Get channels of a team 
 
 ---
 > Request
@@ -3795,7 +3795,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{TeamId}}/channels
 
 <br>
 
-### Get channel info
+### Get channel info 
 
 ---
 > Request
@@ -3806,7 +3806,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{TeamId}}/channels/{{ChannelId}}
 
 <br>
 
-### Create team
+### Create team 
 
 ---
 > Request
@@ -3828,7 +3828,7 @@ POST https://graph.microsoft.com/v1.0/teams
 
 <br>
 
-### Create channel
+### Create channel 
 
 ---
 > Request
@@ -3849,7 +3849,7 @@ POST https://graph.microsoft.com/v1.0/teams/{{TeamId}}/channels
 
 <br>
 
-### Get apps in a team
+### Get apps in a team 
 
 ---
 > Request
@@ -3864,7 +3864,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{TeamId}}/installedApps?$expand=team
 
 <br>
 
-### Get tabs in a channel
+### Get tabs in a channel 
 
 ---
 > Request
@@ -3879,7 +3879,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{TeamId}}/channels/{{ChannelId}}/tab
 
 <br>
 
-### Get items in a team drive
+### Get items in a team drive 
 
 ---
 > Request
@@ -3890,7 +3890,7 @@ GET https://graph.microsoft.com/v1.0/groups/{{TeamId}}/drive/root/children
 
 <br>
 
-### Get messages (without replies) in a channel (beta)
+### Get messages (without replies) in a channel (beta) 
 
 ---
 > Request
@@ -3901,7 +3901,7 @@ GET https://graph.microsoft.com/beta/teams/{{TeamId}}/channels/{{ChannelId}}/mes
 
 <br>
 
-### Get a message in a channel (beta)
+### Get a message in a channel (beta) 
 
 ---
 > Request
@@ -3912,7 +3912,7 @@ GET https://graph.microsoft.com/beta/teams/{{TeamId}}/channels/{{ChannelId}}/mes
 
 <br>
 
-### Get replies to a message in a channel (beta)
+### Get replies to a message in a channel (beta) 
 
 ---
 > Request
@@ -3923,7 +3923,7 @@ GET https://graph.microsoft.com/beta/teams/{{TeamId}}/channels/{{ChannelId}}/mes
 
 <br>
 
-### Get a reply of a message (beta)
+### Get a reply of a message (beta) 
 
 ---
 > Request
@@ -3934,7 +3934,7 @@ GET https://graph.microsoft.com/beta/teams/{{TeamId}}/channels/{{ChannelId}}/mes
 
 <br>
 
-### Create a plain text chat thread (beta)
+### Create a plain text chat thread (beta) 
 
 ---
 > Request
@@ -3956,7 +3956,7 @@ POST https://graph.microsoft.com/beta/teams/{{TeamId}}/channels/{{ChannelId}}/me
 
 <br>
 
-### Create an HTML chat thread (beta)
+### Create an HTML chat thread (beta) 
 
 ---
 > Request
@@ -3979,7 +3979,7 @@ POST https://graph.microsoft.com/beta/teams/{{TeamId}}/channels/{{ChannelId}}/me
 
 <br>
 
-### Get people
+### Get people 
 
 ---
 > Request
@@ -3990,7 +3990,7 @@ GET https://graph.microsoft.com/v1.0/me/people
 
 <br>
 
-### Get people $top $skip
+### Get people $top $skip 
 
 ---
 > Request
@@ -4007,7 +4007,7 @@ GET https://graph.microsoft.com/v1.0/me/people?$top=10&$skip=10
 
 <br>
 
-### Get people $orderby
+### Get people $orderby 
 
 ---
 > Request
@@ -4022,7 +4022,7 @@ GET https://graph.microsoft.com/v1.0/me/people/?$orderby=DisplayName
 
 <br>
 
-### Get people $filter
+### Get people $filter 
 
 ---
 > Request
@@ -4039,7 +4039,7 @@ GET https://graph.microsoft.com/v1.0/me/people/?$select=DisplayName,scoredEmailA
 
 <br>
 
-### Get people $search
+### Get people $search 
 
 ---
 > Request
@@ -4054,7 +4054,7 @@ GET https://graph.microsoft.com/v1.0/me/people/?$search=j
 
 <br>
 
-### Get people $search topic
+### Get people $search topic 
 
 ---
 > Request
@@ -4069,7 +4069,7 @@ GET https://graph.microsoft.com/v1.0/me/people/?$search="ma topic: feature plann
 
 <br>
 
-### Get people $search fuzzy
+### Get people $search fuzzy 
 
 ---
 > Request
@@ -4084,7 +4084,7 @@ GET https://graph.microsoft.com/v1.0/me/people/?$search="John"
 
 <br>
 
-### Get a user's related people
+### Get a user's related people 
 
 ---
 > Request
@@ -4095,7 +4095,7 @@ GET https://graph.microsoft.com/v1.0/users('{{UserName}}')/people/
 
 <br>
 
-### Get all connections
+### Get all connections 
 
 ---
 > Request
@@ -4106,7 +4106,7 @@ GET https://graph.microsoft.com/v1.0/external/connections
 
 <br>
 
-### Create connection
+### Create connection 
 
 ---
 > Request
@@ -4128,7 +4128,7 @@ POST https://graph.microsoft.com/v1.0/external/connections
 
 <br>
 
-### Get connection
+### Get connection 
 
 ---
 > Request
@@ -4139,7 +4139,7 @@ GET https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId
 
 <br>
 
-### Delete connection
+### Delete connection 
 
 ---
 > Request
@@ -4150,7 +4150,7 @@ DELETE https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId
 
 <br>
 
-### Register schema
+### Register schema 
 
 ---
 > Request
@@ -4274,7 +4274,7 @@ POST https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/sc
 
 <br>
 
-### Get schema
+### Get schema 
 
 ---
 > Request
@@ -4285,7 +4285,7 @@ GET https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/sch
 
 <br>
 
-### Get connection operation status
+### Get connection operation status 
 
 ---
 > Request
@@ -4296,7 +4296,7 @@ GET {{OperationUrl}}
 
 <br>
 
-### Put item
+### Put item 
 
 ---
 > Request
@@ -4341,7 +4341,7 @@ PUT https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/ite
 
 <br>
 
-### Get item
+### Get item 
 
 ---
 > Request
@@ -4352,7 +4352,7 @@ GET https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/ite
 
 <br>
 
-### Delete item
+### Delete item 
 
 ---
 > Request
@@ -4363,7 +4363,7 @@ DELETE https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/
 
 <br>
 
-### Create group
+### Create group 
 
 ---
 > Request
@@ -4384,7 +4384,7 @@ POST https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/gr
 
 <br>
 
-### Get group
+### Get group 
 
 ---
 > Request
@@ -4395,7 +4395,7 @@ GET https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/gro
 
 <br>
 
-### Add AAD user as member
+### Add AAD user as member 
 
 ---
 > Request
@@ -4416,7 +4416,7 @@ POST https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/gr
 
 <br>
 
-### Add AAD group as member
+### Add AAD group as member 
 
 ---
 > Request
@@ -4437,7 +4437,7 @@ POST https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/gr
 
 <br>
 
-### Add connector group as member
+### Add connector group as member 
 
 ---
 > Request
@@ -4458,7 +4458,7 @@ POST https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/gr
 
 <br>
 
-### Remove member
+### Remove member 
 
 ---
 > Request
@@ -4469,7 +4469,7 @@ DELETE https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/
 
 <br>
 
-### Delete group
+### Delete group 
 
 ---
 > Request
@@ -4480,7 +4480,7 @@ DELETE https://graph.microsoft.com/v1.0/external/connections/sampleConnectionId/
 
 <br>
 
-### Get a user's messages
+### Get a user's messages 
 
 ---
 > Request
@@ -4491,7 +4491,7 @@ GET https://graph.microsoft.com/v1.0/users/{{UserId}}/messages
 
 <br>
 
-### Get a user's message
+### Get a user's message 
 
 ---
 > Request
@@ -4502,7 +4502,7 @@ GET https://graph.microsoft.com/v1.0/users/{{UserId}}/messages/{{MessageId}}
 
 <br>
 
-### Get sites
+### Get sites 
 
 ---
 > Request
@@ -4513,7 +4513,7 @@ GET https://graph.microsoft.com/v1.0/sites
 
 <br>
 
-### Get drives
+### Get drives 
 
 ---
 > Request
@@ -4524,7 +4524,7 @@ GET https://graph.microsoft.com/v1.0/sites/{{SiteID}}/drives
 
 <br>
 
-### Get subscriptions
+### Get subscriptions 
 
 ---
 > Request
@@ -4535,7 +4535,7 @@ GET https://graph.microsoft.com/v1.0/subscriptions
 
 <br>
 
-### Update subscription
+### Update subscription 
 
 ---
 > Request
@@ -4555,7 +4555,7 @@ PATCH https://graph.microsoft.com/v1.0/subscriptions/{{SubscriptionId}}
 
 <br>
 
-### Create subscription
+### Create subscription 
 
 ---
 > Request
@@ -4579,7 +4579,7 @@ POST https://graph.microsoft.com/beta/subscriptions
 
 <br>
 
-### Get team members
+### Get team members 
 
 ---
 > Request
@@ -4590,7 +4590,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{GroupId}}/members
 
 <br>
 
-### Get single team member
+### Get single team member 
 
 ---
 > Request
@@ -4601,7 +4601,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{GroupId}}/members/{{UserId}}
 
 <br>
 
-### Get channel members
+### Get channel members 
 
 ---
 > Request
@@ -4612,7 +4612,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{GroupId}}/channels/{{ChannelId}}/me
 
 <br>
 
-### Add channel member
+### Add channel member 
 
 ---
 > Request
@@ -4634,7 +4634,7 @@ POST https://graph.microsoft.com/v1.0/teams/{{TeamId}}/channels/{{ChannelId}}/me
 
 <br>
 
-### Remove team member
+### Remove team member 
 
 ---
 > Request
@@ -4645,7 +4645,7 @@ DELETE https://graph.microsoft.com/v1.0/teams/{{TeamId}}/members/{{UserId}}
 
 <br>
 
-### Remove channel member
+### Remove channel member 
 
 ---
 > Request
@@ -4656,7 +4656,7 @@ DELETE https://graph.microsoft.com/v1.0/teams/{{TeamId}}/channels/{{ChannelId}}m
 
 <br>
 
-### Update team member
+### Update team member 
 
 ---
 > Request
@@ -4677,7 +4677,7 @@ PATCH https://graph.microsoft.com/v1.0/teams/{{GroupId}}/members/{{UserId}}
 
 <br>
 
-### Update channel member
+### Update channel member 
 
 ---
 > Request
@@ -4698,7 +4698,7 @@ PATCH https://graph.microsoft.com/v1.0/teams/{{GroupId}}/channels/{{ChannelId}}/
 
 <br>
 
-### Add team member
+### Add team member 
 
 ---
 > Request
@@ -4720,7 +4720,7 @@ POST https://graph.microsoft.com/v1.0/teams/{{GroupId}}/members
 
 <br>
 
-### Get user's joined teams
+### Get user's joined teams 
 
 ---
 > Request
@@ -4731,7 +4731,7 @@ GET https://graph.microsoft.com/v1.0/users/{{UserId}}/joinedTeams
 
 <br>
 
-### Get primary channel
+### Get primary channel 
 
 ---
 > Request
@@ -4742,7 +4742,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{GroupId}}/primaryChannel
 
 <br>
 
-### Get team channels
+### Get team channels 
 
 ---
 > Request
@@ -4753,7 +4753,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{GroupId}}/channels
 
 <br>
 
-### Get team
+### Get team 
 
 ---
 > Request
@@ -4764,7 +4764,7 @@ GET https://graph.microsoft.com/v1.0/teams/{{TeamId}}
 
 <br>
 
-### Delete team
+### Delete team 
 
 ---
 > Request
@@ -4775,7 +4775,7 @@ DELETE https://graph.microsoft.com/v1.0/groups/{{GroupId}}
 
 <br>
 
-### Create team from group
+### Create team from group 
 
 ---
 > Request
@@ -4806,7 +4806,7 @@ PUT https://graph.microsoft.com/v1.0/groups/{{GroupId}}/team
 
 <br>
 
-### Update team
+### Update team 
 
 ---
 > Request
@@ -4836,7 +4836,7 @@ PATCH https://graph.microsoft.com/v1.0/teams/{{TeamId}}
 
 <br>
 
-### Create team
+### Create team 
 
 ---
 > Request
@@ -4858,7 +4858,7 @@ POST https://graph.microsoft.com/v1.0/teams/{{TeamId}}/channels/{{ChannelId}}/me
 
 <br>
 
-### Archive team
+### Archive team 
 
 ---
 > Request
@@ -4878,7 +4878,7 @@ POST https://graph.microsoft.com/v1.0/teams/{{TeamId}}/archive
 
 <br>
 
-### Clone team
+### Clone team 
 
 ---
 > Request
@@ -4902,7 +4902,7 @@ POST https://graph.microsoft.com/v1.0/teams/{{TeamId}}/clone
 
 <br>
 
-### Unarchive team
+### Unarchive team 
 
 ---
 > Request
@@ -4913,7 +4913,7 @@ POST https://graph.microsoft.com/v1.0/teams/{{TeamId}}/unarchive
 
 <br>
 
-### Get users
+### Get users 
 
 ---
 > Request
@@ -4924,7 +4924,7 @@ GET https://graph.microsoft.com/v1.0/users
 
 <br>
 
-### Invite guest user
+### Invite guest user 
 
 ---
 > Request
@@ -4959,7 +4959,7 @@ POST https://graph.microsoft.com/v1.0/invitations
 
 <br>
 
-### List retention labels
+### List retention labels 
 
 ---
 > Request
@@ -4970,7 +4970,7 @@ GET https://graph.microsoft.com/beta/security/labels/retentionLabels
 
 <br>
 
-### Subscription validation
+### Subscription validation 
 
 ---
 > Request
@@ -4987,7 +4987,7 @@ random validation token passed by the Microsoft Graph when validating the notifi
 
 <br>
 
-### v1.0 $metadata
+### v1.0 $metadata 
 
 ---
 > Request
@@ -4998,7 +4998,7 @@ GET https://graph.microsoft.com/v1.0/$metadata
 
 <br>
 
-### beta $metadata
+### beta $metadata 
 
 ---
 > Request
